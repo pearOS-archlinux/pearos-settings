@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="101">
+  <name>McMojave sddm</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>vinceliuice</author>
+  <homepage>https://store.kde.org/p/1312086</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>58</rating>
+  <downloads>176775</downloads>
+  <installedfile>/tmp/McMojave.tar.xz</installedfile>
+  <id>1312086</id>
+  <releasedate>2020-07-09</releasedate>
+  <summary>McMojave sddm</summary>
+  <changelog></changelog>
+  <preview>https://cn.opendesktop.org/cache/100x100-0/img/3/8/f/f/fac25471c95a227246c98fc98fad33fd2e6e.png</preview>
+  <previewBig>https://cn.opendesktop.org/cache/770x540-0/img/3/8/f/f/fac25471c95a227246c98fc98fad33fd2e6e.png</previewBig>
+  <payload>https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1ODkzNzI3ODciLCJvIjoiMSIsInMiOiI5YjZmN2U3MmFhODdjNTAyNGRjY2VjMGQwNzIwNTlmMTg2YmUzN2U2OWI1ZmQ1ZjZiYzdjOWI4ODllYjdmNjA2NDY5ZmFkNDA1N2I2ODJlMDlmMjk5OTAyNDE4MWQ0MjE4MTNmMzM2OTkwYWExMDcyN2MyMjFkYmVjZmFlMWMwMSIsInQiOjE2MTQ1MDE4MTMsInN0ZnAiOm51bGwsInN0aXAiOiI4Ni4xMjAuMjI1Ljc2In0.l81EMReaRahBFGJ73bSP-UOLBz43KjfH3CF1O2ykyD4/McMojave.tar.xz</payload>
+  <tags>gplv3,linux,unix</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

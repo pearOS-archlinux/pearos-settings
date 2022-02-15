@@ -1,0 +1,7 @@
+[Applets][3]
+immutability=1
+plugin=org.kpple.kppleMenu
+
+[Applets][3][Configuration]
+PreloadWeight=57
+geometry=560,367,572,499

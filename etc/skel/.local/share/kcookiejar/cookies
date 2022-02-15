@@ -1,0 +1,5 @@
+# KDE Cookie File v2
+#
+# Host               Domain               Path         Exp.date   Prot Name                 Sec  Value
+[marketplace.qt.io]
+marketplace.qt.io    ""                   "/"          1644175463    0 secure_customer_sig  7    
