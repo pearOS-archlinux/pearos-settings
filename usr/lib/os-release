@@ -1,4 +1,6 @@
-NAME="Arch Linux"
+NAME="pearOS NiceC0re"
+VARIANT="Test Build Feb. 2022"
+VERSION="22.02"
 PRETTY_NAME="pearOS NiceC0re"
 ID=arch
 BUILD_ID=rolling
@@ -7,6 +9,6 @@ HOME_URL="https://pearOS.xyz"
 DOCUMENTATION_URL="https://wiki.pearos.xyz"
 SUPPORT_URL="https://discord.gg/QJPetvVhUb"
 BUG_REPORT_URL="https://bugs.pearos.xyz/"
-LOGO=pearos-logo
+LOGO=nicec0re-logo
 IMAGE_ID=pearos-nicec0re
 IMAGE_VERSION=2022.02
