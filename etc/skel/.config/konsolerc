@@ -1,0 +1,14 @@
+[Desktop Entry]
+DefaultProfile=pearOS-Default-Konsole-Profile.profile
+
+[KFileDialog Settings]
+detailViewIconSize=16
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAABQAAAAJ4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIAAAAAAP////8AAAAAAAAAAA==
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+eDP-1 Height 1920x1080=416
+eDP-1 Width 1920x1080=663
+eDP-1 XPosition 1920x1080=481
+eDP-1 YPosition 1920x1080=419

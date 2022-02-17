@@ -1,0 +1,32 @@
+[ConfigDialog]
+eDP-1 Height 1080=248
+eDP-1 Width 1920=279
+
+[DownloadDialog Settings]
+eDP-1 Height 1920x1080=400
+eDP-1 Width 1920x1080=700
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/pearOS-Default-font/TTFs/pearOS-Font-Bold.ttf,file:$HOME/pearOS-Default-font/TTFs/pearOS-Font-ExtraBold.ttf,file:$HOME/pearOS-Default-font/TTFs/pearOS-Font-Regular.ttf
+Recent URLs[$e]=file:$HOME/pearOS-Default-font/TTFs/
+detailViewIconSize=16
+
+[Main]
+ActiveView=icon_mode
+
+[MainWindow]
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA/wAAAKKAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP-1 Height 1080=708
+eDP-1 Height 1920x1080=700
+eDP-1 Width 1920=1032
+eDP-1 Width 1920x1080=1020
+eDP-1 XPosition=313
+eDP-1 XPosition 1920x1080=510
+eDP-1 YPosition=156
+eDP-1 YPosition 1920x1080=169
+
+[Open-with settings]
+CompletionMode=1
+History=

@@ -1,0 +1,13 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Greeter]
+Theme=xyz.pearos.alxb421.pearOS
+
+[Greeter][LnF][General]
+alwaysShowClock=false
+showMediaControls=false
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/pear/.local/share/wallpapers/WhiteSur/
+SlidePaths=/home/pear/.local/share/wallpapers,/usr/share/wallpapers

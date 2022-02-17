@@ -1,0 +1,134 @@
+<PcFileCache>
+  <File path="/usr/share/pkgconfig/bigreqsproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/dmxproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xineramaproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/applewmproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xf86driproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/gnome-icon-theme.pc" lastWriteTime="2018-03-17T22:42:44-04:00" />
+  <File path="/usr/share/pkgconfig/poppler-data.pc" lastWriteTime="2018-05-01T10:26:35-04:00" />
+  <File path="/usr/share/pkgconfig/dri2proto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/shared-mime-info.pc" lastWriteTime="2020-03-24T11:58:21-04:00" />
+  <File path="/usr/share/pkgconfig/wayland-protocols.pc" lastWriteTime="2020-03-02T04:38:22-05:00" />
+  <File path="/usr/share/pkgconfig/xtrans.pc" lastWriteTime="2020-02-26T06:53:10-05:00" />
+  <File path="/usr/share/pkgconfig/mobile-broadband-provider-info.pc" lastWriteTime="2020-02-17T14:50:02-05:00" />
+  <File path="/usr/share/pkgconfig/xf86vidmodeproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/damageproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/recordproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/videoproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/fixesproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/compositeproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xkbcomp.pc" lastWriteTime="2020-02-28T15:13:02-05:00" />
+  <File path="/usr/share/pkgconfig/yelp-xsl.pc" lastWriteTime="2020-03-10T06:53:08-04:00" />
+  <File path="/usr/share/pkgconfig/xbitmaps.pc" lastWriteTime="2012-10-28T20:04:12-04:00" />
+  <File path="/usr/share/pkgconfig/udev.pc" lastWriteTime="2021-01-06T15:47:39-05:00" />
+  <File path="/usr/share/pkgconfig/xf86bigfontproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/renderproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xkeyboard-config.pc" lastWriteTime="2020-02-29T06:32:57-05:00" />
+  <File path="/usr/share/pkgconfig/kbproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/glproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xorg-sgml-doctools.pc" lastWriteTime="2013-10-03T10:39:23-04:00" />
+  <File path="/usr/share/pkgconfig/iso-codes.pc" lastWriteTime="2019-10-03T07:25:23-04:00" />
+  <File path="/usr/share/pkgconfig/fontutil.pc" lastWriteTime="2018-03-18T13:01:27-04:00" />
+  <File path="/usr/share/pkgconfig/fontsproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xf86dgaproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xextproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/systemd.pc" lastWriteTime="2021-01-06T15:47:39-05:00" />
+  <File path="/usr/share/pkgconfig/bash-completion.pc" lastWriteTime="2020-02-02T00:31:16-05:00" />
+  <File path="/usr/share/pkgconfig/dri3proto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/xcmiscproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/scrnsaverproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/resourceproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/inputproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/randrproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/share/pkgconfig/presentproto.pc" lastWriteTime="2020-03-09T08:10:51-04:00" />
+  <File path="/usr/lib/pkgconfig/dotnet.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/xbuild12.pc" lastWriteTime="2020-12-09T23:48:34-05:00" name="xbuild12" version="12.0" description="XBuild/MSBuild 12.0" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Microsoft.Build.Engine" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/usr/lib/mono/xbuild/12.0/bin/Microsoft.Build.Engine.dll" />
+    <Assembly name="Microsoft.Build.Framework" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/usr/lib/mono/xbuild/12.0/bin/Microsoft.Build.Framework.dll" />
+    <Assembly name="Microsoft.Build.Tasks.v12.0" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/usr/lib/mono/xbuild/12.0/bin/Microsoft.Build.Tasks.v12.0.dll" />
+    <Assembly name="Microsoft.Build.Utilities.v12.0" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/usr/lib/mono/xbuild/12.0/bin/Microsoft.Build.Utilities.v12.0.dll" />
+    <Assembly name="Microsoft.Build" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/usr/lib/mono/xbuild/12.0/bin/Microsoft.Build.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/mono-lineeditor.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/monodevelop-core-addins.pc" lastWriteTime="2019-07-18T13:35:27-04:00" name="monodevelop-core-addins" version="7.8.4" description="MonoDevelop Core Add-ins" gacPackage="false" targetFramework=".NETFramework,Version=v4.7.1">
+    <Assembly name="MonoDevelop.Xml" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/Xml/MonoDevelop.Xml.dll" />
+    <Assembly name="MonoDevelop.AspNet" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/AspNet/MonoDevelop.AspNet.dll" />
+    <Assembly name="MonoDevelop.Gettext" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/DisplayBindings/Gettext/MonoDevelop.Gettext.dll" />
+    <Assembly name="MonoDevelop.Deployment" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.dll" />
+    <Assembly name="MonoDevelop.Deployment.Linux" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.Linux.dll" />
+    <Assembly name="MonoDevelop.GtkCore" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.GtkCore/MonoDevelop.GtkCore.dll" />
+    <Assembly name="MonoDevelop.DesignerSupport" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.DesignerSupport/MonoDevelop.DesignerSupport.dll" />
+    <Assembly name="MonoDevelop.Autotools" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Autotools/MonoDevelop.Autotools.dll" />
+    <Assembly name="MonoDevelop.Debugger" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Debugger/MonoDevelop.Debugger.dll" />
+    <Assembly name="MonoDevelop.Refactoring" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Refactoring/MonoDevelop.Refactoring.dll" />
+    <Assembly name="Mono.Debugging.Soft" version="0.0.0.0" culture="neutral" publicKeyToken="5e9ce85b0923c84f" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/Mono.Debugging.Soft.dll" />
+    <Assembly name="MonoDevelop.Debugger.Soft" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.dll" />
+    <Assembly name="Mono.Debugger.Soft" version="0.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/usr/lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/Mono.Debugger.Soft.dll" />
+    <Assembly name="MonoDevelop.ConnectedServices" version="1.0.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/AddIns/MonoDevelop.ConnectedServices/MonoDevelop.ConnectedServices.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/dotnet35.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/system.web.mvc3.pc" lastWriteTime="2020-12-09T23:48:34-05:00" name="system.web.mvc3" version="3.0.0.0" description="System.Web.Mvc - ASP.NET MVC v3" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="System.Web.Mvc" version="3.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/gac/System.Web.Mvc/3.0.0.0__31bf3856ad364e35/System.Web.Mvc.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/mono-options.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/gtk-sharp-2.0.pc" lastWriteTime="2020-04-17T10:55:33-04:00" name="gtk-sharp-2.0" version="2.12.45" description="Gtk# - GNOME .NET Binding" requires="glib-sharp-2.0" gacPackage="false" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="pango-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/usr/lib/cli/pango-sharp-2.0/pango-sharp.dll" />
+    <Assembly name="atk-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/usr/lib/cli/atk-sharp-2.0/atk-sharp.dll" />
+    <Assembly name="gdk-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/usr/lib/cli/gdk-sharp-2.0/gdk-sharp.dll" />
+    <Assembly name="gtk-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/usr/lib/cli/gtk-sharp-2.0/gtk-sharp.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/pm-utils.pc" lastWriteTime="2019-11-14T10:08:18-05:00" />
+  <File path="/usr/lib/pkgconfig/mono-nunit.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/monodevelop.pc" lastWriteTime="2019-07-18T13:35:27-04:00" name="monodevelop" version="7.8.4" description="Free .NET Development Environment" gacPackage="false" targetFramework=".NETFramework,Version=v4.7.1">
+    <Assembly name="MonoDevelop.Core" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/bin/MonoDevelop.Core.dll" />
+    <Assembly name="MonoDevelop.Ide" version="2.6.0.0" culture="neutral" publicKeyToken="3ead7498f347467b" file="/usr/lib/monodevelop/bin/MonoDevelop.Ide.dll" />
+    <Assembly name="ICSharpCode.NRefactory" version="5.0.0.0" culture="neutral" publicKeyToken="d4bfe873e7598c49" file="/usr/lib/monodevelop/bin/ICSharpCode.NRefactory.dll" />
+    <Assembly name="ICSharpCode.NRefactory.CSharp" version="5.0.0.0" culture="neutral" publicKeyToken="d4bfe873e7598c49" file="/usr/lib/monodevelop/bin/ICSharpCode.NRefactory.CSharp.dll" />
+    <Assembly name="Mono.Cecil" version="0.10.0.0" culture="neutral" publicKeyToken="50cebf1cceb9d05e" file="/usr/lib/monodevelop/bin/Mono.Cecil.dll" />
+    <Assembly name="Mono.Debugging" version="0.0.0.0" culture="neutral" publicKeyToken="5e9ce85b0923c84f" file="/usr/lib/monodevelop/bin/Mono.Debugging.dll" />
+    <Assembly name="Newtonsoft.Json" version="10.0.0.0" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" file="/usr/lib/monodevelop/bin/Newtonsoft.Json.dll" />
+    <Assembly name="Xwt" version="0.1.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/usr/lib/monodevelop/bin/Xwt.dll" />
+    <Assembly name="Xwt.Gtk" version="0.1.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/usr/lib/monodevelop/bin/Xwt.Gtk.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/system.web.mvc2.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/libgdiplus.pc" lastWriteTime="2020-04-17T09:23:36-04:00" />
+  <File path="/usr/lib/pkgconfig/system.web.extensions_1.0.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/gtk-dotnet-2.0.pc" lastWriteTime="2020-04-17T10:55:33-04:00" name="gtk-dotnet-2.0" version="2.12.45" description=".NET Extensions for Gtk" requires="gtk-sharp-2.0" gacPackage="false" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="gtk-dotnet" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/usr/lib/cli/gtk-dotnet-2.0/gtk-dotnet.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/mono-cairo.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/system.web.mvc.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/monodoc.pc" lastWriteTime="2020-12-09T23:48:34-05:00" name="monodoc" version="6.12.0.107" description="Monodoc - Mono Documentation Tools" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="monodoc" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/usr/lib/mono/monodoc/monodoc.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/reactive.pc" lastWriteTime="2020-12-09T23:48:34-05:00" name="reactive" version="6.12.0.107" description="Reactive Extensions" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="System.Reactive.Interfaces" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Interfaces.dll" />
+    <Assembly name="System.Reactive.Core" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Core.dll" />
+    <Assembly name="System.Reactive.Linq" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Linq.dll" />
+    <Assembly name="System.Reactive.PlatformServices" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.PlatformServices.dll" />
+    <Assembly name="System.Reactive.Providers" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Providers.dll" />
+    <Assembly name="System.Reactive.Debugger" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Debugger.dll" />
+    <Assembly name="System.Reactive.Experimental" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Experimental.dll" />
+    <Assembly name="System.Reactive.Runtime.Remoting" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/4.5/System.Reactive.Runtime.Remoting.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/system.web.extensions.design_1.0.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/mono-2.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/cecil.pc" lastWriteTime="2020-12-09T23:48:34-05:00" name="cecil" version="6.12.0.107" description="Mono Internal Libraries -- Do not use" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Mono.Cecil" version="0.9.5.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/usr/lib/mono/gac/Mono.Cecil/0.9.5.0__0738eb9f132ed756/Mono.Cecil.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/wcf.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/mono.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/aspnetwebstack.pc" lastWriteTime="2020-12-09T23:48:34-05:00" name="aspnetwebstack" version="6.12.0.107" description="References Microsoft ASP.NET Web Stack" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="System.Web.Razor" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/gac/System.Web.Razor/2.0.0.0__31bf3856ad364e35/System.Web.Razor.dll" />
+    <Assembly name="System.Web.Http" version="4.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/gac/System.Web.Http/4.0.0.0__31bf3856ad364e35/System.Web.Http.dll" />
+    <Assembly name="System.Web.WebPages" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/gac/System.Web.WebPages/2.0.0.0__31bf3856ad364e35/System.Web.WebPages.dll" />
+    <Assembly name="System.Web.WebPages.Razor" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/gac/System.Web.WebPages.Razor/2.0.0.0__31bf3856ad364e35/System.Web.WebPages.Razor.dll" />
+    <Assembly name="System.Web.WebPages.Deployment" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/usr/lib/mono/gac/System.Web.WebPages.Deployment/2.0.0.0__31bf3856ad364e35/System.Web.WebPages.Deployment.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/monosgen-2.pc" lastWriteTime="2020-12-09T23:48:34-05:00" />
+  <File path="/usr/lib/pkgconfig/ibus-table.pc" lastWriteTime="2020-02-16T15:42:48-05:00" />
+  <File path="/usr/lib/pkgconfig/glib-sharp-2.0.pc" lastWriteTime="2020-04-17T10:55:33-04:00" name="glib-sharp-2.0" version="2.12.45" description="GLib# - .NET Binding for the glib library." gacPackage="false" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="glib-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/usr/lib/cli/glib-sharp-2.0/glib-sharp.dll" />
+  </File>
+</PcFileCache>
