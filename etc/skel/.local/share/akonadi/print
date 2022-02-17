@@ -1,0 +1,1 @@
+printf "%`tput cols`s" test

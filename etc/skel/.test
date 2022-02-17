@@ -1,0 +1,10 @@
+#prompt="\e[100;30m \A  \u@\h  \w \e[0;90;47m \e[30m%\e[37m\e[m"
+#printf "%`tput cols`s" test
+#PS1=$(echo -e $prompt | tr -d '\n' && printf "%$(tput cols)s" test)
+
+
+
+prompt() {
+    PS1=$(printf "%*s\r%s " "$(tput cols)" '\e[100;30m \A' '\e[100;30m \A  \u@\h  \w \e[0;90;47m \e[30m%\e[37m\e[m')
+}
+PROMPT_COMMAND=prompt
