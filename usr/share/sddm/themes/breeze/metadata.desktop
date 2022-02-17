@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=breeze
+Description=macOS Inspired login theme :)
+Author=alxb421, fork of Marian Alexander Arlt's theme
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=10.15
+Website=https://github.com/MarianArlt/kde-plasma-chili
+Screenshot=Preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=alxb421@gmail.com
+Theme-Id=breeze
+Theme-API=2.0
