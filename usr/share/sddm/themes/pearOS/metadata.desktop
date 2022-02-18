@@ -1,10 +1,10 @@
 [SddmGreeterTheme]
-Name=breeze
+Name=pearOS
 Description=macOS Inspired login theme :)
 Author=alxb421, fork of Marian Alexander Arlt's theme
 License=GPL-3.0-or-later
 Type=sddm-theme
-Version=10.15
+Version=22.02
 Website=https://github.com/MarianArlt/kde-plasma-chili
 Screenshot=Preview.png
 MainScript=Main.qml
