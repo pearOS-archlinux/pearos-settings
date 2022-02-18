@@ -11,7 +11,7 @@ X-Plasma-MainScript=ui/main.qml
 X-Plasma-Provides=org.kde.plasma.launchermenu
 
 X-KDE-PluginInfo-Author=Hachikoha
-X-KDE-PluginInfo-Name=xyz.pearos.xyz
+X-KDE-PluginInfo-Name=xyz.pearos.launchpad
 X-KDE-PluginInfo-Version=0.1
 X-KDE-PluginInfo-Category=Application Launchers
 X-KDE-PluginInfo-Depends=
