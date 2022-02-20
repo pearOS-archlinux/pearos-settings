@@ -1,6 +1,6 @@
 [KFileDialog Settings]
-Recent Files[$e]=launchpad.svg,file:///usr/share/extras/launchpad.svg
-Recent URLs[$e]=file:///usr/share/extras/
+Recent Files[$e]=launchpad.svg,file:$HOME/Desktop/pearOS_NiceC0re_Layout - 2.layout.latte,file:///usr/share/extras/launchpad.svg
+Recent URLs[$e]=file:///usr/share/extras/,file:$HOME/Desktop/
 detailViewIconSize=16
 
 [KPropertiesDialog]
