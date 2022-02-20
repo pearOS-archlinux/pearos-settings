@@ -2,7 +2,7 @@
 Name=pearOS Menu
 Comment=Pear menu, based on Kpple Menu
 Type=Service
-Icon=file:///usr/share/extras/pearlogo.svg
+Icon=file:///usr/share/extras/drawing-black.svg
 X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
