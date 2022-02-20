@@ -103,7 +103,7 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [General]
-ColorScheme=pearOS
+ColorScheme=pearOS-dark
 Name=pearOS
 font=pearOS-Font,10,-1,5,50,0,0,0,0,0
 menuFont=pearOS-Font,10,-1,5,25,0,0,0,0,0,Light
