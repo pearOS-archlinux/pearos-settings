@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="399">
+  <name>Better inline clock</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>marianarlt</author>
+  <homepage>https://store.kde.org/p/1245902</homepage>
+  <licence></licence>
+  <version>3.1</version>
+  <rating>82</rating>
+  <downloads>183036</downloads>
+  <installedfile>/home/liveuser/.local/share/plasma/plasmoids/org.kde.plasma.betterinlineclock</installedfile>
+  <id>1245902</id>
+  <releasedate>2020-06-23</releasedate>
+  <summary>The hottest clock around!&lt;br />
+· Formats not found in any other clock, including custom!&lt;br />
+· Disable the separator with a simple check box!&lt;br />
+· Option for manual font size!&lt;br />
+· Correctly calculated width at any time and date!&lt;br />
+· Manual spacing and offsetting!&lt;br />
+·...</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/44/96/51/1245902/2e3d478b3cdfe43f6c902d3c667f6e43060d.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/44/96/51/1245902/2e3d478b3cdfe43f6c902d3c667f6e43060d.png</previewBig>
+  <payload>https://dl3.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1OTI5NjY2NTUiLCJvIjoiMSIsInMiOiIyODViYWI2NTcyNjRiNThjYjMwYWM0ZmYwM2E4ZTQ3YTJiMGVkMmM3ZDU5OTk1YTZhMGU3MWYzMzU1ZjlhZWYzNWFjNDk2ZmZkZWQ4MjNhNDBlZWI5ZmYyZTJjNGQ3MjUyOGJhYjRhYTIzZjFjNzhkZDI0ZjFmZDI3MTc0ZDc0NiIsInQiOjE2NDUzODE0MzEsInN0ZnAiOm51bGwsInN0aXAiOiIxNzguMTM4Ljk4LjI0NiJ9.O3NR6pGiWc3EglruXw98mrMWwDTMCgVdLopPY4tSyYU/betterinlineclock.tar.gz</payload>
+  <tags>clock,plasma##majorversion=5,plasmoid,plasma,kde,extension,gplv3,modification-product,linux,widget,unix</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="425">
+  <name>Mac OSX Inline Battery</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>polunom</author>
+  <homepage>https://store.kde.org/p/1262649</homepage>
+  <licence></licence>
+  <version>5</version>
+  <rating>74</rating>
+  <downloads>67483</downloads>
+  <installedfile>/home/liveuser/.local/share/plasma/plasmoids/org.kde.plasma.inlineBattery</installedfile>
+  <id>1262649</id>
+  <releasedate>2018-09-20</releasedate>
+  <summary>Inline battery widget for your top Plasma panel.&lt;br />
+Features:&lt;br />
+• Indicators for charging, uncharging, and low battery&lt;br />
+• Fully customizable settings</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/51/24/92/1262649/bfe097af97eceba4bdbe4e1e89af4cf7ad3d.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/51/24/92/1262649/bfe097af97eceba4bdbe4e1e89af4cf7ad3d.png</previewBig>
+  <payload>https://dl3.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NDIwNjEzNDUiLCJvIjoiMSIsInMiOiI0N2UxNTJhMDJjYTAyMjJlODcxZThhMGJkNmU4ZTM0NjU0MzhiYmUyYjFjOGUxOTczMDY4MmUzY2NlNWMzMmNkMzg3OTg5ZTY3MjEzMTA3NmJlNWU1MTU2NzU1MzA4NDU4MGJjNTYwNTY4NDQ2N2I2ODM2NDYwZTJjMGI0NTNlNiIsInQiOjE2NDUzODE1OTEsInN0ZnAiOm51bGwsInN0aXAiOiIxNzguMTM4Ljk4LjI0NiJ9.h51Apnb5PTJxgyUaJP5g7gTL4QzeSRs54a6y4NRHPPw/org.kde.plasma.inlineBattery.tar.gz</payload>
+  <tags>battery,mac,macos,linux,monitoring,kde,extension,gplv3,inline,osx,plasma##majorversion=5,plasma,arm64,widget,arch-package,unix</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="425">
+  <name>Big Sur - Inline Battery</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>fkorpsvart</author>
+  <homepage>https://store.kde.org/p/1402942</homepage>
+  <licence></licence>
+  <version>3.0</version>
+  <rating>75</rating>
+  <downloads>47047</downloads>
+  <installedfile>/home/liveuser/.local/share/plasma/plasmoids/org.kde.plasma.bigSur-inlineBattery</installedfile>
+  <id>1402942</id>
+  <releasedate>2020-08-02</releasedate>
+  <summary>&lt;strong>mcOS BS Inline Battery&lt;/strong>&lt;br />
+&lt;br />
+&lt;strong>&lt;em>This is a fork of Kelvin Zhang's original Mac OSX Inline Battery.&lt;/em>&lt;/strong>&lt;br />
+&lt;br />
+Subtle changes that makes a big difference. I have made small modifications to make the battery icon look like the new macOS Big Sur, with...</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/100x100-0/img/00/00/50/03/00/1402942/6736dd6a8082fabb9eca0aa8ef2f6f891e081f70fc97a8f02065d67755e33bf138fc.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-0/img/00/00/50/03/00/1402942/6736dd6a8082fabb9eca0aa8ef2f6f891e081f70fc97a8f02065d67755e33bf138fc.png</previewBig>
+  <payload>https://dl3.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1OTYzOTc0ODIiLCJvIjoiMSIsInMiOiIzOGE4ZjNjNGFlMzdkN2ZjNzE1Y2VkNWMzODNhMTA1NTU5ZWE5MzE4ZGQ5NTA3NDY1ZDYyOTBkMTU5MmM2ZWJiYzU4OTY3ZDNjMTgzNWFkNjUyZjFlY2I3OGJhOWI0MGE5ZGNmYThlNGZlY2RiMTZhMzgxODgwMDk0YjQzZDFlNSIsInQiOjE2NDUzODE1NjAsInN0ZnAiOm51bGwsInN0aXAiOiIxNzguMTM4Ljk4LjI0NiJ9.y7yt01Q2oTA7IuW7iubLa3HvMw1eu2__gsTaCZFipm0/org.kde.plasma.bigSur-inlineBattery.tar.gz</payload>
+  <tags>unix,widget,plasma,plasma##majorversion=5,cc-by-sa,big,big-sur,kde,latte-dock,monitoring,macos,linux,extension</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
