@@ -10,7 +10,7 @@
       <default>false</default>
     </entry>
     <entry name="aboutThisComputerSettings" type="String">
-      <default>/usr/bin/sysoverview</default>
+      <default>/usr/bin/system-overview</default>
     </entry>
     <entry name="systemPreferencesSettings" type="String">
       <default>systemsettings5</default>
