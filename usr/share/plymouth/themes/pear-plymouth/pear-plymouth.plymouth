@@ -1,8 +1,0 @@
-[Plymouth Theme]
-Name=pear-plymouth
-Description=Default pearOS plymouth theme
-ModuleName=script
-
-[script]
-ImageDir=/usr/share/plymouth/themes/pear-plymouth
-ScriptFile=/usr/share/plymouth/themes/pear-plymouth/pear-plymouth.script

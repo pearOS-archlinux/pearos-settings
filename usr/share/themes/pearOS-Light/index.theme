@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=pearOS-Light
+Comment=pearOS GTK Theme Light
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=pearOS-Light
+MetacityTheme=pearOS-Light
+IconTheme=pearOS
+CursorTheme=pearOS-cursors
+ButtonLayout=close,minimize,maximize:menu
+

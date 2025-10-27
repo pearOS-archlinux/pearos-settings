@@ -1,0 +1,13 @@
+[SddmGreeterTheme]
+Name=pearOS SDDM Dark
+Description=pearOS SDDM Dark
+Author=Alexandru Balan
+Copyright=(c) 2025, Pear Software and Services S.R.L.
+License=PPLv2
+Type=sddm-theme
+Version=1.0
+Screenshot=screenshot.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=pearos-sddm
+QtVersion=6

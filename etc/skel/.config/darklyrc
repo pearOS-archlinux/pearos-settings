@@ -1,0 +1,12 @@
+[Common]
+CornerRadius=8
+
+[Style]
+DolphinSidebarOpacity=80
+TabBarAltStyle=true
+TabBarDrawCenteredTabs=true
+TabDrawHighlight=true
+TabUseHighlightColor=true
+TransparentDolphinView=true
+UnifiedTabBarKonsole=true
+WidgetToolBarShadow=true

@@ -1,0 +1,13 @@
+[SddmGreeterTheme]
+Name=pearOS SDDM
+Description=pearOS SDDM 2025.10.27
+Author=Alexandru Balan
+Copyright=(c) 2025, Pear Software and Services
+License=PPLv2
+Type=sddm-theme
+Version=1.0
+Screenshot=screenshot.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=pearos-sddm
+QtVersion=6

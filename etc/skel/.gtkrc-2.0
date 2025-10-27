@@ -1,11 +1,15 @@
 gtk-enable-animations=1
-gtk-primary-button-warps-slider=0
+gtk-theme-name="pearOS-Light"
+gtk-primary-button-warps-slider=1
 gtk-toolbar-style=3
 gtk-menu-images=1
 gtk-button-images=1
+gtk-cursor-blink-time=1000
+gtk-cursor-blink=1
 gtk-cursor-theme-size=24
 gtk-cursor-theme-name="pearOS-cursors"
-gtk-icon-theme-name="pearOS"
-gtk-font-name="pearOS-Font,  10"
+gtk-sound-theme-name="ocean"
+gtk-icon-theme-name="pearOS-light"
+gtk-font-name="Sen,  10"
 
 gtk-modules=appmenu-gtk-module

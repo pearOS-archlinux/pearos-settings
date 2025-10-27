@@ -3,6 +3,3 @@ autoload=false
 
 [Module-device_automounter]
 autoload=false
-
-[PlasmaBrowserIntegration]
-shownCount=4

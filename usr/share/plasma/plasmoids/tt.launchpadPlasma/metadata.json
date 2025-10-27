@@ -1,0 +1,22 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "taylan@tatli.me",
+        "Name": "Taylan Tatlı"
+      }
+    ],
+    "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Application%20Menu%20(Kicker)",
+    "Category": "Application Launchers",
+    "Description": "Modified Launchpad Plasma - Configurable grid of application icons without favorites panel.",
+    "EnabledByDefault": true,
+    "Icon": "start-here-kde",
+    "Id": "tt.launchpadPlasma",
+    "License": "GPL-2.0+",
+    "Name": "Launchpad Plasma Mod",
+    "Website": "https://kde.org/plasma-desktop"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-Provides": ["org.kde.plasma.launchermenu"]
+}
