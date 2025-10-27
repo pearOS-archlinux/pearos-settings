@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=pearOS-Dark
+Comment=pearOS Dark GTK Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=pearOS-Dark
+MetacityTheme=pearOS-Dark
+IconTheme=pearOS-Dark
+CursorTheme=pearOS-cursors
+ButtonLayout=close,minimize,maximize:menu
+
