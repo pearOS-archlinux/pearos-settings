@@ -6,7 +6,7 @@
   </linearGradient>
   <linearGradient id="linearGradient898" x1="7.906" x2="7.906" y1="15" y2="28.077" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
-   <stop stop-color="#363636" offset="1"/>
+   <stop stop-color="#f2f2f2" offset="1"/>
   </linearGradient>
  </defs>
  <path d="M14.98 3A10 10 0 0 0 5 13a10 10 0 0 0 10 10h9a7 7 0 0 0 7-7 7 7 0 0 0-6.834-6.998A10 10 0 0 0 15 3a10 10 0 0 0-.02 0z" fill="url(#linearGradient852)"/>

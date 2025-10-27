@@ -1,0 +1,28 @@
+[Desktop Entry]
+Name=pearOS-dark
+Comment=Dark Theme for pearOS
+
+X-KDE-PluginInfo-Author=Alexandru Balan
+X-KDE-PluginInfo-Email=alex@pear-software.com
+X-KDE-PluginInfo-Name=pearOS-Dark
+X-KDE-PluginInfo-Version=2025.10.27
+X-KDE-PluginInfo-Website=https://pearos.xyz
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-License=PPL-2.0
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=5.0
+
+[Wallpaper]
+defaultWallpaperTheme=pearOS-Dark
+defaultFileSuffix=.jpg
+defaultWidth=3840
+defaultHeight=2160
+
+[ContrastEffect]
+enabled=false
+contrast=0.2
+intensity=1.4
+saturation=10
+
+[AdaptiveTransparency]
+enabled=true

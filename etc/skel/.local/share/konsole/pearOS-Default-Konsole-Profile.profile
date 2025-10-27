@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=BlackOnWhite
+ColorScheme=WhiteOnBlack
 
 [General]
 Command=/bin/zsh

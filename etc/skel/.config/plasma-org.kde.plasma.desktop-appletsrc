@@ -37,7 +37,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=
 
 [Containments][27][Applets][82][Configuration]
-PreloadWeight=70
+PreloadWeight=75
 activityId=
 formfactor=0
 immutability=1
@@ -230,17 +230,17 @@ colorCards=39,174,96
 coverByNetwork=true
 currentNameColor=Negative
 darkTheme=xyz.pearos.pearOS-Dark
-elements=9,0,10,11,19,20,26,28,25,23,13
+elements=16,11,13,6,7,2,8
 index_themes=[12,0,17,15,9,10,13,14,8,5],[16,11,13,6,7,2,8],[16,0,20,19,21,8,11,13,14,5],[12,15,9,10,13,14,8,5,21,11,25,4,1]
 lightTheme=xyz.pearos.pearOS-Light
 names_themes=Default,macOS,iOS,tahoe
 nightMode=true
-selected_theme=Custom
+selected_theme=macOS
 seriesX_themes=[0,2,0,0,2,2,0,1,2,3],[0,2,2,0,0,0,3],[0,2,3,2,0,1,0,0,1,2],[0,0,2,2,0,1,2,3,0,2,1,0,2]
 seriesY_themes=[0,0,1,2,2,3,4,4,4,4],[0,0,1,2,3,4,1],[0,0,2,2,2,2,3,4,4,4],[0,2,2,3,4,4,4,4,5,5,5,1,0]
 shadowOpacity=10
-xElements=0,2,0,0,0,1,2,2,3,2,3
-yElements=0,0,1,2,3,3,2,3,2,4,4
+xElements=0,2,2,0,0,0,3
+yElements=0,0,1,2,3,4,1
 
 [Containments][3][Applets][7]
 immutability=1
@@ -424,7 +424,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][3][Applets][8][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 SystrayContainmentId=64
 
 [Containments][3][Applets][8][General]
@@ -501,7 +501,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][64][Applets][77][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][64][Applets][78][Configuration]
 PreloadWeight=42
@@ -541,14 +541,14 @@ DialogWidth=720
 [Containments][88][General]
 alignment=1
 arrangement=1
-positions={"1920x1080":["1","8","desktop:/system_install.desktop","0","1"]}
+positions={"1920x1080":["1","8","desktop:/plasma","0","1","desktop:/icons","0","2","desktop:/system_install.desktop","0","0"]}
 sortMode=-1
 
 [Containments][88][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/ColdRipple/
-PreviewImage=/usr/share/wallpapers/ColdRipple/
+Image=file://pearOS-dark
+PreviewImage=/home/liveuser/.local/share/wallpapers/pearOS-dark/default.jpg
 SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df
+screenMapping=desktop:/icons,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/plasma,0,9523a99b-c5cf-47c8-9b19-f504b9adb295

@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=pearOS
-Comment=Default pearOS NiceCore icon pack
-Inherits=Numix-Circle-Light,Adwaita,hicolor
+Comment=pearOS icon theme
+Inherits=hicolor,breeze
 Example=folder
 
 # KDE/Plasma Stuff

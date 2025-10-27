@@ -3,4 +3,4 @@ NaturalScroll=false
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
-cursorTheme=pearOS
+cursorTheme=pearOS-dark
