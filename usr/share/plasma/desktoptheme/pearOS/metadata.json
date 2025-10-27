@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alex@pear-software.com",
+                "Name": "Pear Software and Services"
+            }
+        ],
+        "Category": "Plasma 6.0 theme",
+        "Description": "pearOS Light theme",
+        "EnabledByDefault": true,
+        "Id": "pearOS",
+        "License": "GPL-3.0",
+        "Name": "pearOS-Light",
+        "Version": "6.2.0",
+        "Website": "https://pearos.xyz"
+    },
+    "X-Plasma-API": "5.0"
+}

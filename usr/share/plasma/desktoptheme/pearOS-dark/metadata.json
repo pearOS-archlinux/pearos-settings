@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alex@pear-software.com",
+                "Name": "Pear Software and Services"
+            }
+        ],
+        "Category": "Plasma 6.0 theme",
+        "Description": "pearOS Dark theme for NiceC0re",
+        "EnabledByDefault": true,
+        "Id": "pearOS-Dark",
+        "License": "PPL-2.0",
+        "Name": "pearOS-dark",
+        "Version": "2025.10.27",
+        "Website": "https://pearos.xyz"
+    },
+    "X-Plasma-API": "5.0"
+}

@@ -1,38 +1,37 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Sweet</name>
-	<author>Eliver Lara &lt;eliverlara@gmail&gt;</author>
-	<copyright>&#194;Eliver Lara, 2019</copyright>
-	<date>2019</date>
-	<description>Sweet window Theme</description>
+	<name>pearOS</name>
+	<author>Pear Software and Services</author>
+	<copyright>PPL-2.0+</copyright>
+	<date>2025.10.27</date>
+	<description>pearOS Metacity Theme</description>
 </info>
 
-
 <!-- CONSTANTS -->
-<constant name="C_titlebar" value="#fff" />
-<constant name="C_titlebar_unfocused" value="#fff" />
-<constant name="C_border_focused" value="#fff" />
-<constant name="C_border_unfocused" value="#fff" />
-<constant name="C_title_focused" value="#31363D" />
-<constant name="C_title_unfocused" value="#93979f" />
+<constant name="C_titlebar" value="#373737" />
+<constant name="C_titlebar_unfocused" value="#373737" />
+<constant name="C_border_focused" value="#373737" />
+<constant name="C_border_unfocused" value="#373737" />
+<constant name="C_title_focused" value="#f5f5f5" />
+<constant name="C_title_unfocused" value="#dedede" />
 
-<constant name="C_wm_button_background" value="#fc2" />
-<constant name="C_wm_button_foreground" value="#283141" />
-<constant name="C_wm_button_unfocused" value="#e6e8eb" />
+<constant name="C_wm_button_background" value="#dedede" />
+<constant name="C_wm_button_foreground" value="#dedede" />
+<constant name="C_wm_button_unfocused" value="#888888" />
 
-<constant name="C_close_button" value="#283141" />
-<constant name="C_maximize_button" value="#283141" />
-<constant name="C_restore_button" value="#283141" />
-<constant name="C_minimize_button" value="#283141" />
+<constant name="C_close_button" value="#f5685d" />
+<constant name="C_maximize_button" value="#a1ce6d" />
+<constant name="C_restore_button" value="#feee61" />
+<constant name="C_minimize_button" value="#feee61" />
 
 <!-- GEOMETRY -->
 
 <!-- Focused window -->
-<frame_geometry name="normal" title_scale="medium" rounded_top_left="4" rounded_top_right="4">
+<frame_geometry name="normal" title_scale="medium" rounded_top_left="2" rounded_top_right="2">
 	<distance name="left_width" value="1" />
 	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="3" />
+	<distance name="bottom_height" value="1" />
 	<distance name="left_titlebar_edge" value="5" />
 	<distance name="right_titlebar_edge" value="5" />
 	<distance name="title_vertical_pad" value="4" />
@@ -42,10 +41,10 @@
 </frame_geometry>
 
 <!-- Unfocused window -->
-<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="4" rounded_top_right="4" parent="normal" >
-	<distance name="left_width" value="0" />
-	<distance name="right_width" value="0" />
-	<distance name="bottom_height" value="0" />
+<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="2" rounded_top_right="2" parent="normal" >
+	<distance name="left_width" value="1" />
+	<distance name="right_width" value="1" />
+	<distance name="bottom_height" value="1" />
 	<distance name="left_titlebar_edge" value="5"/>
 	<distance name="right_titlebar_edge" value="5"/>
 	<distance name="title_vertical_pad" value="4" />
@@ -105,7 +104,7 @@
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
-	<distance name="title_vertical_pad" value="0" />
+	<distance name="title_vertical_pad" value="8" />
 	<border name="title_border" left="0" right="0" top="0" bottom="0" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
@@ -212,171 +211,195 @@
 
 <draw_ops name="border_right_unfocused">
 	<line
-		x1="width-1" y1="0"
-		x2="width-1" y2="height"
+		x1="width-1" y1="0" 
+		x2="width-1" y2="height" 
 		color="C_border_unfocused" />
 </draw_ops>
 
 <draw_ops name="border_left_focused">
 	<line
-		x1="0" y1="0"
-		x2="0" y2="height"
+		x1="0" y1="0" 
+		x2="0" y2="height" 
 		color="C_border_focused" />
 </draw_ops>
 
 <draw_ops name="border_left_unfocused">
 	<line
-		x1="0" y1="0"
-		x2="0" y2="height"
+		x1="0" y1="0" 
+		x2="0" y2="height" 
 		color="C_border_unfocused" />
 </draw_ops>
 
-<!-- BUTTON ICONS -->
+<!-- ::: BUTTON ICONS ::: -->
 <!-- note: negative values in x or y causes gnome-shell to crash -->
-
-<!-- Close icon -->
+<!-- close icon -->
 <draw_ops name="close_focused">
-	<image filename="close_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-close.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="close_focused_prelight">
-	<image filename="close_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-close-hover.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="close_focused_pressed">
-	<image filename="close_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-close-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="close_unfocused">
-	<image filename="close_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="close_unfocused_prelight">
-	<image filename="close_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-close-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="close_unfocused_pressed">
-	<image filename="close_unfocused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-close-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
-
-<!-- Maximize icon -->
+<!-- maximize icon -->
 <draw_ops name="maximize_focused">
-	<image filename="maximize_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-maximize.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="maximize_focused_prelight">
-	<image filename="maximize_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-maximize-hover.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="maximize_focused_pressed">
-	<image filename="maximize_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-maximize-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="maximize_unfocused">
-	<image filename="maximize_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="maximize_unfocused_prelight">
-	<image filename="maximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-maximize-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="maximize_unfocused_pressed">
-	<image filename="maximize_unfocused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-maximize-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
-<!-- Unmaximize icon -->
+<!-- unmaximize icon -->
 <draw_ops name="unmaximize_focused">
-	<image filename="unmaximize_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-maximize.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unmaximize_focused_prelight">
-	<image filename="unmaximize_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unmaximize-hover.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unmaximize_focused_pressed">
-	<image filename="unmaximize_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unmaximize-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unmaximize_unfocused">
-	<image filename="unmaximize_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unmaximize_unfocused_prelight">
-	<image filename="unmaximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unmaximize-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unmaximize_unfocused_pressed">
-	<image filename="unmaximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unmaximize-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
-
-<!-- Minimize icon -->
+<!-- minimize icon -->
 <draw_ops name="minimize_focused">
-	<image filename="minimize_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
-</draw_ops>
-<draw_ops name="minimize_focused_prelight">
-	<image filename="minimize_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
-</draw_ops>
-<draw_ops name="minimize_focused_pressed">
-	<image filename="minimize_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
-</draw_ops>
-<draw_ops name="minimize_unfocused">
-	<image filename="minimize_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
-</draw_ops>
-<draw_ops name="minimize_unfocused_prelight">
-	<image filename="minimize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
-</draw_ops>
-<draw_ops name="minimize_unfocused_pressed">
-	<image filename="minimize_unfocused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-minimize.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
+<draw_ops name="minimize_focused_prelight">
+	<image filename="titlebuttons/titlebutton-minimize-hover.svg" x="0" y="1" width="object_width" height="object_height" />
+</draw_ops>
+
+<draw_ops name="minimize_focused_pressed">
+	<image filename="titlebuttons/titlebutton-minimize-active.svg" x="0" y="1" width="object_width" height="object_height" />
+</draw_ops>
+
+<draw_ops name="minimize_unfocused">
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
+</draw_ops>
+
+<draw_ops name="minimize_unfocused_prelight">
+	<image filename="titlebuttons/titlebutton-minimize-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
+</draw_ops>
+
+<draw_ops name="minimize_unfocused_pressed">
+	<image filename="titlebuttons/titlebutton-minimize-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
+</draw_ops>
 
 <!-- Menu icon -->
 <draw_ops name="menu_focused">
-	<image filename="menu_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-menu.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 <draw_ops name="menu_focused_prelight">
-	<image filename="menu_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-menu-hover.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 <draw_ops name="menu_focused_pressed">
-	<image filename="menu_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-menu-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 <draw_ops name="menu_unfocused">
-	<image filename="menu_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 <draw_ops name="menu_unfocused_prelight">
-	<image filename="menu_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-menu-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 <draw_ops name="menu_unfocused_pressed">
-	<image filename="menu_unfocused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-menu-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
-
-<!-- Shade icon -->
+<!-- shade icon -->
 <draw_ops name="shade_focused">
-	<image filename="shade_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-shade.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="shade_focused_prelight">
-	<image filename="shade_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-shade-hover.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="shade_focused_pressed">
-	<image filename="shade_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-shade-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="shade_unfocused">
-	<image filename="shade_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="shade_unfocused_prelight">
-	<image filename="shade_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-shade-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="shade_unfocused_pressed">
-	<image filename="shade_unfocused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-shade-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
-
-<!-- Unshade icon -->
+<!-- unshade icon -->
 <draw_ops name="unshade_focused">
-	<image filename="unshade_focused_normal.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unshade.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unshade_focused_prelight">
-	<image filename="unshade_focused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unshade-hover.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unshade_focused_pressed">
-	<image filename="unshade_focused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unshade-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unshade_unfocused">
-	<image filename="unshade_unfocused.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unshade_unfocused_prelight">
-	<image filename="unshade_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unshade-backdrop.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
+
 <draw_ops name="unshade_unfocused_pressed">
-	<image filename="unshade_unfocused_pressed.png" x="0" y="2" width="object_width" height="object_height" />
+	<image filename="titlebuttons/titlebutton-unshade-backdrop-active.svg" x="0" y="1" width="object_width" height="object_height" />
 </draw_ops>
 
 
@@ -455,9 +478,9 @@
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_focused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_focused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_focused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_focused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_focused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed" />
@@ -488,9 +511,9 @@
 	<button function="close" state="normal" draw_ops="close_unfocused" />
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_unfocused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_unfocused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_unfocused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_unfocused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_unfocused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_unfocused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed" />
@@ -521,9 +544,9 @@
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_focused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_focused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_focused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_focused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_focused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed" />
@@ -555,9 +578,9 @@
 	<button function="close" state="normal" draw_ops="close_unfocused" />
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_unfocused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_unfocused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_unfocused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_unfocused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_unfocused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_unfocused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed" />
@@ -580,7 +603,7 @@
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="dialog_focused" geometry="normal">
+<frame_style name="dialog_focused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
 	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
@@ -614,7 +637,7 @@
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="dialog_unfocused" geometry="normal_unfocused">
+<frame_style name="dialog_unfocused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
 	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />

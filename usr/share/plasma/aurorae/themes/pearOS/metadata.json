@@ -1,0 +1,25 @@
+{
+    "KPackageStructure": "aurorae",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alex@pear-software.com",
+                "Name": "Pear Software and Services"
+            }
+        ],
+        "Category": "Plasma 6 Window Decorations",
+        "ServiceTypes": [
+            "aurorae"
+        ],
+        "EnabledByDefault": true,
+        "Name": "pearOS",
+        "Description" : "pearOS-Light window decorations",
+        "Id": "pearOS-Light",
+        "Version": "2025.10.27",
+        "License": "PPLv2",
+        "X-KDE-PluginInfo-blur": false,
+        "X-KPackage-Dependencies": [
+        ]
+    }
+}
+

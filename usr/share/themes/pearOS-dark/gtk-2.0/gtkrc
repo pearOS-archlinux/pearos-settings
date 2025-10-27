@@ -1,31 +1,26 @@
+gtk-color-scheme = "base_color: #242424"
+gtk-color-scheme = "text_color: #dedede"
+gtk-color-scheme = "bg_color: #333333"
+gtk-color-scheme = "fg_color: #dedede"
+gtk-color-scheme = "tooltip_bg_color: #2a2a2a"
+gtk-color-scheme = "tooltip_fg_color: #dedede"
+gtk-color-scheme = "selected_bg_color: #0860f2"
+gtk-color-scheme = "selected_fg_color: #ffffff"
+gtk-color-scheme = "insensitive_bg_color: #2a2a2a"
+gtk-color-scheme = "insensitive_fg_color: #565656"
+gtk-color-scheme = "insensitive_button_fg_color: #565656"
+gtk-color-scheme = "notebook_bg: #242424"
+gtk-color-scheme = "dark_sidebar_bg: #3b3b3b"
+gtk-color-scheme = "link_color: #5294e2"
+gtk-color-scheme = "menu_bg: #333333"
+gtk-color-scheme = "menu_fg: #dedede"
 
-# Text/base colors
-gtk-color-scheme = "text_color:#31363D\nbase_color:#ebf0f5"
-# Foreground/background colors
-gtk-color-scheme = "fg_color:#31363d\nbg_color:#e6e6e6"
-# Selection colors
-gtk-color-scheme = "selected_fg_color:#fefefe\nselected_bg_color:#00D3A7"
-# Tooltip colors
-gtk-color-scheme = "tooltip_fg_color:#ffffff\ntooltip_bg_color:#000000"
-# Window colors
-gtk-color-scheme = "wm_color:#31363d\nunfocused_wm_color:#31363d"
-# Panel colors
-gtk-color-scheme = "panel_bg_color:#000000\npanel_fg_color:#ffffff"
-# Dark Theme - Text/base colors
-gtk-color-scheme = "dark_text_color:#fefefe\ndark_base_color:#505359"
-# Dark Theme - Foreground/background colors
-gtk-color-scheme = "dark_fg_color:#31363d\ndark_bg_color:#e6e6e6"
-gtk-color-scheme = "sidebar_bg:#222e39"
-gtk-color-scheme = "sidebar_fg:#98abb2"
+gtk-icon-sizes = "gtk-button=16,16" # This makes button icons smaller.
 gtk-auto-mnemonics = 1
 gtk-primary-button-warps-slider = 1
 
 include "main.rc"
-
-# App stylings
-include "apps/chrome.rc"
-include "apps/gimp.rc"
-include "apps/libreoffice.rc"
-include "apps/terminal.rc"
-include "apps/thunar.rc"
-include "apps/xfce.rc"
+include "apps.rc"
+include "panel.rc"
+include "xfce-notify.rc"
+include "menubar-toolbar.rc"
