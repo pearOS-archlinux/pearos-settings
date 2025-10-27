@@ -1,3 +1,6 @@
+[PlasmaTransientsConfig]
+PreloadWeight=2
+
 [PlasmaViews][Panel 2]
 floating=1
 panelLengthMode=1
@@ -36,12 +39,14 @@ thickness=44
 alignment=1
 floating=0
 floatingApplets=1
+panelLengthMode=0
+panelOpacity=2
 
 [PlasmaViews][Panel 3][Defaults]
 maxLength=1536
 minLength=1536
 offset=0
-thickness=34
+thickness=32
 
 [PlasmaViews][Panel 3][Horizontal1920]
 maxLength=1536

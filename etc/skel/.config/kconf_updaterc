@@ -51,7 +51,7 @@ mtime=1644937206
 [gtkconfig.upd]
 ctime=1614756297
 done=gtk_theme,dont_use_gtk_css_for_window_decorations,remove_deprecated_gtk4_option
-mtime=1644938306
+mtime=1751990549
 
 [gwenview.upd]
 ctime=1614585974
@@ -70,7 +70,7 @@ mtime=1611951964
 
 [kcalcrc.upd]
 ctime=1614756296
-mtime=1612091452
+mtime=1757424577
 
 [kcm_rename_plasma_desktop.upd]
 done=5.24PlasmaDesktopKCMRename
@@ -142,8 +142,8 @@ mtime=1644938657
 
 [kwin.upd]
 ctime=1614756305
-done=replace-scalein-with-scale,port-minimizeanimation-effect-to-js,port-scale-effect-to-js,port-dimscreen-effect-to-js,auto-bordersize,animation-speed,desktop-grid-click-behavior,no-swap-encourage,make-translucency-effect-disabled-by-default,remove-flip-switch-effect,remove-cover-switch-effect,remove-cubeslide-effect,remove-xrender-backend,enable-scale-effect-by-default
-mtime=1644936698
+done=replace-scalein-with-scale,port-minimizeanimation-effect-to-js,port-scale-effect-to-js,port-dimscreen-effect-to-js,auto-bordersize,animation-speed,desktop-grid-click-behavior,no-swap-encourage,make-translucency-effect-disabled-by-default,remove-flip-switch-effect,remove-cover-switch-effect,remove-cubeslide-effect,remove-xrender-backend,enable-scale-effect-by-default,kwin-6.0-reset-active-mouse-screen,kwin-6.0-delete-desktop-switching-shortcuts,kwin-6.0-remove-breeze-tabbox-default,kwin-6.1-remove-gridview-expose-shortcuts
+mtime=1756810827
 
 [kwinrules.upd]
 ctime=1614756305
@@ -168,6 +168,10 @@ ctime=1615378531
 done=messageviewer_move_gravatar
 mtime=1613121260
 
+[migrate-calendar-to-plugin-id.upd]
+done=kwin-6.1-remove-gridview-expose-shortcuts,migrate-calendar-plugins
+mtime=1758884595
+
 [okular.upd]
 ctime=1612192765
 done=annotation-toolbar,builtin-annotations
@@ -178,10 +182,38 @@ ctime=1614495507
 done=pimsettingexporter-15.08-kickoff
 mtime=1611952045
 
+[plasma-systemmonitor.upd]
+done=migrate-calendar-plugins,memory-column
+mtime=1751992143
+
+[plasma6.0-remove-dpi-settings.upd]
+done=memory-column,plasma6.0-remove-dpi-settings
+mtime=1758884595
+
+[plasma6.0-remove-old-shortcuts.upd]
+done=plasma6.0-remove-dpi-settings,plasma6.0-remove-old-shortcuts
+mtime=1758884595
+
+[plasma6.3-update-clipboard-database-2-to-3.upd]
+done=plasma6.0-remove-old-shortcuts,plasma6.3-update-clipboard-database-2-to-3
+mtime=1758884595
+
+[plasmashell-6.0-keep-custom-position-of-panels.upd]
+done=plasma6.3-update-clipboard-database-2-to-3,plasmashell-6.0-keep-custom-position-of-panels
+mtime=1758884595
+
+[plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd]
+done=plasmashell-6.0-keep-custom-position-of-panels,plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
+mtime=1758884595
+
 [sieveeditor.upd]
 ctime=1614495507
 done=sieveeditor-15.08-kickoff
 mtime=1611952059
+
+[spectacle.upd]
+done=plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels,24.02.0-video_format,24.02.0-keep_old_save_location,24.02.0-rename_settings,24.02.0-keep_old_filename_templates,24.05.2-change_placeholder_format
+mtime=1751992658
 
 [spectacle_newConfig.upd]
 ctime=1614585978

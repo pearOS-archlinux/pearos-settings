@@ -4,3 +4,6 @@ State=AAAA/wAAAAD9AAAAAAAAA/wAAAK8AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG
 ToolBarsMovable=Disabled
 eDP-1 XPosition 1920x1080=450
 eDP-1 YPosition 1920x1080=217
+
+[systemsettings_sidebar_mode]
+HighlightNonDefaultSettings=true

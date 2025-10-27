@@ -6,6 +6,7 @@ Show Full Path in Title=false
 Show Menu Bar=true
 Show Status Bar=true
 Show Tab Bar=true
+Show Url Nav Bar=true
 
 [KTextEditor Document]
 Allow End of Line Detection=true
@@ -112,6 +113,7 @@ ColorScheme=
 [filetree]
 editShade=178,188,247
 listMode=false
+middleClickToClose=false
 shadingEnabled=true
 showCloseButton=false
 showFullPathOnRoots=false

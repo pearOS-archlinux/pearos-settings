@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE khotnewstuff3>
 <hotnewstuffregistry>
- <stuff category="121">
-  <name>McMojave LAF</name>
-  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+ <stuff category="488">
+  <name>Apple Splash dinamic</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>zayronXIO</author>
+  <homepage>https://store.kde.org/p/2218598</homepage>
+  <licence></licence>
+  <version>1.3.3</version>
+  <rating>50</rating>
+  <downloads>1</downloads>
+  <installedfile>/home/liveuser/.local/share/plasma/look-and-feel/AppleSplash/</installedfile>
+  <id>2218598</id>
+  <releasedate>2025-10-19</releasedate>
+  <summary>&lt;p>Splash screen with a macos-like appearance that follows the user's wallpaper&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/24/01/13/2218598/image10.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/24/01/13/2218598/image10.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc2MDg5NjAyNiwibyI6IjEiLCJzIjoiYzExNzI0YjhmMGFhZjA3MGExODAyMzQzYmE4ZWY4Nzg3OWU5MTU2ZjgwZTUwYzhmMjQwZDBhMDExYjEwMGU1ZmJiZTI1MTU0NmJlYmI0NTE0Nzk2ZTNiNjU2Y2Q3NTFlM2MzY2RhYmQxOTBkMWI3OTc5NTgyN2Q3ZDk1MTM5YzEiLCJ0IjoxNzYxNTUxMDg3LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.69DevZNDO2a3OUx0-VgyRvjiNjjP_jMtPwvrNBqsxgE/AppleSplash.tar.xz</payload>
+  <tags>splashscreen,theme,unix,original-product,plasma,plasma##majorversion=5,kde,linux,macos,agplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="722">
+  <name>Apple MacOS [WhiteSur-Dark]</name>
+  <providerid>api.kde-look.org</providerid>
   <author>vinceliuice</author>
-  <homepage>https://store.kde.org/p/1310500</homepage>
+  <homepage>https://store.kde.org/p/1400424</homepage>
   <licence></licence>
   <version></version>
-  <rating>78</rating>
-  <downloads>108108</downloads>
-  <installedfile>/home/pear/.local/share/plasma/look-and-feel/com.github.vinceliuice.McMojave</installedfile>
-  <id>1310500</id>
-  <releasedate>2020-07-09</releasedate>
-  <summary>McMojave kde is a MacOSX Mojave like theme for KDE Plasma desktop.&lt;br />
--------------------------&lt;br />
-You can use this with:&lt;br />
--------------------------&lt;br />
-&lt;strong>- Aurorae Themes&lt;/strong>:&lt;br />
-&lt;a href="https://www.pling.com/p/1305005/" target="_blank"...</summary>
+  <rating>83</rating>
+  <downloads>615872</downloads>
+  <installedfile>/home/liveuser/.local/share/plasma/look-and-feel/com.github.vinceliuice.WhiteSur-dark/</installedfile>
+  <id>1400424</id>
+  <releasedate>2025-08-27</releasedate>
+  <summary>&lt;p>MacOS big sur theme for kde plasma&lt;br />-----------------------&lt;br />&lt;b>Kvantum theme:&lt;/b> &lt;a href="https://www.pling.com/p/1398841/">https://www.pling.com/p/1398841/&lt;/a>&lt;br />-----------------------&lt;br />&lt;b>Icon theme:&lt;/b> &lt;a href="https://www.pling.com/p/1405756/">https://www.pling.com/p/1405756/&lt;/a>&lt;br />-----------------------&lt;br />&lt;b>Cursors theme:&lt;/b> &lt;a href="https://www.pling.com/p/1355701/">https://www.pling.com/p/1355701/&lt;/a>&lt;br />-----------------------&lt;br />&lt;b>Wallpaper:&lt;/b> &lt;a href="https://www.pling.com/p/1398833/">https://www.pling.com/p/1398833/&lt;/a>&lt;/p></summary>
   <changelog></changelog>
-  <preview>https://cn.opendesktop.org/cache/100x100-0/img/f/0/e/0/ae11c36cac92aa4442f0130dd3711f293b79.png</preview>
-  <previewBig>https://cn.opendesktop.org/cache/770x540-0/img/f/0/e/0/ae11c36cac92aa4442f0130dd3711f293b79.png</previewBig>
-  <payload>https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1OTQzNTI0MDAiLCJvIjoiMSIsInMiOiIyOWQ1MDU0YzhiNmVlNGY2NGJkODAyNGFlZjNhY2RiZWFlZmUzODEwYzFlMTdkMDVkOWI1M2ZmYWU4MjBmYjY5NGM2NGViMzUwMTFjMGQ2OGE1YjY2NTE5ZDFkOTE3OWZiYjYxYjYzMDQ3MmI4Y2UwNzRiMGRhNGRjZDYxNWJjMSIsInQiOjE2MTQ1MDE2NTEsInN0ZnAiOm51bGwsInN0aXAiOiI4Ni4xMjAuMjI1Ljc2In0.5rISOPx1pYziWQBoWDXTGnpzjmF8FTzLi2ql2OH_cg0/01-com-20200710033447.github.vinceliuice.McMojave.tar.xz</payload>
-  <tags>gplv3,original-product,linux,unix,theme,kde,plasma,look-and-feel</tags>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1400424/3e7b3166dbee0a004ed4a44a7e17218fbb19.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1400424/3e7b3166dbee0a004ed4a44a7e17218fbb19.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc1NjMwMzc5MiwibyI6IjEiLCJzIjoiMmY0MzRmMjU0MGI5ZjA1NTE5Y2QwYzdlYTQ3OWRkNzQ3YTE1MjBmMjBiZTEwYjc0Yzc2YTE1NjU1YzkxMGJmZjYwMDc5YmQxODA2NTIzNGQzYmY4ZTlkZjcxZmUyYjc0ZTQ5NjM2NDY5NjM5M2UyNGI2MGM5ZTdlYTI1ZGI1NTgiLCJ0IjoxNzYxNTUyNDA1LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.-8TNiK2LScy58nNaijJLoDaHasMA4-3UshB59uIiEiY/com.github.vinceliuice.WhiteSur-dark.tar.gz</payload>
+  <tags>theme,unix,original-product,plasma,plasma##majorversion=6,kde,gplv3,linux</tags>
   <status>installed</status>
  </stuff>
 </hotnewstuffregistry>

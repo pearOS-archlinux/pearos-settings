@@ -23,27 +23,64 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][27][Applets][28][Configuration][General]
-launchers=applications:org.gnome.Nautilus.desktop,applications:firefox.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,applications:org.manjaro.pamac.manager.desktop,applications:systemsettings.desktop
+iconSpacing=0
+launchers=applications:org.gnome.Nautilus.desktop,applications:firefox.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,applications:systemsettings.desktop
+minimizeActiveTaskOnClick=false
 
-[Containments][27][Applets][29]
+[Containments][27][Applets][82]
+activityId=
+formfactor=0
 immutability=1
-plugin=p-connor.plasma-drawer
+lastScreen=-1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=
 
-[Containments][27][Applets][29][Configuration][ConfigDialog]
+[Containments][27][Applets][82][Configuration]
+PreloadWeight=70
+activityId=
+formfactor=0
+immutability=1
+lastScreen=-1
+location=0
+plugin=org.kde.plasma.folder
+popupHeight=388
+popupWidth=288
+wallpaperplugin=
+
+[Containments][27][Applets][82][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][27][Applets][29][Configuration][General]
-adaptiveSearchIconSize=true
-customButtonImage=view-app-grid
-searchIconSize=32
-searchRunners=krunner_services,krunner_systemsettings,krunner_recentdocuments,baloosearch,krunner_placesrunner,locations,krunner_bookmarksrunner,krunner_appstream,calculator,org.kde.datetime
-showSystemActions=false
-systemActionIconSize=32
+[Containments][27][Applets][82][Configuration][General]
+icon=bottles_wine-winefile
+locked=true
+positions={"":[],"1920x1080":[]}
+url=file:///home/liveuser/Downloads
+useCustomIcon=true
+
+[Containments][27][Applets][83]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][27][Applets][84]
+immutability=1
+plugin=tt.launchpadPlasma
+
+[Containments][27][Applets][84][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][27][Applets][84][Configuration][General]
+customButtonImage=/usr/share/extras/launchpad.svg
 useCustomButtonImage=true
 
+[Containments][27][Applets][86]
+immutability=1
+plugin=org.kde.plasma.trash
+
 [Containments][27][General]
-AppletOrder=29;28
+AppletOrder=84;28;83;82;86
 
 [Containments][3]
 activityId=
@@ -54,19 +91,6 @@ location=3
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][3][Applets][23]
-immutability=1
-plugin=org.kde.milou
-
-[Containments][3][Applets][23][Configuration]
-PreloadWeight=100
-popupHeight=34
-popupWidth=630
-
-[Containments][3][Applets][23][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
 [Containments][3][Applets][31]
 immutability=1
 plugin=org.latgardi.darwinmenu
@@ -76,10 +100,14 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][3][Applets][31][Configuration][General]
-appStoreCommand=pamac-manager
-fixedIconSize=28
+appStoreCommand=
+customButtonImage=/usr/share/extras/drawing.svg
+fixedIconSize=21
 iconSizePercent=95
+resizeIconToRoot=true
+useCustomButtonImage=true
 useFixedIconSize=true
+useRectangleButtonShape=false
 
 [Containments][3][Applets][31][Shortcuts]
 global=Meta+Alt+Esc
@@ -89,14 +117,6 @@ immutability=1
 plugin=org.kde.plasma.panelspacer
 
 [Containments][3][Applets][36][Configuration][General]
-expanding=false
-length=10
-
-[Containments][3][Applets][37]
-immutability=1
-plugin=org.kde.plasma.panelspacer
-
-[Containments][3][Applets][37][Configuration][General]
 expanding=false
 length=10
 
@@ -112,7 +132,7 @@ popupWidth=810
 [Containments][3][Applets][38][Configuration][Appearance]
 customDateFormat=
 dateFormat=custom
-enabledCalendarPlugins=alternatecalendar
+enabledCalendarPlugins=a,l,t,e,r,n,a,t,e,c,a,l,e,n,d,a,r,
 firstDayOfWeek=0
 fontFamily=SF Pro Display
 fontWeight=400
@@ -136,37 +156,24 @@ immutability=1
 plugin=com.github.antroids.application-title-bar
 
 [Containments][3][Applets][40][Configuration][Appearance]
-widgetButtonsAuroraeTheme=pearOS-Dark
+overrideElementsMaximized=true
+widgetButtonsAuroraeTheme=pearOS-dark
 widgetButtonsIconsTheme=Aurorae
-widgetButtonsMargins=8
-widgetElements=windowCloseButton,windowMinimizeButton,windowMaximizeButton
+widgetButtonsMargins=7
+widgetElements=
 widgetElementsDisabledMode=Hide
+widgetElementsMaximized=windowCloseButton,windowMinimizeButton,windowMaximizeButton,windowIcon,windowTitle
 widgetMargins=2
 widgetSpacing=6
 widgetToolTipMode=Disabled
 windowTitleFontSize=10
 windowTitleHideEmpty=true
+windowTitleHorizontalAlignment=Right
 windowTitleUndefined=Finder    Files  Edit  View  Windows  Help
 
 [Containments][3][Applets][40][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
-
-[Containments][3][Applets][41]
-immutability=1
-plugin=Chaac.Complete.Weather
-
-[Containments][3][Applets][41][Configuration]
-PreloadWeight=100
-popupHeight=425
-popupWidth=350
-
-[Containments][3][Applets][41][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][3][Applets][41][Configuration][General]
-boldfonts=true
 
 [Containments][3][Applets][42]
 immutability=1
@@ -185,14 +192,6 @@ showTooltip=false
 [Containments][3][Applets][42][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
-
-[Containments][3][Applets][43]
-immutability=1
-plugin=org.kde.plasma.panelspacer
-
-[Containments][3][Applets][43][Configuration][General]
-expanding=false
-length=10
 
 [Containments][3][Applets][44]
 immutability=1
@@ -219,7 +218,7 @@ plugin=Plasma.Flex.Hub
 
 [Containments][3][Applets][63][Configuration]
 PreloadWeight=100
-popupHeight=518
+popupHeight=437
 popupWidth=333
 
 [Containments][3][Applets][63][Configuration][ConfigDialog]
@@ -231,16 +230,17 @@ colorCards=39,174,96
 coverByNetwork=true
 currentNameColor=Negative
 darkTheme=xyz.pearos.pearOS-Dark
-elements=12,4,7,13,14,5,8,15,10,11,0
+elements=9,0,10,11,19,20,26,28,25,23,13
 index_themes=[12,0,17,15,9,10,13,14,8,5],[16,11,13,6,7,2,8],[16,0,20,19,21,8,11,13,14,5],[12,15,9,10,13,14,8,5,21,11,25,4,1]
 lightTheme=xyz.pearos.pearOS-Light
 names_themes=Default,macOS,iOS,tahoe
+nightMode=true
 selected_theme=Custom
 seriesX_themes=[0,2,0,0,2,2,0,1,2,3],[0,2,2,0,0,0,3],[0,2,3,2,0,1,0,0,1,2],[0,0,2,2,0,1,2,3,0,2,1,0,2]
 seriesY_themes=[0,0,1,2,2,3,4,4,4,4],[0,0,1,2,3,4,1],[0,0,2,2,2,2,3,4,4,4],[0,2,2,3,4,4,4,4,5,5,5,1,0]
 shadowOpacity=10
-xElements=0,0,0,2,3,2,3,0,0,2,2
-yElements=0,1,2,3,3,4,4,3,5,5,0
+xElements=0,2,0,0,0,1,2,2,3,2,3
+yElements=0,0,1,2,3,3,2,3,2,4,4
 
 [Containments][3][Applets][7]
 immutability=1
@@ -424,7 +424,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][3][Applets][8][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 SystrayContainmentId=64
 
 [Containments][3][Applets][8][General]
@@ -439,7 +439,7 @@ DialogHeight=175
 DialogWidth=3840
 
 [Containments][3][General]
-AppletOrder=31;40;42;6;7;41;43;23;37;8;39;63;36;38;44
+AppletOrder=31;40;42;6;7;8;39;63;36;38;44
 
 [Containments][64]
 activityId=
@@ -456,6 +456,9 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][64][Applets][65][Configuration]
+PreloadWeight=60
+
 [Containments][64][Applets][66]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
@@ -464,17 +467,15 @@ plugin=org.kde.plasma.manage-inputmethod
 immutability=1
 plugin=org.kde.plasma.clipboard
 
-[Containments][64][Applets][68]
-immutability=1
-plugin=org.kde.plasma.printmanager
+[Containments][64][Applets][68][Configuration]
+PreloadWeight=42
 
 [Containments][64][Applets][69]
 immutability=1
 plugin=org.kde.kscreen
 
-[Containments][64][Applets][70]
-immutability=1
-plugin=org.kde.plasma.devicenotifier
+[Containments][64][Applets][70][Configuration]
+PreloadWeight=42
 
 [Containments][64][Applets][71]
 immutability=1
@@ -488,12 +489,8 @@ plugin=org.kde.plasma.keyboardindicator
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
 
-[Containments][64][Applets][74]
-immutability=1
-plugin=org.kde.plasma.volume
-
-[Containments][64][Applets][74][Configuration][General]
-migrated=true
+[Containments][64][Applets][74][Configuration]
+PreloadWeight=42
 
 [Containments][64][Applets][75]
 immutability=1
@@ -503,27 +500,33 @@ plugin=org.kde.kdeconnect
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
-[Containments][64][Applets][78]
-immutability=1
-plugin=org.kde.plasma.brightness
+[Containments][64][Applets][77][Configuration]
+PreloadWeight=55
+
+[Containments][64][Applets][78][Configuration]
+PreloadWeight=42
 
 [Containments][64][Applets][79]
 immutability=1
 plugin=org.kde.plasma.battery
+
+[Containments][64][Applets][80][Configuration]
+PreloadWeight=42
 
 [Containments][64][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][64][General]
-extraItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.kdeconnect
-iconSpacing=6
-knownItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.kdeconnect
+extraItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.kscreen
+iconSpacing=1
+knownItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.vault
+scaleIconsToFit=true
 
-[Containments][76]
+[Containments][88]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=8c4c7858-f7ab-4b03-b6c6-1a9f5e97e8d8
+activityId=9523a99b-c5cf-47c8-9b19-f504b9adb295
 formfactor=0
 immutability=1
 lastScreen=0
@@ -531,9 +534,21 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][76][General]
-positions={"1920x1080":[]}
+[Containments][88][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][88][General]
+alignment=1
+arrangement=1
+positions={"1920x1080":["1","8","desktop:/system_install.desktop","0","1"]}
+sortMode=-1
+
+[Containments][88][Wallpaper][org.kde.image][General]
+Image=/usr/share/wallpapers/ColdRipple/
+PreviewImage=/usr/share/wallpapers/ColdRipple/
+SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df
+screenMapping=desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df

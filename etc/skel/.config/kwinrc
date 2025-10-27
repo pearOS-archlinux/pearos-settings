@@ -4,14 +4,12 @@
 
 [Desktops]
 Id_1=f5e21766-0c6f-4ce3-9dab-8707b079e367
-Id_2=1e0da598-f00a-4da5-8d70-b4bc0115be24
-Id_3=7a1f243a-a1dd-444c-943d-26016c2586aa
-Id_4=d359a34b-fcc4-4044-9024-ab45ca9913a5
-Number=4
+Number=1
 Rows=1
 
 [Effect-blur]
-NoiseStrength=10
+BlurStrength=5
+NoiseStrength=0
 
 [Effect-blurplus]
 BlurDecorations=true
@@ -26,11 +24,13 @@ PaintAsTranslucent=true
 RefractionNormalPow=15
 WindowClasses=org.kde.dolphin\nsystemsettings\norg.kde.okular\norg.kde.gwenview\norg.kde.konsole\norg.gnome.Nautilus\n
 
+[Effect-magiclamp]
+AnimationDuration=400
+
 [Effect-translucency]
-ComboboxPopups=94
-Dialogs=93
 DropdownMenus=89
-MoveResize=89
+IndividualMenuConfig=true
+MoveResize=100
 PopupMenus=89
 TornOffMenus=89
 
@@ -44,16 +44,15 @@ WobblynessLevel=3
 blurEnabled=true
 contrastEnabled=true
 dimscreenEnabled=false
-glideEnabled=true
+fadeEnabled=true
 invertEnabled=true
-kinetic_fadingpopupsEnabled=true
 kwin4_effect_shapecornersEnabled=false
 macsimize6Enabled=false
 magiclampEnabled=true
 scaleEnabled=false
 screenedgeEnabled=false
 sheetEnabled=true
-slidebackEnabled=true
+slidingpopupsEnabled=false
 squashEnabled=false
 translucencyEnabled=true
 truely-maximizedEnabled=true
@@ -81,6 +80,9 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][1e0da598-f00a-4da5-8d70-b4bc0115be24][e4260ac8-2d87-4da4-af70-f072b618efca]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][23cbe2e6-757c-5d06-80ca-e303e3746d1f]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][4c85f5bb-4dcb-5bec-8433-5c0e6860d679]
@@ -123,6 +125,8 @@ HideUtilityWindowsForInactive=false
 Scale=1
 
 [org.kde.kdecoration2]
+BorderSize=None
 BorderSizeAuto=false
 ButtonsOnLeft=XIA
 ButtonsOnRight=
+theme=__aurorae__svg__WhiteSur-dark

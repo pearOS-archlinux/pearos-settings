@@ -1,6 +1,9 @@
 [Applications][firefox]
 Seen=true
 
+[Applications][org.gnome.Nautilus]
+Seen=true
+
 [Applications][org.gnome.nautilus]
 Seen=true
 

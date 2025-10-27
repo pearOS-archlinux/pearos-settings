@@ -5,4 +5,4 @@ LayoutName=org.kde.breeze.desktop
 BorderSize=Tiny
 NoPlugin=false
 library=org.kde.kwin.aurorae
-theme=__aurorae__svg__pearOS-Light
+theme=__aurorae__svg__WhiteSur-dark

@@ -2,45 +2,23 @@
 <!DOCTYPE khotnewstuff3>
 <hotnewstuffregistry>
  <stuff category="132">
-  <name>McMojave-circle</name>
-  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
-  <author>vinceliuice</author>
-  <homepage>https://store.kde.org/p/1305429</homepage>
+  <name>clay [tinted icons dark / clear / transparent]</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>verismei</author>
+  <homepage>https://store.kde.org/p/2319410</homepage>
   <licence></licence>
-  <version></version>
-  <rating>92</rating>
-  <downloads>27497</downloads>
-  <installedfile>/home/pear/.local/share/icons/McMojave-circle/*</installedfile>
-  <installedfile>/home/pear/.local/share/icons/McMojave-circle-dark/*</installedfile>
-  <id>1305429</id>
-  <releasedate>2021-02-05</releasedate>
-  <summary>MacOSX Mojave like circle icon theme for linux desktops&lt;br />
---------------------------&lt;br />
-Based on OSX_ONE: &lt;a href="https://github.com/unc926/OSX_ONE" target="_blank" rel="nofollow">https://github.com/unc926/OSX_ONE&lt;/a>&lt;br />
---------------------------&lt;br />
-&lt;strong>You can use this with:&lt;/strong>&lt;br />
---------------------------&lt;br />
-&lt;strong>GTK theme&lt;/strong>&lt;br />
-Mojave-gtk-theme: &lt;a href="https://www.pling.com/p/1275087/" target="_blank" rel="nofollow">https://www.pling.com/p/1275087/&lt;/a>&lt;br />
-&lt;br />
-&lt;strong>KDE theme&lt;/strong>&lt;br />
-McMojave-kde: &lt;a href="https://www.pling.com/p/1304936/" target="_blank" rel="nofollow">https://www.pling.com/p/1304936/&lt;/a>&lt;br />
-&lt;br />
-&lt;strong>Folder-color&lt;/strong>&lt;br />
-Folder-color: &lt;a href="http://foldercolor.tuxfamily.org" target="_blank" rel="nofollow">http://foldercolor.tuxfamily.org&lt;/a>&lt;br />
---------------------------&lt;br />
-&lt;strong>Info&lt;/strong>&lt;br />
---------------------------&lt;br />
-This theme use &lt;strong>numix-icon-theme-circle&lt;/strong> for Inherits&lt;br />
-so if you want a better experience you can install numix-circle&lt;br />
-&lt;br />
-&lt;strong>numix-icon-theme-circle&lt;/strong> :&lt;br />
-&lt;a href="https://github.com/numixproject/numix-icon-theme-circle" target="_blank" rel="nofollow">https://github.com/numixproject/numix-icon-theme-circle&lt;/a></summary>
+  <version>0.96</version>
+  <rating>50</rating>
+  <downloads>2653</downloads>
+  <installedfile>/home/liveuser/.local/share/icons/int_clay/*</installedfile>
+  <id>2319410</id>
+  <releasedate>2025-10-24</releasedate>
+  <summary>&lt;p>dark, partly transparent, discreet icons, tinted clay / clear.&lt;br />&lt;br />---&lt;br />&lt;br />|  boot / plymouth  |  login / sddm  | &lt;a href="https://store.kde.org/p/2318752">splash / kde &lt;/a> | &lt;a href="https://www.pling.com/p/2326361"> light &lt;/a> / &lt;a href="https://www.pling.com/p/2320394"> dark &lt;/a> Kvantum |&lt;a href="https://store.kde.org/p/2317854"> wallpaper &lt;/a> | &lt;a href="https://store.kde.org/p/2319261"> light &lt;/a> / &lt;a href="https://store.kde.org/p/2319262"> dark &lt;/a> cursors | light / &lt;a href="https://store.kde.org/p/2319410"> dark &lt;/a> icons | &lt;a href="https://store.kde.org/p/2315827"> refraction / blur &lt;/a> |&lt;br />&lt;br />---&lt;br />&lt;br />remixed a few packs /w strong mods, f.e. &lt;a href="https://github.com/vinceliuice/MacTahoe-icon-theme">https://github.com/vinceliuice/MacTahoe-icon-theme&lt;/a> (tinted, modified).&lt;/p></summary>
   <changelog></changelog>
-  <preview>https://cn.opendesktop.org/cache/100x100-0/img/4/2/1/f/088a401b6c0998d484a63f7b5036ea945206.png</preview>
-  <previewBig>https://cn.opendesktop.org/cache/770x540-0/img/4/2/1/f/088a401b6c0998d484a63f7b5036ea945206.png</previewBig>
-  <payload>https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MTI0NDc4MzQiLCJvIjoiMSIsInMiOiI1OTExNzkwMGU5YWZiNDY0ZTVjZTM2OTYzNThjMGI0NjU4MjMxNjVkMDcwMjlkMzYwYzI1YzM1YjdmNzVhNTkwNzk1ZDFjZDZjYzk4NWI4ZjhlMzhlOWM2MWVjM2M2NDhjYzZlNWM0MTBmNjU4YmJlOWVmYWQ2YzIwZDNhM2ZmYSIsInQiOjE2MTQ1MDE3NTcsInN0ZnAiOm51bGwsInN0aXAiOiI4Ni4xMjAuMjI1Ljc2In0.9cWCgR5U0nlRaNKobJqTLZDRlu9IU2ruo2dbDXtEw9s/01-McMojave-circle.tar.xz</payload>
-  <tags>gplv3,linux,unix,icon-theme</tags>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/78/78/79/2319410/unbenannt1.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/78/78/79/2319410/unbenannt1.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc2MTA1OTAwNiwibyI6IjEiLCJzIjoiMDA2YjhhNTA0OWMxOGM0MmUwMmNlNDY0NGJiYzM2MDE3M2E2NzQ3MzY2YzExYmVmOGJlZGU0ODhkNTUzYjE0NDVmMDk0YzViMTQ2ZWE4YTExZWNjNjc3Y2RmOTFjOGU5NTNhY2E4N2QyMWYzZWVkNjBjYmNiYjg0ZDg1YmRkNDkiLCJ0IjoxNzYxNTUzNDY2LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.fF8O07qZvrGR0Iscjppf05BDRio6XkTSXfRJ4ZkyYWc/int-clay.tar.gz</payload>
+  <tags>linux,unix,tahoe,blur,dark,clay,clear,efi,icon-theme,gplv3</tags>
   <status>installed</status>
  </stuff>
 </hotnewstuffregistry>

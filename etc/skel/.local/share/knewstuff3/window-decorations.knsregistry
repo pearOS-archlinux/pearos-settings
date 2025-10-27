@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="114">
+  <name>WhiteSur Aurorae</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>vinceliuice</author>
+  <homepage>https://store.kde.org/p/1398835</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>56</rating>
+  <downloads>216467</downloads>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-Sharp-dark/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-dark-opaque/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-Sharp/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur_x1.25/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-dark_x1.5/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur_x1.5/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-dark/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-dark-opaque_x1.25/*</installedfile>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/WhiteSur-dark_x1.25/*</installedfile>
+  <id>1398835</id>
+  <releasedate>2022-06-25</releasedate>
+  <summary>&lt;p>MacOS big sur theme for kde plasma&lt;br />---------------------------------------&lt;br />&lt;b>Fix for Aurorae theme:&lt;/b>&lt;br />Go to the &lt;b>"Application Style &amp;gt; Window Decorations"&lt;/b> and set the boder to &lt;b>"No Borders"&lt;/b>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1398835/ad2aae0df61ba06b53fb73d40cccff2d1b30.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1398835/ad2aae0df61ba06b53fb73d40cccff2d1b30.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY1NjEyMzQ1MCwibyI6IjEiLCJzIjoiNWY3M2QyZTRmNGQzYjNiNTFjODJiNDI3ZTlmYmFhM2IwZjY5MjJkZjFlZGExMmVkZjU3Mzc2YWRkNjhlZjg4YWNhZGQxMDI4ZjA2ZTk4Nzk1MWI1ZmI3YTk1NTAzZmI3MDI1MWZiY2E5YzcyNjkzYThjODdmNTVmOGYyZGU1ZTciLCJ0IjoxNzYxNTUyNDE0LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.SeuLB1BeXYYOF1DoM4XPa16PfhxunHd4eh5RubVOGhY/WhiteSur.tar.gz</payload>
+  <tags>unix,theme,linux,kde,gplv3,original-product,plasma</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Utterly Round Dark for Plasma 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>himdek</author>
+  <homepage>https://store.kde.org/p/2132512</homepage>
+  <licence></licence>
+  <version>1.2</version>
+  <rating>50</rating>
+  <downloads>95603</downloads>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/Utterly-Round-Dark/*</installedfile>
+  <id>2132512</id>
+  <releasedate>2025-05-01</releasedate>
+  <summary>&lt;p>Rounded Window borders for KDE Plasma desktop environment that can follow any light color scheme with transparency and blur&lt;br />&lt;br />* To blend window decoration with background, install and use the Color Scheme, Kvantum Theme and Konsole Color Scheme from the below Global Theme&lt;br />&lt;a href="https://www.pling.com/p/1904859/">Utterly Nord&lt;/a>, &lt;a href="https://store.kde.org/p/1906500/">Utterly Sweet&lt;/a>&lt;br />&lt;br />Key features:&lt;br />&lt;br />* Blends with Window background when appropriate Kvantum theme and Konsole Color Scheme is used&lt;br />* Rounded corners&lt;br />* Follows any light color scheme and hence is usable with any Global Theme&lt;br />* Supports transparency: Go to &lt;code>System Settings &amp;amp;gt; Workspace Behavior &amp;amp;gt; Desktop Effects&lt;/code> and enable &lt;code>Blur&lt;/code>, &lt;code>Background Contrast&lt;/code> and &lt;code>Tranlucency&lt;/code> for best result.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/66/42/38/2132512/screenshot-20230307-170151.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/66/42/38/2132512/screenshot-20230307-170151.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcwOTg5MjE5NSwibyI6IjEiLCJzIjoiNTRhMGY2ZTA4NzcyODY5ZWIyY2M4MzAzMjczNDcxZTg3OThjZGM5ZWRjOWRiN2NkNGYxNGYyODBhN2FlM2IwMDI1YTQ0ZGRkZWFiYTc4NzBkMTdkMmFkZjYyZjI2OTRlOWFiNjdmN2JhODQ2NmJiYTlkZTVhOGM1ZWFlMTU5MTkiLCJ0IjoxNzYxNTUzOTM5LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.WkA8RFikPuTCqL66czPsjYm4crXZ4mCoIawUhRZqGVQ/Utterly-Round-Aurorae-Dark.tar.xz</payload>
+  <tags>theme,unix,gplv2-later,kde,linux,mac,original-product,plasma,blur,blured,blurred,blurry</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Layan aurorae theme</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>vinceliuice</author>
+  <homepage>https://store.kde.org/p/1325238</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>69</rating>
+  <downloads>508427</downloads>
+  <installedfile>/home/liveuser/.local/share/aurorae/themes/Layan/*</installedfile>
+  <id>1325238</id>
+  <releasedate>2024-09-10</releasedate>
+  <summary>&lt;p>Layan modern and elegant design theme for kde desktop&lt;br />---------------------&lt;br />&lt;b>gtk theme&lt;/b>: Layan&lt;br />&lt;a href="https://www.pling.com/p/1309214/">https://www.pling.com/p/1309214/&lt;/a>&lt;br />---------------------&lt;br />&lt;b>Icon theme&lt;/b>: Tela icon theme&lt;br />&lt;a href="https://www.pling.com/p/1279924/">https://www.pling.com/p/1279924/&lt;/a>&lt;br />---------------------&lt;br />&lt;b>Wallpaper&lt;/b>: Layan&lt;br />&lt;a href="https://www.pling.com/p/1309218/">https://www.pling.com/p/1309218/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1325238/50fba2e9d2e843b351b59c52c1c91df53a8d.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1325238/50fba2e9d2e843b351b59c52c1c91df53a8d.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyNTkzNjI0NiwibyI6IjEiLCJzIjoiZTE0M2I1MjFiZmY0ODgzZGE4ZDZjNWZjYzQ1YTY2MmU5YzIwN2E1N2FjOTMyOTgxMzE4MTZiMDUxODk5YWQwNGQzMjhjNjFhMDBhZDNiMDk4OTQwY2Q5NTFmNThmMmJlY2UwM2E0OTg3NGRhMGExN2NkMWE1Y2MyNjAyM2IxMjciLCJ0IjoxNzYxNTUwOTc3LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.0ZfzxhobSxGAawTMrPszXU0l9H9LzeEuPlwA1q1GJ20/Layan.tar.xz</payload>
+  <tags>linux,gplv3,kde,unix,theme,original-product,plasma</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

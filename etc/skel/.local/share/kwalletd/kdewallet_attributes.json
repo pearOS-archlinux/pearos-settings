@@ -1,0 +1,24 @@
+{
+    "$fdo_created": "1761545801",
+    "$fdo_modified": "1761547354",
+    "Network Management/{302a3b6b-350e-4ae6-bfa5-7bd2d48c90a7};802-11-wireless-security": {
+        "$fdo_created": "1761547354",
+        "$fdo_mime_type": "text/plain",
+        "$fdo_modified": "1761547354",
+        "attributes": {
+            "server": "Network Management",
+            "type": "map",
+            "user": "{302a3b6b-350e-4ae6-bfa5-7bd2d48c90a7};802-11-wireless-security",
+            "xdg:schema": "org.qt.keychain"
+        }
+    },
+    "Network Management/{a6a1afc7-ae78-42c8-94e2-446df7e4db25};802-11-wireless-security": {
+        "$fdo_created": "1761547350",
+        "$fdo_modified": "1761547350",
+        "attributes": {
+            "server": "Network Management",
+            "type": "map",
+            "user": "{a6a1afc7-ae78-42c8-94e2-446df7e4db25};802-11-wireless-security"
+        }
+    }
+}

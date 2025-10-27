@@ -1,8 +1,8 @@
 [General]
-ColorScheme=pearOSLight
+ColorScheme=WhiteSurDark
 
 [Icons]
-Theme=pearOS-light
+Theme=WhiteSur-dark
 
 [KDE]
-widgetStyle=Darkly
+widgetStyle=kvantum-dark

@@ -3,32 +3,58 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///home/liveuser/.zdirs" added="2022-02-20T17:46:59.232458Z" modified="2022-02-20T17:46:59.232462Z" visited="2022-02-20T17:46:59.232459Z">
+  <bookmark href="file:///usr/share/applications/org.gnome.Nautilus.desktop" added="2025-10-27T06:25:53.122308Z" modified="2025-10-27T06:26:34.721239Z" visited="2025-10-27T06:25:53.122309Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
+        <mime:mime-type type="application/x-desktop"/>
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2022-02-20T17:46:59.232460Z" count="1"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-27T06:26:34.721235Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/liveuser/.zcompdump" added="2022-02-20T17:47:08.383390Z" modified="2022-02-20T17:47:08.383407Z" visited="2022-02-20T17:47:08.383395Z">
+  <bookmark href="file:///usr/share/applications/nautilus-autorun-software.desktop" added="2025-10-27T06:25:57.470374Z" modified="2025-10-27T06:25:57.470382Z" visited="2025-10-27T06:25:57.470375Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
+        <mime:mime-type type="application/x-desktop"/>
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2022-02-20T17:47:08.383402Z" count="1"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-27T06:25:57.470380Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/liveuser/.screenrc" added="2022-02-20T17:47:17.917258Z" modified="2022-02-20T17:47:24.128330Z" visited="2022-02-20T17:47:17.917260Z">
+  <bookmark href="file:///usr/share/extras/launchpad.svg" added="2025-10-27T06:28:23.862000Z" modified="2025-10-27T06:28:23.862000Z" visited="2025-10-27T06:28:23.862000Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2022-02-20T17:47:24.128325Z" count="2"/>
+          <bookmark:application name="org.kde.plasmashell" exec="/usr/bin/plasmashell %f" modified="2025-10-27T06:28:23.862000Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/extras/drawing.svg" added="2025-10-27T06:28:53.655000Z" modified="2025-10-27T06:28:53.655000Z" visited="2025-10-27T06:28:53.655000Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="org.kde.plasmashell" exec="/usr/bin/plasmashell %f" modified="2025-10-27T06:28:53.655000Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="trash:/" added="2025-10-27T07:12:49.078000Z" modified="2025-10-27T07:12:49.078000Z" visited="2025-10-27T07:12:49.078000Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="nautilus %u" modified="2025-10-27T07:12:49.078000Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
