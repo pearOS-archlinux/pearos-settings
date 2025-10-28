@@ -1,0 +1,1 @@
+    rm -rf "$HOME/.config/gtk-4.0/assets"

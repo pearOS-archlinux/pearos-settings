@@ -125,22 +125,22 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/liveuser" added="2025-10-27T20:31:45.224000Z" modified="2025-10-27T20:31:45.224000Z" visited="2025-10-27T20:31:45.224000Z">
+  <bookmark href="file:///home/liveuser" added="2025-10-27T20:31:45.224000Z" modified="2025-10-28T00:59:38.723000Z" visited="2025-10-28T00:59:38.723000Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="inode/directory"/>
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="nautilus --new-window %u" modified="2025-10-27T20:31:45.224000Z" count="1"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="nautilus --new-window %u" modified="2025-10-28T00:59:38.723000Z" count="4"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///run/media/liveuser/4fb55385-734f-43fe-a490-3916b8feab0d/@home/alex/Desktop/plasma6-pearos/assets/pearos-plasma-theme.zip" added="2025-10-27T20:32:51.809459Z" modified="2025-10-27T20:36:15.625790Z" visited="2025-10-27T20:32:51.809460Z">
+  <bookmark href="file:///run/media/liveuser/4fb55385-734f-43fe-a490-3916b8feab0d/@home/alex/Desktop/plasma6-pearos/assets/pearos-plasma-theme.zip" added="2025-10-27T20:32:51.809459Z" modified="2025-10-28T00:52:53.868958Z" visited="2025-10-27T20:32:51.809460Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="application/zip"/>
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;ark %U&apos;" modified="2025-10-27T20:36:15.625786Z" count="2"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;ark %U&apos;" modified="2025-10-28T00:52:53.868956Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>
@@ -283,6 +283,126 @@
         <mime:mime-type type="application/json"/>
         <bookmark:applications>
           <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-27T21:17:34.524796Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/Desktop/tweaks.sh" added="2025-10-28T00:33:04.217000Z" modified="2025-10-28T00:33:04.217000Z" visited="2025-10-28T00:33:04.217000Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-shellscript"/>
+        <bookmark:applications>
+          <bookmark:application name="org.kde.kate" exec="kate -b %u" modified="2025-10-28T00:33:04.217000Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///run/media/liveuser/4fb55385-734f-43fe-a490-3916b8feab0d/@home/alex/Desktop/pearos-settings/usr/share/icons/pearOS/apps/symbolic/org.gnome.Settings-trash-file-history-symbolic.svg" added="2025-10-28T00:43:16.370965Z" modified="2025-10-28T00:43:16.370971Z" visited="2025-10-28T00:43:16.370967Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;/usr/lib/firefox/firefox %u&apos;" modified="2025-10-28T00:43:16.370968Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///run/media/liveuser/4fb55385-734f-43fe-a490-3916b8feab0d/@home/alex/Desktop/filesystem/pkg/filesystem/etc/arch-release" added="2025-10-28T00:46:38.176994Z" modified="2025-10-28T00:46:38.176999Z" visited="2025-10-28T00:46:38.176995Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-zerosize"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-28T00:46:38.176996Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/Desktop/gherla" added="2025-10-28T00:48:50.553000Z" modified="2025-10-28T00:48:50.553000Z" visited="2025-10-28T00:48:50.553000Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="nautilus --new-window %u" modified="2025-10-28T00:48:50.553000Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/Desktop/gherla/gherla.tar.xz" added="2025-10-28T00:49:11.556619Z" modified="2025-10-28T00:49:11.556622Z" visited="2025-10-28T00:49:11.556620Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-xz-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2025-10-28T00:49:11.556620Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/Desktop/share" added="2025-10-28T00:53:02.724000Z" modified="2025-10-28T00:53:02.724000Z" visited="2025-10-28T00:53:02.724000Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="nautilus --new-window %u" modified="2025-10-28T00:53:02.724000Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/plasma/look-and-feel/xyz.pearos.alxb421.pearOS-dark/contents/previews/preview.png" added="2025-10-28T00:55:03.353358Z" modified="2025-10-28T00:55:03.353361Z" visited="2025-10-28T00:55:03.353358Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;gwenview %U&apos;" modified="2025-10-28T00:55:03.353359Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/plasma/look-and-feel/xyz.pearos.alxb421.pearOS-dark/metadata.desktop" added="2025-10-28T00:55:27.209009Z" modified="2025-10-28T00:55:27.209014Z" visited="2025-10-28T00:55:27.209010Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-desktop"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-28T00:55:27.209011Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/splash.png" added="2025-10-28T01:00:22.962633Z" modified="2025-10-28T01:00:22.962640Z" visited="2025-10-28T01:00:22.962634Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2025-10-28T01:00:22.962635Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/.local/share/plasma/look-and-feel/pearOS/contents/splash/Splash.qml" added="2025-10-28T01:01:00.107255Z" modified="2025-10-28T01:01:42.256915Z" visited="2025-10-28T01:01:00.107256Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-qml"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-28T01:01:42.256912Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/.local/share/plasma/look-and-feel/pearOS/metadata.json" added="2025-10-28T01:03:24.885535Z" modified="2025-10-28T01:03:24.885548Z" visited="2025-10-28T01:03:24.885536Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-28T01:03:24.885540Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/liveuser/.local/share/plasma/look-and-feel/pearOS-dark/metadata.json" added="2025-10-28T01:03:34.907555Z" modified="2025-10-28T01:03:34.907566Z" visited="2025-10-28T01:03:34.907556Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;kate -b %U&apos;" modified="2025-10-28T01:03:34.907560Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

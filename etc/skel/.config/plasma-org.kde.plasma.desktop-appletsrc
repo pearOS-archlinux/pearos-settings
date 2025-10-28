@@ -424,7 +424,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][3][Applets][8][Configuration]
-PreloadWeight=65
+PreloadWeight=75
 SystrayContainmentId=64
 
 [Containments][3][Applets][8][General]
@@ -501,7 +501,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][64][Applets][77][Configuration]
-PreloadWeight=60
+PreloadWeight=75
 
 [Containments][64][Applets][78][Configuration]
 PreloadWeight=42
@@ -541,14 +541,14 @@ DialogWidth=720
 [Containments][88][General]
 alignment=1
 arrangement=1
-positions={"1920x1080":["1","8","desktop:/plasma","0","1","desktop:/icons","0","2","desktop:/system_install.desktop","0","0"]}
+positions={"1920x1080":["1","9","desktop:/gherla","0","1","desktop:/share","0","2","desktop:/system_install.desktop","0","0"]}
 sortMode=-1
 
 [Containments][88][Wallpaper][org.kde.image][General]
-Image=file://pearOS-dark
-PreviewImage=/home/liveuser/.local/share/wallpapers/pearOS-dark/default.jpg
+Image=/usr/share/wallpapers/pearOS-dark/default.jpg
+PreviewImage=/usr/share/wallpapers/pearOS-dark/default.jpg
 SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/icons,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/plasma,0,9523a99b-c5cf-47c8-9b19-f504b9adb295
+screenMapping=desktop:/icons,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/gherla,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/share,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/plasma,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df

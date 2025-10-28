@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="716">
+  <name>Fedora Minimalistic - Plasma 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>freezykaif</author>
+  <homepage>https://store.kde.org/p/2163026</homepage>
+  <licence></licence>
+  <version>1.0</version>
+  <rating>50</rating>
+  <downloads>14517</downloads>
+  <installedfile>/home/liveuser/.local/share/plasma/look-and-feel/Fedora-Minimalistic/</installedfile>
+  <id>2163026</id>
+  <releasedate>2024-06-12</releasedate>
+  <summary>&lt;p>Minimalistic Splash Screen of Fedora Linux for KDE Plasma 6 .&lt;br />&lt;br />To Install :&lt;br />&lt;br />1 ) Extract the archive to get a folder named '' Fedora-Minimalistic '' .&lt;br />&lt;br />2 ) Copy the folder and paste it inside " ~/.local/share/plasma/look-and-feel " ( no root access required ) or " /usr/share/plasma/look-and-feel " ( root access required ) . If you dont have these folders, then create them.&lt;br />&lt;br />3 ) Head over to System Settings &amp;gt; Appearance &amp;amp; Style &amp;gt; Colors &amp;amp; Themes &amp;gt; Global Theme &amp;gt; Splash Screen &amp;amp; select '' Fedora-Minimalistic " .&lt;br />&lt;br />3.1 ) Alternatively, the Splash Screen can be applied from System Settings &amp;gt; Quick Settings &amp;gt; More Appearance Settings &amp;gt; Splash Screen &amp;gt; Select Desired Splash Screen ( in this case it is " Fedora-Minimalistic " ) .&lt;br />&lt;br />4 ) Enjoy !&lt;br />&lt;br />This project is based on Riyadul Mollick's Fedora Splash Screen.&lt;br />This project has been upgraded to support Plasma 6 and loading animation has been changed.&lt;br />&lt;br />Reach out to me for any queries regarding this on Discord [ freezykaif ] !&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/78/94/35/2163026/splash.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/78/94/35/2163026/splash.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxNzkxMDY4NywibyI6IjEiLCJzIjoiMzc5ZTQ3OTM5Mjg2M2Q4MmYxYzc0MTM5ZDA1YmZiNjRjN2Y2YzRmNThjNWYwMWNiZmIzY2I2YzM4NGI4MTUwZWE2ZmUyMTljMWQyNjZhZDZmM2U4MjU4YjZjMzFiNDAyNTVlMTI4OWI5M2U2MTAxMTdjNzBhZGNjYWY5MjU2MDgiLCJ0IjoxNzYxNjE2NjM0LCJzdGZwIjpudWxsLCJzdGlwIjoiMTc4LjEzOC4zNC40In0.QtahI5Y0u7qPcsEX_92rTi6tA3-Vc4_QNSoy5261604/Fedora-Minimalistic.tar.gz</payload>
+  <tags>linux,plasma##majorversion=6,plasma,unix,splashscreen,theme,kde,efi,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
