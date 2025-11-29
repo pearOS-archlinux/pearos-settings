@@ -24,7 +24,7 @@ DialogWidth=720
 
 [Containments][27][Applets][28][Configuration][General]
 iconSpacing=0
-launchers=applications:org.gnome.Nautilus.desktop,applications:firefox.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,applications:systemsettings.desktop
+launchers=applications:org.gnome.Nautilus.desktop,applications:firefox.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,applications:systemsettings1.desktop
 minimizeActiveTaskOnClick=false
 
 [Containments][27][Applets][82]
