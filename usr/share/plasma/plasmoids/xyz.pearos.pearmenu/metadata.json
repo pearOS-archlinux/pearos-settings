@@ -1,0 +1,31 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Alexandru Balan",
+                "Email": "alex@pear-software.com"
+            },
+            {
+                "Name": "Latgardi",
+                "Email": "saikinmirai@gmail.com"
+            }
+        ],
+        "Name": "Pear Menu",
+        "Name[be]": "Мэню Pear",
+        "Id": "xyz.pearos.pearmenu",
+        "Description": "Pear Menu is a Plasma applet based on darwin-menu that provides a menu system similar to that found on other operating systems. It allows users to access frequently used system settings and session controls.\n\nApplet also provides \"Force Quit\" app, which can be opened with global shortcut.",
+        "Category": "Application Launchers",
+        "Icon": "file:///usr/share/extras/drawing.svg",
+        "EnabledByDefault": true,
+        "License": "BSD-2-Clause",
+        "Copyright": "https://pearos.xyz",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.9",
+        "Website": "https://github.com/latgardi"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
+}

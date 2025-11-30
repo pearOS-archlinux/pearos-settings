@@ -1,0 +1,27 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alex@pear-software.com",
+                "Name": "Alexandru Balan"
+            },
+            {
+                "Email": "kde@privat.broulik.de",
+                "Name": "Kai Uwe Broulik"
+            }
+        ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Global%20Menu",
+        "Category": "Windows and Tasks",
+        "Description": "Global menubar in your Plasma Desktop",
+        "FormFactors": [
+            "desktop"
+        ],
+        "Icon": "show-menu",
+        "Id": "org.kde.plasma.appmenu",
+        "License": "GPL-2.0+",
+        "Name": "pearOS Global Menu",
+        "Website": "https://kde.org/plasma-desktop"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

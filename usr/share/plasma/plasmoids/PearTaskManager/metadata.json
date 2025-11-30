@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "hein@kde.org",
+                "Name": "Eike Hein"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Window bar displaying icons and text",
+        "EnabledByDefault": true,
+        "Icon": "preferences-system-windows",
+        "Id": "PearTaskManager",
+        "License": "GPL-2.0+",
+        "Name": "Pear Task Manager",
+        "Website": "https://pearos.xyz"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.multitasking"
+    ]
+}

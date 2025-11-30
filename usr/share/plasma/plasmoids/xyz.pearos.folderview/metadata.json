@@ -1,0 +1,26 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "sebas@kde.org",
+                "Name": "Sebastian Kügler"
+            },
+            {
+                "Email": "hein@kde.org",
+                "Name": "Eike Hein"
+            }
+        ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Desktop%20Containment",
+        "Category": "Containments",
+        "Description": "A clean and simple layout",
+        "EnabledByDefault": true,
+        "Icon": "user-desktop",
+        "Id": "org.kde.desktopcontainment",
+        "License": "GPL-2.0+",
+        "Name": "Desktop",
+        "Website": "https://www.kde.org/plasma-desktop"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-ContainmentType": "Desktop"
+}
