@@ -1,6 +1,0 @@
-[Desktop Entry]
-Icon=text-plain
-Name=.zcompdump
-Type=Link
-URL[$e]=file:$HOME/.zcompdump
-X-KDE-LastOpenedWith=org.kde.kate

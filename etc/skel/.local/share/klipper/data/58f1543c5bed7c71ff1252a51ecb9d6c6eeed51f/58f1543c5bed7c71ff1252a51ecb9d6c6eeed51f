@@ -1,1 +1,0 @@
-sed -i 's/^gtk-theme-name=.*/gtk-theme-name="pearOS-Dark"/' ~/.gtkrc-2.0 || echo 'gtk-theme-name="pearOS-Dark"' >> ~/.gtkrc-2.0

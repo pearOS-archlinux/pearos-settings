@@ -1,1 +1,0 @@
-    ln -sf "$HOME/.themes/pearOS-Dark/gtk-4.0/"{assets,gtk.css,gtk-dark.css} "$HOME/.config/gtk-4.0/"

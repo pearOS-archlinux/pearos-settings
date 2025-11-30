@@ -1,1 +1,0 @@
-    sed -i 's/^gtk-theme-name=.*/gtk-theme-name=pearOS-Dark/' ~/.config/gtk-4.0/settings.ini || echo -e "[Settings]\ngtk-theme-name=pearOS-Dark" >> ~/.config/gtk-4.0/settings.ini
