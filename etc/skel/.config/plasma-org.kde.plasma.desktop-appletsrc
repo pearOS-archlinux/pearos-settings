@@ -5,6 +5,49 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
+[Containments][1][Wallpaper][org.kde.image][General]
+FillMode=2
+
+[Containments][119]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=9523a99b-c5cf-47c8-9b19-f504b9adb295
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][119][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][119][General]
+alignment=1
+arrangement=1
+positions={"1920x1080":[]}
+
+[Containments][119][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/pearOS-dark/default.jpg
+PreviewImage=/usr/share/wallpapers/pearOS-dark/default.jpg
+SlidePaths=/usr/share/wallpapers/
+
+[Containments][120]
+activityId=9523a99b-c5cf-47c8-9b19-f504b9adb295
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][120][General]
+positions={"3440x1440":[]}
+
+[Containments][120][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/pearOS-dark/default.jpg
+
 [Containments][27]
 activityId=
 formfactor=2
@@ -14,73 +57,120 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][27][Applets][28]
-immutability=1
-plugin=org.kde.plasma.icontasks
-
-[Containments][27][Applets][28][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][27][Applets][28][Configuration][General]
-iconSpacing=0
-launchers=applications:org.gnome.Nautilus.desktop,applications:firefox.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.konsole.desktop,applications:org.kde.kate.desktop,applications:pearos-systemsettings.desktop
-minimizeActiveTaskOnClick=false
-
-[Containments][27][Applets][82]
-activityId=
-formfactor=0
-immutability=1
-lastScreen=-1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=
-
-[Containments][27][Applets][82][Configuration]
-PreloadWeight=75
-activityId=
-formfactor=0
-immutability=1
-lastScreen=-1
-location=0
-plugin=org.kde.plasma.folder
-popupHeight=388
-popupWidth=288
-wallpaperplugin=
-
-[Containments][27][Applets][82][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][27][Applets][82][Configuration][General]
-icon=bottles_wine-winefile
-locked=true
-positions={"":[],"1920x1080":[]}
-url=file:///home/liveuser/Downloads
-useCustomIcon=true
-
-[Containments][27][Applets][83]
+[Containments][27][Applets][101]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
-[Containments][27][Applets][84]
+[Containments][27][Applets][102]
 immutability=1
-plugin=tt.launchpadPlasma
+plugin=org.kde.plasma.marginsseparator
 
-[Containments][27][Applets][84][Configuration][ConfigDialog]
+[Containments][27][Applets][103]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][27][Applets][104]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][27][Applets][117]
+immutability=1
+plugin=PearFolderArc
+
+[Containments][27][Applets][117][Configuration]
+PreloadWeight=100
+popupHeight=432
+popupWidth=432
+
+[Containments][27][Applets][117][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][27][Applets][84][Configuration][General]
-customButtonImage=/usr/share/extras/launchpad.svg
-useCustomButtonImage=true
+[Containments][27][Applets][117][Configuration][General]
+folderPath=~/Downloads/
+indentStep=13
+maxItems=7
+offset=-143
+rotationStep=3
 
 [Containments][27][Applets][86]
 immutability=1
-plugin=org.kde.plasma.trash
+plugin=PearLauncher
+
+[Containments][27][Applets][86][Configuration]
+PreloadWeight=100
+popupHeight=432
+popupWidth=432
+
+[Containments][27][Applets][86][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][27][Applets][86][Configuration][General]
+customButtonImage=/usr/share/extras/launchpad.svg
+floating=true
+useCustomButtonImage=true
+useSystemFontSettings=true
+
+[Containments][27][Applets][86][Shortcuts]
+global=Alt+Space
+
+[Containments][27][Applets][91]
+immutability=1
+plugin=PearFinder
+
+[Containments][27][Applets][91][Configuration]
+PreloadWeight=100
+popupHeight=432
+popupWidth=432
+
+[Containments][27][Applets][91][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][27][Applets][92]
+immutability=1
+plugin=PearTaskManager
+
+[Containments][27][Applets][92][Configuration]
+PreloadWeight=55
+popupHeight=432
+popupWidth=432
+
+[Containments][27][Applets][92][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][27][Applets][92][Configuration][General]
+launchers=preferred://filemanager,preferred://browser,applications:pearos-systemsettings.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.kate.desktop
+
+[Containments][27][Applets][93]
+immutability=1
+plugin=PearTrash
+
+[Containments][27][Applets][93][Configuration]
+PreloadWeight=55
+popupHeight=432
+popupWidth=432
+
+[Containments][27][Applets][97]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][27][Applets][98]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
+
+[Containments][27][Applets][98][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][27][Applets][99]
+immutability=1
+plugin=org.kde.plasma.marginsseparator
 
 [Containments][27][General]
-AppletOrder=84;28;83;82;86
+AppletOrder=104;91;102;98;86;97;101;92;103;99;117;93
 
 [Containments][3]
 activityId=
@@ -91,32 +181,59 @@ location=3
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][3][Applets][31]
+[Containments][3][Applets][105]
 immutability=1
-plugin=org.latgardi.darwinmenu
+plugin=PearAppTitle
 
-[Containments][3][Applets][31][Configuration][ConfigDialog]
+[Containments][3][Applets][105][Configuration]
+PreloadWeight=65
+popupHeight=432
+popupWidth=432
+
+[Containments][3][Applets][105][Configuration][Appearance]
+elidePos=0
+fixedLength=86
+isBold=true
+noActivityText=Pinder  Pinder\s
+
+[Containments][3][Applets][105][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][3][Applets][31][Configuration][General]
-appStoreCommand=
-customButtonImage=/usr/share/extras/drawing.svg
-fixedIconSize=21
-iconSizePercent=95
-resizeIconToRoot=true
-useCustomButtonImage=true
-useFixedIconSize=true
-useRectangleButtonShape=false
+[Containments][3][Applets][116]
+immutability=1
+plugin=org.kde.plasma.appmenu
 
-[Containments][3][Applets][31][Shortcuts]
-global=Meta+Alt+Esc
+[Containments][3][Applets][116][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][3][Applets][23]
+immutability=1
+plugin=org.kde.milou
+
+[Containments][3][Applets][23][Configuration]
+PreloadWeight=100
+popupHeight=34
+popupWidth=630
+
+[Containments][3][Applets][23][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][3][Applets][36]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
 [Containments][3][Applets][36][Configuration][General]
+expanding=false
+length=10
+
+[Containments][3][Applets][37]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][3][Applets][37][Configuration][General]
 expanding=false
 length=10
 
@@ -130,13 +247,16 @@ popupHeight=450
 popupWidth=810
 
 [Containments][3][Applets][38][Configuration][Appearance]
-customDateFormat=
+customDateFormat=ddd MMM d
+dateDisplayFormat=BesideTime
 dateFormat=custom
-enabledCalendarPlugins=a,l,t,e,r,n,a,t,e,c,a,l,e,n,d,a,r,
+enabledCalendarPlugins=alternatecalendar
 firstDayOfWeek=0
-fontFamily=SF Pro Display
+fontFamily=Noto Sans Devanagari UI
+fontSize=9
+fontStyleName=Regular
 fontWeight=400
-showDate=false
+showSeconds=Never
 showWeekNumbers=true
 
 [Containments][3][Applets][38][Configuration][ConfigDialog]
@@ -156,42 +276,32 @@ immutability=1
 plugin=com.github.antroids.application-title-bar
 
 [Containments][3][Applets][40][Configuration][Appearance]
-overrideElementsMaximized=true
-widgetButtonsAuroraeTheme=pearOS-dark
+widgetButtonsAuroraeTheme=pearOS-Dark
 widgetButtonsIconsTheme=Aurorae
-widgetButtonsMargins=7
-widgetElements=
+widgetButtonsMargins=8
+widgetElements=windowCloseButton,windowMinimizeButton,windowMaximizeButton
 widgetElementsDisabledMode=Hide
-widgetElementsMaximized=windowCloseButton,windowMinimizeButton,windowMaximizeButton,windowIcon,windowTitle
 widgetMargins=2
 widgetSpacing=6
-widgetToolTipMode=Disabled
+widgetToolTipMode=MaximizedWindow
 windowTitleFontSize=10
 windowTitleHideEmpty=true
-windowTitleHorizontalAlignment=Right
-windowTitleUndefined=Finder    Files  Edit  View  Windows  Help
+windowTitleUndefined=<b>Finder</b>    Files  Edit  View  Windows  Help
+
+[Containments][3][Applets][40][Configuration][Behavior]
+widgetActiveTaskFilterNotMaximized=true
 
 [Containments][3][Applets][40][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][3][Applets][42]
+[Containments][3][Applets][43]
 immutability=1
-plugin=org.kde.windowtitle
+plugin=org.kde.plasma.panelspacer
 
-[Containments][3][Applets][42][Configuration][Appearance]
-altTxt=Finder     FIles     Edit     View     Go     Window     Help
-firstSpace=6
-isCaps=true
-txt=<b>%w</b>
-visible=false
-
-[Containments][3][Applets][42][Configuration][Behavior]
-showTooltip=false
-
-[Containments][3][Applets][42][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+[Containments][3][Applets][43][Configuration][General]
+expanding=false
+length=10
 
 [Containments][3][Applets][44]
 immutability=1
@@ -208,17 +318,13 @@ hoverBgRadius=0
 length=10
 screenWidth=1920
 
-[Containments][3][Applets][6]
-immutability=1
-plugin=org.kde.plasma.appmenu
-
 [Containments][3][Applets][63]
 immutability=1
 plugin=Plasma.Flex.Hub
 
 [Containments][3][Applets][63][Configuration]
 PreloadWeight=100
-popupHeight=437
+popupHeight=599
 popupWidth=333
 
 [Containments][3][Applets][63][Configuration][ConfigDialog]
@@ -230,17 +336,16 @@ colorCards=39,174,96
 coverByNetwork=true
 currentNameColor=Negative
 darkTheme=xyz.pearos.pearOS-Dark
-elements=16,11,13,6,7,2,8
+elements=12,4,7,13,14,5,8,15,10,11,0,25
 index_themes=[12,0,17,15,9,10,13,14,8,5],[16,11,13,6,7,2,8],[16,0,20,19,21,8,11,13,14,5],[12,15,9,10,13,14,8,5,21,11,25,4,1]
 lightTheme=xyz.pearos.pearOS-Light
 names_themes=Default,macOS,iOS,tahoe
-nightMode=true
-selected_theme=macOS
+selected_theme=Custom
 seriesX_themes=[0,2,0,0,2,2,0,1,2,3],[0,2,2,0,0,0,3],[0,2,3,2,0,1,0,0,1,2],[0,0,2,2,0,1,2,3,0,2,1,0,2]
 seriesY_themes=[0,0,1,2,2,3,4,4,4,4],[0,0,1,2,3,4,1],[0,0,2,2,2,2,3,4,4,4],[0,2,2,3,4,4,4,4,5,5,5,1,0]
 shadowOpacity=10
-xElements=0,2,2,0,0,0,3
-yElements=0,0,1,2,3,4,1
+xElements=0,0,0,2,3,2,3,0,0,2,2,0
+yElements=0,1,2,3,3,4,4,3,5,5,0,6
 
 [Containments][3][Applets][7]
 immutability=1
@@ -424,7 +529,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][3][Applets][8][Configuration]
-PreloadWeight=75
+PreloadWeight=100
 SystrayContainmentId=64
 
 [Containments][3][Applets][8][General]
@@ -434,12 +539,25 @@ iconSpacing=6
 knownItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.kdeconnect,org.kde.plasma.weather,org.kde.plasma.vault
 scaleIconsToFit=true
 
+[Containments][3][Applets][82]
+immutability=1
+plugin=org.kde.plasma.battery
+
+[Containments][3][Applets][82][Configuration]
+PreloadWeight=55
+popupHeight=329
+popupWidth=360
+
+[Containments][3][Applets][85]
+immutability=1
+plugin=xyz.pearos.pearmenu
+
 [Containments][3][ConfigDialog]
 DialogHeight=175
 DialogWidth=3840
 
 [Containments][3][General]
-AppletOrder=31;40;42;6;7;8;39;63;36;38;44
+AppletOrder=85;40;105;116;7;82;43;23;37;8;39;63;36;38;44
 
 [Containments][64]
 activityId=
@@ -448,16 +566,20 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=432
-popupWidth=432
+popupHeight=448
+popupWidth=484
 wallpaperplugin=org.kde.image
+
+[Containments][64][Applets][107]
+immutability=1
+plugin=org.kde.plasma.vault
 
 [Containments][64][Applets][65]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][64][Applets][65][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][64][Applets][66]
 immutability=1
@@ -467,15 +589,23 @@ plugin=org.kde.plasma.manage-inputmethod
 immutability=1
 plugin=org.kde.plasma.clipboard
 
-[Containments][64][Applets][68][Configuration]
-PreloadWeight=42
+[Containments][64][Applets][67][Configuration]
+PreloadWeight=65
+
+[Containments][64][Applets][68]
+immutability=1
+plugin=org.kde.plasma.printmanager
 
 [Containments][64][Applets][69]
 immutability=1
 plugin=org.kde.kscreen
 
+[Containments][64][Applets][70]
+immutability=1
+plugin=org.kde.plasma.devicenotifier
+
 [Containments][64][Applets][70][Configuration]
-PreloadWeight=42
+PreloadWeight=100
 
 [Containments][64][Applets][71]
 immutability=1
@@ -489,8 +619,15 @@ plugin=org.kde.plasma.keyboardindicator
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
 
+[Containments][64][Applets][74]
+immutability=1
+plugin=org.kde.plasma.volume
+
 [Containments][64][Applets][74][Configuration]
-PreloadWeight=42
+PreloadWeight=75
+
+[Containments][64][Applets][74][Configuration][General]
+migrated=true
 
 [Containments][64][Applets][75]
 immutability=1
@@ -501,54 +638,47 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][64][Applets][77][Configuration]
-PreloadWeight=75
+PreloadWeight=100
 
-[Containments][64][Applets][78][Configuration]
-PreloadWeight=42
+[Containments][64][Applets][78]
+immutability=1
+plugin=org.kde.plasma.bluetooth
 
 [Containments][64][Applets][79]
+immutability=1
+plugin=org.kde.plasma.brightness
+
+[Containments][64][Applets][79][Configuration]
+PreloadWeight=47
+
+[Containments][64][Applets][80]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][64][Applets][80][Configuration]
-PreloadWeight=42
+PreloadWeight=57
+
+[Containments][64][Applets][81]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][64][Applets][81][Configuration]
+PreloadWeight=0
 
 [Containments][64][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][64][General]
-extraItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.kscreen
-iconSpacing=1
+extraItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.vault
+iconSpacing=6
 knownItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.vault
-scaleIconsToFit=true
 
-[Containments][88]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=9523a99b-c5cf-47c8-9b19-f504b9adb295
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][88][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][88][General]
-alignment=1
-arrangement=1
-positions={"1920x1080":["1","9","desktop:/gherla","0","1","desktop:/share","0","2","desktop:/system_install.desktop","0","0"]}
-sortMode=-1
-
-[Containments][88][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/pearOS-dark/default.jpg
-PreviewImage=/usr/share/wallpapers/pearOS-dark/default.jpg
-SlidePaths=/usr/share/wallpapers/
+[Containments27Appletsts][83][Configuration][General]
+customButtonImage=/usr/share/extras/launchpad.svg
+floating=true
+useCustomButtonImage=true
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/icons,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/gherla,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/share,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/plasma,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df
+screenMapping=desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/New Folder,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/filesystem,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/home.tar.xz,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.desktopcontainment,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma6-pearos,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/mac-cursors-main,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/sddm.conf,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/iso,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/Settings.app,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma-org.kde.plasma.desktop-appletsrc,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/TahoeLauncher,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-private-key.asc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-refind-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/homeee,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/install_steps.zip,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.plasma.appmenu,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/main.qml.backup_1764482849,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/package-repository,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps-bundle,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/original_code,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/test,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma6pearos_install.log,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/git.key,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/PearFolderArc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/a,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pkgbuilds,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/pearos-boot-sound,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-settings,0,3173ac60-468b-43ae-9ce9-60542f97cd90
