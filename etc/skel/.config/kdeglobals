@@ -177,6 +177,10 @@ ScreenScaleFactors=Virtual-1=1;
 EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
 
+[Sounds]
+Theme=pearOS-sounds
+
+
 [WM]
 activeBackground=51,51,51
 activeBlend=171,171,171
