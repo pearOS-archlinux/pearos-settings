@@ -1,6 +1,0 @@
-[Libinput][1575][1][QEMU QEMU USB Tablet]
-NaturalScroll=false
-
-[Mouse]
-X11LibInputXAccelProfileFlat=true
-cursorTheme=pearOS-dark
