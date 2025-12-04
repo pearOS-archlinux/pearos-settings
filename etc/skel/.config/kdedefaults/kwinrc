@@ -1,0 +1,4 @@
+[org.kde.kdecoration2]
+NoPlugin=false
+Library=org.kde.kwin.aurorae
+Theme=__aurorae__svg__pearOS-dark
