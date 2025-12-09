@@ -9,7 +9,7 @@ import org.kde.kirigami 2 as Kirigami
 import org.kde.coreaddons as KCoreAddons
 import org.kde.plasma.private.sessions 2.0 as Sessions
 import org.kde.taskmanager 0.1 as TaskManager
-import org.kde.plasma.private.quicklaunch 1.0
+import org.kde.plasma.plasma5support as Plasma5Support
 
 AbstractButton {
     id: menuButton
@@ -65,10 +65,6 @@ AbstractButton {
 
     KCoreAddons.KUser {
         id: kUser
-    }
-
-    Logic {
-        id: logic
     }
 
     ListModel {
@@ -205,7 +201,7 @@ AbstractButton {
             text: i18n("About This Pear")
             icon.name: "computer"
             onTriggered: menuButton.aboutThisPCUseCommand
-                ? logic.openExec(menuButton.aboutThisPCCommand)
+                ? executable.exec(menuButton.aboutThisPCCommand)
                 : KCMLauncher.openInfoCenter("")
         }
 
@@ -230,7 +226,7 @@ AbstractButton {
                     text: model.text
                     icon.name: "application-x-executable"
                     onTriggered: {
-                        logic.openExec(model.command)
+                        executable.exec(model.command)
                     }
                 }
 
@@ -264,7 +260,7 @@ AbstractButton {
             icon.name: "preferences-system"
             onTriggered: {
                 menuButton.systemSettingsUseCommand
-                    ? logic.openExec(menuButton.systemSettingsCommand)
+                    ? executable.exec(menuButton.systemSettingsCommand)
                     : KCMLauncher.openSystemSettings("")
             }
         }
@@ -273,9 +269,7 @@ AbstractButton {
             id: appStoreMenuItem
             text: i18n("App Store...")
             icon.name: "applications-other"
-            onTriggered: {
-                logic.openExec(menuButton.appStoreCommand)
-            }
+            onTriggered: executable.exec(menuButton.appStoreCommand)
         }
 
         QtLabs.MenuSeparator {}
@@ -293,9 +287,9 @@ AbstractButton {
                     icon.name: model.icon || "application-x-executable"
                     onTriggered: {
                         if (model.command) {
-                            logic.openExec(model.command)
+                            executable.exec(model.command)
                         } else if (model.desktopFile) {
-                            logic.openExec("kioclient5 exec " + model.desktopFile)
+                            executable.exec("kioclient5 exec " + model.desktopFile)
                         }
                     }
                 }
@@ -356,5 +350,25 @@ AbstractButton {
         }
         onAboutToHide: menu.isOpened = false
         onAboutToShow: menu.isOpened = true
+    }
+
+    Plasma5Support.DataSource {
+        id: executable
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(source, data) {
+            disconnectSource(source)
+        }
+
+        function exec(cmd) {
+            executable.connectSource(cmd)
+        }
+    }
+
+    Connections {
+    target: Plasmoid
+        function onConfigurationChanged() {
+            menu.forceLayout()
+        }
     }
 }

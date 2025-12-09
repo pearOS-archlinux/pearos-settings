@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.private.quicklaunch 1.0
+import org.kde.plasma.plasma5support as Plasma5Support
 
 Popup {
     property int selectedAppPid
@@ -12,10 +12,6 @@ Popup {
     SystemPalette {
         id: disabledPalette;
         colorGroup: SystemPalette.Disabled
-    }
-
-    Logic {
-        id: logic
     }
 
     focus: true
@@ -104,7 +100,7 @@ Popup {
                 focusPolicy: Qt.TabFocus
                 text: i18nc("force quit action", "Force Quit")
                 onClicked: {
-                    logic.openExec(`kill ${confirmationDialog.selectedAppPid}`)
+                    executable.exec(`kill ${confirmationDialog.selectedAppPid}`)
                     confirmationDialog.close()
                     confirmationDialog.selectedAppPid = 0
                     confirmationDialog.selectedAppName = ""
@@ -119,4 +115,17 @@ Popup {
         }
     }
     closePolicy: Popup.NoAutoClose
+
+    Plasma5Support.DataSource {
+        id: executable
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(source, data) {
+            disconnectSource(source)
+        }
+
+        function exec(cmd) {
+            executable.connectSource(cmd)
+        }
+    }
 }

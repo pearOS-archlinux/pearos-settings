@@ -25,7 +25,7 @@
         "Version": "0.9",
         "Website": "https://github.com/latgardi"
     },
-    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-API-Minimum-Version": "6.5",
     "X-Plasma-MainScript": "ui/main.qml",
     "KPackageStructure": "Plasma/Applet"
 }
