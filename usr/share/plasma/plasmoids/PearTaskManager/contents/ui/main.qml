@@ -217,7 +217,6 @@ PlasmoidItem {
 
     readonly property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         id: backend
-        highlightWindows: Plasmoid.configuration.highlightWindows
 
         onAddLauncher: {
             tasks.addLauncher(url);

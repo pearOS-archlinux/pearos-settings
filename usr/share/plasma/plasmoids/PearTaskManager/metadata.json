@@ -16,7 +16,7 @@
         "Name": "Pear Task Manager",
         "Website": "https://pearos.xyz"
     },
-    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-API-Minimum-Version": "6.5",
     "X-Plasma-Provides": [
         "org.kde.plasma.multitasking"
     ]

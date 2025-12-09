@@ -1,12 +1,12 @@
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
-import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.plasma.private.trash as TrashPrivate
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.draganddrop as DragDrop
+import org.kde.plasma.plasma5support as Plasma5Support
+import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -18,23 +18,21 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.RightEdge
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
-    readonly property bool hasContents: dirModel.count > 0
+    readonly property bool hasContents: dirModelCount > 0
 
     property bool containsAcceptableDrag: false
 
     Plasmoid.title: i18nc("@title the name of the Trash widget", "Trash")
     toolTipSubText: hasContents
-        ? i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count)
+        ? i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModelCount)
         : i18nc("@info:status The trash is empty", "Empty")
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: hasContents ? "/usr/share/extras/user-trash-full.svg" : "/usr/share/extras/user-trash.svg"
 
     Plasmoid.onActivated: {
-        // Execute nautilus trash:// command
-        // Qt.openUrlExternally with trash:// should open Nautilus
-        // if it's configured as the handler for trash:// protocol
-        Qt.openUrlExternally("trash://")
+        // Open Nautilus with trash://
+        openTrashSource.connectSource("nautilus trash://")
     }
 
     Keys.onPressed: {
@@ -51,9 +49,34 @@ PlasmoidItem {
     Accessible.description: toolTipSubText
     Accessible.role: Accessible.Button
 
-    TrashPrivate.DirModel {
-        id: dirModel
-        url: "trash:/"
+    Plasma5Support.DataSource {
+        id: dirModelSource
+        engine: "executable"
+        connectedSources: []
+        
+        function checkTrash() {
+            dirModelSource.connectSource("kioclient5 ls trash:/")
+        }
+        
+        onNewData: function(source, data) {
+            disconnectSource(source)
+            if (data.stdout) {
+                var lines = data.stdout.split('\n').filter(line => line.trim().length > 0)
+                root.dirModelCount = lines.length
+            } else {
+                root.dirModelCount = 0
+            }
+        }
+    }
+    
+    property int dirModelCount: 0
+    
+    Timer {
+        id: trashCheckTimer
+        interval: 1000
+        running: false
+        repeat: true
+        onTriggered: dirModelSource.checkTrash()
     }
 
     Plasmoid.contextualActions: [
@@ -66,7 +89,9 @@ PlasmoidItem {
             text: i18nc("@action:inmenu Empty the trash", "Empty")
             icon.name: "trash-empty"
             enabled: hasContents
-            onTriggered: TrashPrivate.Trash.emptyTrash()
+            onTriggered: {
+                emptyTrashSource.connectSource("kioclient5 empty trash:/")
+            }
         },
         PlasmaCore.Action {
             text: i18nc("@action:inmenu", "Trash Settings…")
@@ -76,8 +101,39 @@ PlasmoidItem {
         }
     ]
 
+    Plasma5Support.DataSource {
+        id: openTrashSource
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(source, data) {
+            disconnectSource(source)
+        }
+    }
+    
+    Plasma5Support.DataSource {
+        id: emptyTrashSource
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(source, data) {
+            disconnectSource(source)
+            dirModelSource.checkTrash()
+        }
+    }
+    
+    Plasma5Support.DataSource {
+        id: trashSource
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(source, data) {
+            disconnectSource(source)
+            dirModelSource.checkTrash()
+        }
+    }
+
     Component.onCompleted: {
         Plasmoid.removeInternalAction("configure");
+        dirModelSource.checkTrash()
+        trashCheckTimer.start()
     }
 
     // Only exists because the default CompactRepresentation doesn't:
@@ -96,15 +152,21 @@ PlasmoidItem {
         DragDrop.DropArea {
             anchors.fill: parent
             preventStealing: true
-            onDragEnter: root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
+            onDragEnter: {
+                // Accept all URLs for now - KIO will handle validation
+                root.containsAcceptableDrag = event.mimeData.urls.length > 0
+            }
             onDragLeave: root.containsAcceptableDrag = false
 
             onDrop: {
                 root.containsAcceptableDrag = false
 
-                var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
-                if (trashableUrls.length > 0) {
-                    TrashPrivate.Trash.trashUrls(trashableUrls)
+                var urls = event.mimeData.urls
+                if (urls.length > 0) {
+                    // Use kioclient5 to move files to trash
+                    for (var i = 0; i < urls.length; i++) {
+                        trashSource.connectSource("kioclient5 move " + urls[i] + " trash:/")
+                    }
                     event.accept(Qt.MoveAction)
                 } else {
                     event.accept(Qt.IgnoreAction) // prevent Plasma from spawning an applet
