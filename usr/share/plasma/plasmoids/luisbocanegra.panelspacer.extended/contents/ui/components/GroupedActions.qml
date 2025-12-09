@@ -1,14 +1,17 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-// import org.kde.kirigami 2.4 as Kirigami
+import org.kde.plasma.core as PlasmaCore
+import org.kde.ksvg as KSvg
+import org.kde.iconthemes as KIconThemes
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 import QtQuick.Dialogs
-import org.kde.plasma.private.quicklaunch 1.0
 import "."
+import "../"
 
 ColumnLayout {
-    id: groupedActions
+    id: root
     Layout.preferredWidth: 450
     property var confInternalName: ""
     property ListModel modelData
@@ -16,17 +19,17 @@ ColumnLayout {
     property alias configValue: actionCombo.configValue
     property alias commandValue: internalValue.value
     property alias applicationUrlValue: btnAddLauncher.applicationUrl
+    property string customName
+    property string customIcon
+
     property bool showSeparator: true
+    property bool showCustomNameAndIcon: false
     property bool isLoading: true
 
     Item {
-        implicitHeight: 4
-    }
-
-    Item {
-        // HACK: Workaround for the command TextArea being marqued as changed when focused
-        // requesting a confirmation that isnt actually needed, so store its value
-        // here and update it only when textarea singals onTextChanged
+        // HACK: Workaround for the command TextArea being marked as changed when focused
+        // requesting a confirmation that isn't actually needed, so store its value
+        // here and update it only when textarea signals onTextChanged
         // there is probably a simpler way or something I've missed...
         id: internalValue
         property string value: ""
@@ -34,41 +37,100 @@ ColumnLayout {
         Component.onCompleted: {
             commandTextArea.text = value;
         }
+        visible: false
     }
 
     FilterListView {
         id: actionCombo
         Layout.fillWidth: true
-        configName: confInternalName
+        configName: root.confInternalName
         componentValue: configValue.split(",")[0]
+        customIcon: root.customIcon
+        customName: root.customName
+        showCustomIcon: root.showCustomNameAndIcon
+    }
+
+    RowLayout {
+        visible: actionCombo.showList && root.showCustomNameAndIcon
+        Label {
+            text: i18n("Name:")
+        }
+        TextField {
+            Layout.fillWidth: true
+            placeholderText: i18n("Custom name")
+            text: root.customName
+            onTextChanged: root.customName = text
+        }
+        Label {
+            text: i18n("Icon:")
+        }
+        Button {
+            id: iconButton
+            hoverEnabled: true
+            ToolTip.delay: Kirigami.Units.toolTipDelay
+            ToolTip.text: i18nc("@info:tooltip", "Icon name is \"%1\"", root.customIcon)
+            ToolTip.visible: iconButton.hovered && root.customIcon.length > 0
+
+            KIconThemes.IconDialog {
+                id: iconDialog
+                onIconNameChanged: {
+                    root.customIcon = iconName;
+                }
+            }
+
+            onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
+
+            Kirigami.Icon {
+                anchors.centerIn: parent
+                width: parent.width
+                height: width
+                source: root.customIcon
+            }
+
+            Menu {
+                id: iconMenu
+
+                // Appear below the button
+                y: parent.height
+
+                MenuItem {
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose…")
+                    icon.name: "document-open-folder"
+                    Accessible.description: i18nc("@info:whatsthis", "Choose an icon for Application Launcher")
+                    onClicked: iconDialog.open()
+                }
+                MenuItem {
+                    text: i18nc("@item:inmenu Reset icon to default", "Reset to default icon")
+                    icon.name: "edit-clear"
+                    enabled: root.customIcon !== ""
+                    onClicked: root.customIcon = ""
+                }
+                MenuItem {
+                    text: i18nc("@action:inmenu", "Remove icon")
+                    icon.name: "delete"
+                    enabled: root.customIcon !== ""
+                    onClicked: root.customIcon = ""
+                }
+            }
+        }
     }
 
     // Command area
-    TextArea {
-        id: commandTextArea
-        visible: actionCombo.componentValue == "custom_command"
-        wrapMode: TextArea.Wrap
-        selectByMouse: true
-        placeholderText: qsTr("Enter shell command or pick a executable")
-        onTextChanged: internalValue.value = text
-        persistentSelection: false
-        // cursor position
-        property int cursorLine: 1 + text.substring(0, cursorPosition).split("\n").length - 1
-        property int cursorColumn: cursorPosition - text.lastIndexOf("\n", cursorPosition - 1)
-        Text {
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            horizontalAlignment: Text.AlignRight
-            text: commandTextArea.cursorLine + ", " + commandTextArea.cursorColumn
-            color: Kirigami.Theme.textColor
-            anchors.rightMargin: 8
-            anchors.bottomMargin: 5
-            opacity: parent.activeFocus ? .6 : 0
-        }
-        Layout.fillWidth: true
-        Kirigami.SpellCheck.enabled: false
-    }
     RowLayout {
+        Label {
+            text: i18n("Command:")
+        }
+        TextField {
+            id: commandTextArea
+            visible: actionCombo.componentValue == "custom_command"
+            wrapMode: TextArea.Wrap
+            selectByMouse: true
+            placeholderText: qsTr("command script or executable")
+            onTextChanged: internalValue.value = text
+            persistentSelection: false
+            Layout.fillWidth: true
+            Kirigami.SpellCheck.enabled: false
+        }
         visible: actionCombo.componentValue == "custom_command"
         Item {
             Layout.fillWidth: true
@@ -112,23 +174,31 @@ ColumnLayout {
         }
     }
 
-    // App selection
-    Logic {
-        id: logic
-        onLauncherAdded: {
-            var launcher = logic.launcherData(url);
+    QuickLaunch {
+        id: quickLaunch
+        onLauncherAdded: url => {
+            var launcher = quickLaunch.launcherData(url);
             console.log("APP:", url);
             btnAddLauncher.text = launcher.applicationName + " - Tap to change";
             btnAddLauncher.applicationUrl = url;
             btnAddLauncher.icon.name = launcher.iconName || "fork";
             hiddenAppText.text = url;
         }
+        onLogicChanged: {
+            if (logic) {
+                root.updateAppButton(root.applicationUrlValue);
+            }
+        }
+        visible: false
     }
 
     // Update button app name and icon
-    function updateAppButton(appVal) {
-        if (appVal !== "") {
-            var launcher = logic.launcherData(appVal);
+    function updateAppButton(url) {
+        if (!quickLaunch.logic) {
+            return;
+        }
+        if (url !== "") {
+            var launcher = quickLaunch.launcherData(url);
             btnAddLauncher.text = launcher.applicationName + " - Tap to change";
             btnAddLauncher.icon.name = launcher.iconName || "fork";
         } else {
@@ -139,33 +209,47 @@ ColumnLayout {
 
     ColumnLayout {
         visible: actionCombo.componentValue == "launch_application"
-        RowLayout {
-            Button {
-                id: btnAddLauncher
-                property string applicationUrl: ""
 
-                onClicked: {
-                    logic.addLauncher();
-                }
+        Label {
+            text: i18n("C++ plugin not found, install it to launch applications on Plasma 6.5 or newer. <a href=\"https://github.com/luisbocanegra/plasma-panel-spacer-extended#build-from-source-with-c-plugin\">Install instructions</a>")
+            wrapMode: Label.Wrap
+            Layout.fillWidth: true
+            color: Kirigami.Theme.neutralTextColor
+            onLinkActivated: link => Qt.openUrlExternally(link)
+            HoverHandler {
+                cursorShape: Qt.PointingHandCursor
+            }
+            visible: !quickLaunch.pluginFound
+        }
 
-                Component.onCompleted: {
-                    updateAppButton(applicationUrlValue);
-                    hiddenAppText.text = applicationUrlValue;
-                }
+        Button {
+            id: btnAddLauncher
+            visible: quickLaunch.pluginFound
+            Layout.fillWidth: true
+            property string applicationUrl: ""
+
+            onClicked: {
+                quickLaunch.addLauncher();
             }
 
-            TextArea {
-                id: hiddenAppText
-                placeholderText: qsTr("Enter URL or pick a file")
-                Layout.fillWidth: true
-                onTextChanged: {
-                    updateAppButton(text);
-                    btnAddLauncher.applicationUrl = hiddenAppText.text;
-                }
+            Component.onCompleted: {
+                hiddenAppText.text = root.applicationUrlValue;
+            }
+        }
+
+        TextField {
+            id: hiddenAppText
+            visible: quickLaunch.pluginFound
+            placeholderText: qsTr("Enter URL or pick a file")
+            Layout.fillWidth: true
+            onTextChanged: {
+                root.updateAppButton(text);
+                btnAddLauncher.applicationUrl = hiddenAppText.text;
             }
         }
 
         RowLayout {
+            visible: quickLaunch.pluginFound
             Item {
                 Layout.fillWidth: true
             }
@@ -215,17 +299,14 @@ ColumnLayout {
 
     FileDialog {
         id: fileDialogExec
-        onAccepted: commandTextArea.text = fileDialogExec.fileUrl.toString().replace("file://", "")
+        onAccepted: commandTextArea.text = fileDialogExec.selectedFile.toString().replace("file://", "")
     }
 
     FileDialog {
         id: fileDialogUrl
         onAccepted: {
-            hiddenAppText.text = fileDialogUrl.fileUrl.toString();
+            hiddenAppText.text = fileDialogUrl.selectedFile.toString();
         }
-    }
-    Item {
-        implicitHeight: 4
     }
 
     // Separator
@@ -233,6 +314,6 @@ ColumnLayout {
         Layout.fillWidth: true
         height: 1
         color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.15)
-        visible: showSeparator
+        visible: root.showSeparator
     }
 }
