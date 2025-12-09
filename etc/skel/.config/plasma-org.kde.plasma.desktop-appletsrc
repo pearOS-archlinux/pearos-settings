@@ -284,7 +284,7 @@ immutability=1
 plugin=com.github.antroids.application-title-bar
 
 [Containments][3][Applets][40][Configuration][Appearance]
-widgetButtonsAuroraeTheme=pearOS-Dark
+widgetButtonsAuroraeTheme=pearOS-1.5x
 widgetButtonsIconsTheme=Aurorae
 widgetButtonsMargins=8
 widgetElements=windowCloseButton,windowMinimizeButton,windowMaximizeButton
