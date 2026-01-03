@@ -45,8 +45,9 @@ PlasmoidItem {
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        enabled: appMenuModel.menuAvailable || shouldShowBasicMenu
-        checkable: (appMenuModel.menuAvailable || shouldShowBasicMenu) && Plasmoid.currentIndex === fakeIndex
+        // Activăm butonul dacă avem meniu real sau meniu prestabilit
+        enabled: (appMenuModel.menuAvailable && appMenuModel.visible) || shouldShowBasicMenu
+        checkable: ((appMenuModel.menuAvailable && appMenuModel.visible) || shouldShowBasicMenu) && Plasmoid.currentIndex === fakeIndex
         checked: checkable
         icon.name: "application-menu"
 
@@ -59,6 +60,30 @@ PlasmoidItem {
 
     fullRepresentation: GridLayout {
         id: buttonGrid
+
+        // Funcție care verifică dacă avem meniu real cu butoane vizibile
+        function checkAndUpdateBasicMenu() {
+            // Dacă nu avem meniu disponibil sau vizibil, afișăm meniul prestabilit
+            if (!appMenuModel.menuAvailable || !appMenuModel.visible) {
+                root.shouldShowBasicMenu = true;
+                return;
+            }
+            // Dacă avem meniu disponibil și vizibil, verificăm dacă există butoane
+            // Dacă nu există butoane, afișăm meniul prestabilit
+            root.shouldShowBasicMenu = (buttonRepeater.count === 0);
+        }
+        
+        // Actualizăm shouldShowBasicMenu când se schimbă proprietățile relevante
+        Connections {
+            target: appMenuModel
+            function onMenuAvailableChanged() { buttonGrid.checkAndUpdateBasicMenu(); }
+            function onVisibleChanged() { buttonGrid.checkAndUpdateBasicMenu(); }
+        }
+        
+        // Inițializăm shouldShowBasicMenu la pornire
+        Component.onCompleted: {
+            checkAndUpdateBasicMenu();
+        }
 
         Plasmoid.status: {
             if (appMenuModel.menuAvailable && Plasmoid.currentIndex > -1 && buttonRepeater.count > 0) {
@@ -113,7 +138,15 @@ PlasmoidItem {
 
         Repeater {
             id: buttonRepeater
-            model: appMenuModel.visible ? appMenuModel : null
+            // Afișăm meniul real DOAR când avem meniu disponibil și vizibil
+            // Verificarea pentru butoanele vizibile se face prin count > 0
+            model: (appMenuModel.menuAvailable && appMenuModel.visible) ? appMenuModel : null
+            
+            // Actualizăm shouldShowBasicMenu când se schimbă numărul de butoane
+            onCountChanged: {
+                buttonGrid.checkAndUpdateBasicMenu();
+            }
+            
 
             MenuDelegate {
                 readonly property int buttonIndex: index
@@ -588,6 +621,70 @@ PlasmoidItem {
                             helpMenu.close()
                         }
                     }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "Get NordVPN"
+                        onClicked: {
+                            root.openUrl("https://go.nordvpn.net/aff_c?offer_id=15&aff_id=136731&url_id=902")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "Get NordPass"
+                        onClicked: {
+                            root.openUrl("https://go.nordpass.io/aff_c?offer_id=488&aff_id=136731&url_id=9356")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "Join Reddit"
+                        onClicked: {
+                            root.openUrl("https://www.reddit.com/r/pearos/")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "YouTube"
+                        onClicked: {
+                            root.openUrl("https://www.youtube.com/pearOS")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "Instagram"
+                        onClicked: {
+                            root.openUrl("https://www.instagram.com/pear_os/")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "pearOS Website"
+                        onClicked: {
+                            root.openUrl("https://pearos.xyz")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "pearID"
+                        onClicked: {
+                            root.openUrl("https://account.pearos.xyz")
+                            helpMenu.close()
+                        }
+                    }
+                    
+                    PlasmaExtras.MenuItem {
+                        text: "GitHub"
+                        onClicked: {
+                            root.openUrl("https://github.com/pearOS-archlinux/")
+                            helpMenu.close()
+                        }
+                    }
                 }
             }
         }
@@ -605,13 +702,17 @@ PlasmoidItem {
         containmentStatus: Plasmoid.containment.status
         screenGeometry: root.screenGeometry
         onRequestActivateIndex: Plasmoid.requestActivateIndex(index)
+        
+        
         Component.onCompleted: {
             Plasmoid.model = appMenuModel;
         }
     }
     
-    // Proprietate pentru basic menu - DOAR când nu există meniul real
-    readonly property bool shouldShowBasicMenu: !appMenuModel.menuAvailable && !appMenuModel.visible
+    // Proprietate pentru basic menu - se afișează DOAR când nu există meniul real
+    // Se actualizează în interiorul fullRepresentation pentru a verifica și butoanele vizibile
+    // Inițializăm implicit cu true pentru a afișa meniul prestabilit când nu există activități
+    property bool shouldShowBasicMenu: true
     
     // TaskManager pentru gestionarea ferestrelor (folosit de Window menu)
     TaskManager.TasksModel {
