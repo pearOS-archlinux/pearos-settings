@@ -1,0 +1,25 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alex@pear-software.com",
+                "Name": "Alexandru Balan"
+            }
+        ],
+        "Name": "PearPrivacy",
+        "Id": "PearPrivacy",
+        "Description": "A privacy plasmoid that detects when camera or microphone is being used",
+        "Category": "System Information",
+        "Icon": "camera-web",
+        "EnabledByDefault": true,
+        "License": "GPL-3.0+",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1.0",
+        "Website": "https://pearos.xyz"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="checkInterval" type="Int">
+      <label>Check interval (seconds)</label>
+      <default>1</default>
+      <min>1</min>
+      <max>10</max>
+    </entry>
+    <entry name="showCameraIndicator" type="Bool">
+      <label>Show camera indicator</label>
+      <default>true</default>
+    </entry>
+    <entry name="showMicrophoneIndicator" type="Bool">
+      <label>Show microphone indicator</label>
+      <default>true</default>
+    </entry>
+    <entry name="showScreenRecordingIndicator" type="Bool">
+      <label>Show screen recording indicator</label>
+      <default>true</default>
+    </entry>
+    <entry name="iconSize" type="Int">
+      <label>Icon size percentage</label>
+      <default>80</default>
+      <min>50</min>
+      <max>200</max>
+    </entry>
+    <entry name="ringLightEnabled" type="Bool">
+      <label>Ring Light enabled</label>
+      <default>false</default>
+    </entry>
+    <entry name="ringLightThickness" type="Int">
+      <label>Ring Light border thickness</label>
+      <default>20</default>
+      <min>2</min>
+      <max>500</max>
+    </entry>
+    <entry name="ringLightWidth" type="Int">
+      <label>Ring Light width in pixels</label>
+      <default>1920</default>
+    </entry>
+    <entry name="ringLightHeight" type="Int">
+      <label>Ring Light height in pixels</label>
+      <default>1080</default>
+    </entry>
+    <entry name="ringLightUseWhite" type="Bool">
+      <label>Ring Light use white color</label>
+      <default>true</default>
+    </entry>
+    <entry name="ringLightTemperature" type="Int">
+      <label>Ring Light temperature (cool to warm)</label>
+      <default>0</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
+    <entry name="ringLightHue" type="Int">
+      <label>Ring Light hue</label>
+      <default>0</default>
+      <min>0</min>
+      <max>360</max>
+    </entry>
+    <entry name="ringLightAutoStartOnCamera" type="Bool">
+      <label>Auto start Ring Light on camera use</label>
+      <default>false</default>
+    </entry>
+    <entry name="ringLightShape" type="Bool">
+      <label>Ring Light shape (true = Circle, false = Screen)</label>
+      <default>false</default>
+    </entry>
+    <entry name="ringLightRadius" type="Int">
+      <label>Ring Light circle radius in pixels</label>
+      <default>400</default>
+    </entry>
+  </group>
+
+</kcfg>
+
