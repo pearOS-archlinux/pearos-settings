@@ -18,7 +18,7 @@ KSvg.SvgItem {
         horizontalCenter: iconBox.horizontalCenter
     }
 
-    visible: parent.model.IsGroupParent
+    visible: false
 
     states: [
         State {

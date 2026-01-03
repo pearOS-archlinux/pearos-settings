@@ -75,6 +75,7 @@ PlasmaCore.ToolTipArea {
     property var audioStreams: []
     property bool delayAudioStreamIndicator: false
     property bool completed: false
+    property real iconBounceOffset: -3
     readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.interactiveMute
     readonly property bool hasAudioStream: audioStreams.length > 0
     readonly property bool playingAudio: hasAudioStream && audioStreams.some(item => !item.corked)
@@ -150,6 +151,43 @@ PlasmaCore.ToolTipArea {
     }
     transform: Translate {
         id: translateTransform
+    }
+
+    SequentialAnimation {
+        id: iconBounceAnimation
+        NumberAnimation {
+            target: task
+            property: "iconBounceOffset"
+            from: -3
+            to: -30
+            duration: 300
+            easing.type: Easing.OutQuad
+        }
+        NumberAnimation {
+            target: task
+            property: "iconBounceOffset"
+            from: -20
+            to: -3
+            duration: 200
+            easing.type: Easing.InQuad
+        }
+    }
+
+    property bool wasStartup: false
+    Timer {
+        id: startupCheckTimer
+        interval: 50
+        repeat: true
+        running: completed
+        onTriggered: {
+            const isStartup = model.IsStartup;
+            if (isStartup && !wasStartup) {
+                iconBounceAnimation.restart();
+            } else if (!isStartup && !iconBounceAnimation.running) {
+                iconBounceOffset = -3;
+            }
+            wasStartup = isStartup;
+        }
     }
 
     Accessible.name: model.display
@@ -541,7 +579,7 @@ PlasmaCore.ToolTipArea {
         anchors {
             horizontalCenter: parent.horizontalCenter
             verticalCenter: parent.verticalCenter
-            verticalCenterOffset: -3
+            verticalCenterOffset: task.iconBounceOffset
         }
 
         width: task.inPopup ? Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium) : Math.min(task.parent?.minimumWidth ?? 0, task.height - 4)
@@ -576,14 +614,6 @@ PlasmaCore.ToolTipArea {
 
             source: model.decoration
         }
-
-        Loader {
-            anchors.centerIn: parent
-            width: Math.min(parent.width, parent.height)
-            height: width
-            active: model.IsStartup
-            sourceComponent: busyIndicator
-        }
     }
 
     Rectangle {
@@ -597,7 +627,7 @@ PlasmaCore.ToolTipArea {
         height: 6
         radius: width / 2
         color: Kirigami.Theme.highlightColor
-        visible: model.IsWindow
+        visible: model.IsWindow || model.IsStartup
     }
 
     // Separator after the last item
