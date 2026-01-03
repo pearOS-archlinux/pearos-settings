@@ -61,7 +61,11 @@ PlasmoidItem {
         onNewData: function(source, data) {
             disconnectSource(source)
             if (data.stdout) {
-                var lines = data.stdout.split('\n').filter(line => line.trim().length > 0)
+                var lines = data.stdout.split('\n').filter(line => {
+                    var trimmed = line.trim()
+                    // Filter out empty lines and the current directory indicator (.)
+                    return trimmed.length > 0 && trimmed !== '.'
+                })
                 root.dirModelCount = lines.length
             } else {
                 root.dirModelCount = 0
@@ -90,7 +94,7 @@ PlasmoidItem {
             icon.name: "trash-empty"
             enabled: hasContents
             onTriggered: {
-                emptyTrashSource.connectSource("kioclient5 empty trash:/")
+                emptyTrashSource.connectSource("sh -c 'rm -rf ~/.local/share/Trash/files/* ~/.local/share/Trash/info/* 2>/dev/null || true'")
             }
         },
         PlasmaCore.Action {
