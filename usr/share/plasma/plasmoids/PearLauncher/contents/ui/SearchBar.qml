@@ -32,11 +32,28 @@ RowLayout {
             anchors.fill: parent
             enabled: !useCustomIcon
             hoverEnabled: true
+            
+            Timer {
+                id: activateSearchTimer
+                interval: 150 // Sincronizat cu animația de fade out (200ms) - începem mai devreme pentru o tranziție mai smooth
+                onTriggered: {
+                    plasmoid.activated(); // Declanșăm același eveniment ca Alt+Space
+                }
+            }
+            
             onClicked: {
                 if (main.showAllApps) {
                     // Când suntem pe toate aplicațiile, deschidem fereastra de search
-                    root.visible = false; // Închidem fereastra principală
-                    plasmoid.activated(); // Declanșăm același eveniment ca Alt+Space
+                    if (root && root.visible) {
+                        // Începem animația de fade out
+                        if (root.closeAnimated) {
+                            root.closeAnimated(); // Aceasta va declanșa animația de fade out
+                        } else {
+                            root.visible = false;
+                        }
+                    }
+                    // Folosim un timer pentru a deschide fereastra de search după ce animația de fade out a început
+                    activateSearchTimer.start();
                 } else {
                     // Când suntem pe favorite, revenim la toate aplicațiile
                     main.showAllApps = !main.showAllApps;

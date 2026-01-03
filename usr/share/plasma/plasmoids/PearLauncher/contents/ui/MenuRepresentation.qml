@@ -39,6 +39,8 @@ PlasmaCore.Dialog {
 
 	Plasmoid.status: root.visible ? PlasmaCore.Types.RequiresAttentionStatus : PlasmaCore.Types.PassiveStatus
 
+	property bool isClosing: false
+
 	property int iconSize: { 
 		switch(Plasmoid.configuration.appsIconSize){
 			case 0: return Kirigami.Units.iconSizes.smallMedium;
@@ -63,7 +65,9 @@ PlasmaCore.Dialog {
 	onVisibleChanged: {
 		if (!visible) {
 			reset();
+			isClosing = false;
 		} else {
+			isClosing = false;
 			var pos = popupPosition(width, height);
 			x = pos.x;
 			y = pos.y;
@@ -84,7 +88,13 @@ PlasmaCore.Dialog {
 	}
 
 	function toggle() {
-		root.visible = false;
+		root.closeAnimated();
+	}
+
+	function closeAnimated() {
+		if (root.visible && !root.isClosing) {
+			root.isClosing = true;
+		}
 	}
 
 	function reset() {
@@ -159,6 +169,22 @@ PlasmaCore.Dialog {
 		// Searchbar.height + separator.height  + categories switcher.height 
 		height: 40 + 2 + 40 + (root.cellSizeHeight *4) + innerPadding//550 * 1
 		
+		// Animație pentru fade out
+		opacity: root.isClosing ? 0.0 : 1.0
+		Behavior on opacity {
+			NumberAnimation {
+				id: fadeOutAnimation
+				duration: 200
+				easing.type: Easing.OutCubic
+				onRunningChanged: {
+					if (!running && root.isClosing) {
+						// După ce animația s-a terminat, închidem fereastra
+						root.visible = false;
+						root.isClosing = false;
+					}
+				}
+			}
+		}
 		
 		// We want the MainView to have an uniform margin through different plasma themes
 		property real innerPadding: 15 
@@ -185,7 +211,7 @@ PlasmaCore.Dialog {
 
 		Keys.onPressed: {
 			if (event.key == Qt.Key_Escape) {
-				root.visible = false;
+				root.closeAnimated();
 			}
 		}
 	}

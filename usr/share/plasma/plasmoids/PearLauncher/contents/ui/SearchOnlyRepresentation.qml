@@ -91,6 +91,15 @@ PlasmaCore.Dialog {
 		width: root.minWidth
 		height: main.searching ? root.maxHeight : 60
 		
+		// Animație pentru fade in
+		opacity: root.visible ? 1.0 : 0.0
+		Behavior on opacity {
+			NumberAnimation {
+				duration: 200
+				easing.type: Easing.OutCubic
+			}
+		}
+		
 		property real innerPadding: 15 
 
 		Item {
