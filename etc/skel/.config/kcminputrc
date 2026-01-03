@@ -1,3 +1,6 @@
+[Libinput][1267][12655][ELAN0412:00 04F3:316F Mouse]
+NaturalScroll=true
+
 [Mouse]
 X11LibInputXAccelProfileFlat=true
 cursorTheme=pearOS

@@ -1,7 +1,3 @@
-[Activities][LastVirtualDesktop]
-14ce8c0d-05b1-416d-a18a-991402375048=1e0da598-f00a-4da5-8d70-b4bc0115be24
-8779850d-e333-4d82-8780-24edcb7395a8=f5e21766-0c6f-4ce3-9dab-8707b079e367
-
 [Desktops]
 Id_1=f5e21766-0c6f-4ce3-9dab-8707b079e367
 Number=1
@@ -16,16 +12,27 @@ BlurDecorations=true
 BlurMatching=false
 BlurMenus=true
 BlurNonMatching=true
-BlurStrength=13
-FakeBlur=true
+BlurStrength=2
 FakeBlurCustomImageBlur=false
-NoiseStrength=8
+NoiseStrength=0
 PaintAsTranslucent=true
+RefractionEdgeSize=13
 RefractionNormalPow=15
-WindowClasses=org.kde.dolphin\nsystemsettings\norg.kde.okular\norg.kde.gwenview\norg.kde.konsole\norg.gnome.Nautilus\n
+RefractionRGBFringing=15
+RefractionStrength=3
+RoundCornersOfMaximizedWindows=true
+Saturation=1.3
+TransparentBlur=false
+WindowClasses=plasmashell\nnautilus
 
 [Effect-magiclamp]
 AnimationDuration=400
+
+[Effect-overview]
+BorderActivate=9
+
+[Effect-shakecursor]
+Magnification=7
 
 [Effect-translucency]
 DropdownMenus=89
@@ -40,20 +47,27 @@ MoveFactor=20
 Stiffness=3
 WobblynessLevel=3
 
+[Input]
+TabletMode=off
+
 [Plugins]
-blurEnabled=true
+blurEnabled=false
 contrastEnabled=true
+desktopchangeosdEnabled=false
 dimscreenEnabled=false
 fadeEnabled=true
+forceblurEnabled=true
 invertEnabled=true
 kwin4_effect_shapecornersEnabled=false
-macsimize6Enabled=false
+macsimize6Enabled=true
 magiclampEnabled=true
+minimizeallEnabled=false
 scaleEnabled=false
 screenedgeEnabled=false
 sheetEnabled=true
 slidingpopupsEnabled=false
 squashEnabled=false
+synchronizeskipswitcherEnabled=true
 translucencyEnabled=true
 truely-maximizedEnabled=true
 
@@ -73,8 +87,14 @@ SecondOutlineColor=44,44,44
 SecondOutlineThickness=0.25
 Size=20
 
+[Script-macsimize6]
+moveToLast=true
+
 [Tiling]
 padding=4
+
+[Tiling][13ad835f-efbe-45ee-83f9-61b89a63edf5][e5ea93b9-a015-40e9-8d9b-9349585d1a82]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][1e0da598-f00a-4da5-8d70-b4bc0115be24][cb995a0f-9c7a-4f35-a2b8-440453c8a29a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -103,7 +123,13 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][7a1f243a-a1dd-444c-943d-26016c2586aa][e4260ac8-2d87-4da4-af70-f072b618efca]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][8c68844c-c191-42d8-913a-691bb69425b3][e5ea93b9-a015-40e9-8d9b-9349585d1a82]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][9350f969-92d0-5658-bb27-639b07d90acc]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][b7572ad3-6a77-4352-8cf6-affa7f1a1855][e5ea93b9-a015-40e9-8d9b-9349585d1a82]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c59323a7-6c7c-5999-ba78-4b8c03a908f2]
@@ -121,11 +147,16 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][f5e21766-0c6f-4ce3-9dab-8707b079e367][e4260ac8-2d87-4da4-af70-f072b618efca]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][f5e21766-0c6f-4ce3-9dab-8707b079e367][e5ea93b9-a015-40e9-8d9b-9349585d1a82]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Windows]
 HideUtilityWindowsForInactive=false
 
 [Xwayland]
 Scale=1
+XwaylandEavesdrops=All
+XwaylandEavesdropsMouse=true
 
 [org.kde.kdecoration2]
 BorderSize=None
