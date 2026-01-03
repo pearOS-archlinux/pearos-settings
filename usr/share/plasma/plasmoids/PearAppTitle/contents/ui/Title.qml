@@ -47,7 +47,7 @@ GridLayout {
     CItem{
         length : {
             if(cfg.lengthKind == 0) {
-                if (showButtons) return buttonsRow.implicitWidth
+                if (showButtons) return labelPlain.implicitWidth // buttonsRow.implicitWidth
                 else if (hasHtml) return label.implicitWidth
                 else return labelPlain.implicitWidth
             }
