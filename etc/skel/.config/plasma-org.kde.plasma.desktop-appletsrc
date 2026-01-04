@@ -29,8 +29,7 @@ arrangement=1
 positions={"1920x1080":[]}
 
 [Containments][121][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/pearOS-dark/default.jpg
-PreviewImage=/usr/share/wallpapers/pearOS-dark/default.jpg
+Image=file:///usr/share/wallpapers/pearOS-dark/default.jpg
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][122]
@@ -52,7 +51,7 @@ arrangement=1
 positions={"3440x1440":[]}
 
 [Containments][122][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/pearOS-dark/default.jpg
+Image=file:///usr/share/extras/wallpapers/def_dark.png
 PreviewImage=/usr/share/wallpapers/pearOS-dark/default.jpg
 SlidePaths=/usr/share/wallpapers/
 
@@ -102,8 +101,9 @@ immutability=1
 plugin=luisbocanegra.panel.colorizer
 
 [Containments][27][Applets][132][Configuration]
-popupHeight=400
-popupWidth=560
+PreloadWeight=100
+popupHeight=451
+popupWidth=450
 
 [Containments][27][Applets][132][Configuration][ConfigDialog]
 DialogHeight=630
@@ -326,8 +326,9 @@ immutability=1
 plugin=luisbocanegra.panel.colorizer
 
 [Containments][3][Applets][131][Configuration]
-popupHeight=400
-popupWidth=560
+PreloadWeight=100
+popupHeight=451
+popupWidth=450
 
 [Containments][3][Applets][131][Configuration][ConfigDialog]
 DialogHeight=630
@@ -339,6 +340,21 @@ globalSettings={"panel":{"normal":{"enabled":true,"blurBehind":false,"background
 hideWidget=true
 lastPreset=/home/liveuser/.local/share/plasma/plasmoids/luisbocanegra.panel.colorizer/contents/ui/presets/Transparent
 panelWidgets=[{"id":85,"name":"xyz.pearos.pearmenu","title":"Pear Menu","icon":"file:///usr/share/extras/drawing.svg","inTray":false},{"id":40,"name":"com.github.antroids.application-title-bar","title":"Application Title Bar","icon":"window-close","inTray":false},{"id":105,"name":"PearAppTitle","title":"Pear App Title","icon":"preferences-desktop","inTray":false},{"id":131,"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"id":116,"name":"org.kde.plasma.appmenu","title":"pearOS Global Menu","icon":"show-menu","inTray":false},{"id":123,"name":"PearPrivacy","title":"PearPrivacy","icon":"camera-web","inTray":false},{"id":43,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":8,"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"id":128,"name":"luisbocanegra.panelspacer.extended","title":"Panel Spacer Extended","icon":"","inTray":false},{"id":82,"name":"org.kde.plasma.battery","title":"Power and Battery","icon":"battery-full-symbolic","inTray":false},{"id":129,"name":"luisbocanegra.panelspacer.extended","title":"Panel Spacer Extended","icon":"","inTray":false},{"id":125,"name":"org.kde.milou","title":"Search","icon":"system-search","inTray":false},{"id":130,"name":"luisbocanegra.panelspacer.extended","title":"Panel Spacer Extended","icon":"","inTray":false},{"id":63,"name":"Plasma.Flex.Hub","title":"Flex Hub","icon":"configure","inTray":false},{"id":39,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":124,"name":"PearClock","title":"PearClock","icon":"clock","inTray":false},{"id":36,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":-1,"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wireless-80-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
+
+[Containments][3][Applets][138]
+immutability=1
+plugin=PearControlCentre
+
+[Containments][3][Applets][138][Configuration]
+popupHeight=400
+popupWidth=560
+
+[Containments][3][Applets][138][Configuration][Appearance]
+showBattery=false
+
+[Containments][3][Applets][138][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
 
 [Containments][3][Applets][36]
 immutability=1
@@ -387,35 +403,6 @@ plugin=org.kde.plasma.panelspacer
 [Containments][3][Applets][43][Configuration][General]
 expanding=false
 length=10
-
-[Containments][3][Applets][63]
-immutability=1
-plugin=Plasma.Flex.Hub
-
-[Containments][3][Applets][63][Configuration]
-PreloadWeight=100
-popupHeight=600
-popupWidth=333
-
-[Containments][3][Applets][63][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][3][Applets][63][Configuration][General]
-colorCards=39,174,96
-coverByNetwork=true
-currentNameColor=Negative
-darkTheme=xyz.pearos.pearOS-Dark
-elements=12,4,7,13,14,5,8,15,10,11,0,25
-index_themes=[12,0,17,15,9,10,13,14,8,5],[16,11,13,6,7,2,8],[16,0,20,19,21,8,11,13,14,5],[12,15,9,10,13,14,8,5,21,11,25,4,1]
-lightTheme=xyz.pearos.pearOS-Light
-names_themes=Default,macOS,iOS,tahoe
-selected_theme=Custom
-seriesX_themes=[0,2,0,0,2,2,0,1,2,3],[0,2,2,0,0,0,3],[0,2,3,2,0,1,0,0,1,2],[0,0,2,2,0,1,2,3,0,2,1,0,2]
-seriesY_themes=[0,0,1,2,2,3,4,4,4,4],[0,0,1,2,3,4,1],[0,0,2,2,2,2,3,4,4,4],[0,2,2,3,4,4,4,4,5,5,5,1,0]
-shadowOpacity=10
-xElements=0,0,0,2,3,2,3,0,0,2,2,0
-yElements=0,1,2,3,3,4,4,3,5,5,0,6
 
 [Containments][3][Applets][8]
 PreloadWeight=100
@@ -713,7 +700,7 @@ DialogHeight=175
 DialogWidth=3840
 
 [Containments][3][General]
-AppletOrder=85;40;105;131;116;123;43;8;128;82;129;125;130;63;39;124;36
+AppletOrder=85;40;105;131;116;123;43;8;128;82;129;125;130;138;39;124;36
 
 [Containments27Appletsts][83][Configuration][General]
 customButtonImage=/usr/share/extras/launchpad.svg
@@ -722,4 +709,4 @@ useCustomButtonImage=true
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/package-repository,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/iso,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/pearOS-private-key.asc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/git.key,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/main.qml.backup_1764482849,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma6-pearos,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/install_steps.zip,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.desktopcontainment,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma-org.kde.plasma.desktop-appletsrc,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/newsettings,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/pearOS-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/New Folder,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/filesystem,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/TahoeLauncher,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/plasma6pearos_install.log,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/org.kde.plasma.appmenu,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/mac-cursors-main,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps-bundle,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/sddm.conf,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/homeee,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-refind-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/Settings.app,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/original_code,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/PearFolderArc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/ref.sh,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/a,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-settings,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-boot-sound,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/extrass,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/test,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pkgbuilds,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/home.tar.xz,0,3173ac60-468b-43ae-9ce9-60542f97cd90
+screenMapping=desktop:/org.kde.plasma.appmenu,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/homeee,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/mac-cursors-main,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/install_steps.zip,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/original_code,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/newsettings,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/Settings.app,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/a,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/plasma6-pearos,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma-org.kde.plasma.desktop-appletsrc,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/pearos-settings,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/home.tar.xz,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/package-repository,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.desktopcontainment,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pkgbuilds,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/main.qml.backup_1764482849,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/filesystem,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/git.key,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/iso,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-private-key.asc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/extrass,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/plasma6pearos_install.log,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/TahoeLauncher,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/New Folder,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/sddm.conf,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/ref.sh,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/pearos-refind-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-boot-sound,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/PearFolderArc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps-bundle,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/test,0,3173ac60-468b-43ae-9ce9-60542f97cd90

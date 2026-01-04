@@ -1,0 +1,5 @@
+[Added Associations]
+inode/directory=org.gnome.Nautilus.desktop;org.kde.gwenview.desktop;
+
+[Default Applications]
+inode/directory=org.gnome.Nautilus.desktop;
