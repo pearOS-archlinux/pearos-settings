@@ -4,6 +4,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Window
 import QtCore
 import Qt5Compat.GraphicalEffects
+import QtWebEngine
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -32,6 +33,30 @@ PlasmoidItem {
     property string cameraAppIcon: ""
     property string microphoneAppIcon: ""
     property string screenRecordingAppIcon: ""
+    property bool piriStatusReady: true
+    property bool piriShowIcon: false
+
+    Plasma5Support.DataSource {
+        id: piriShowIconReader
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(sourceName, data) {
+            disconnectSource(sourceName)
+            var output = data["stdout"].toString().trim()
+            root.piriShowIcon = (output === "true")
+        }
+    }
+
+    Plasma5Support.DataSource {
+        id: piriStatusReader
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(sourceName, data) {
+            disconnectSource(sourceName)
+            var output = data["stdout"].toString().trim()
+            root.piriStatusReady = (output === "ready")
+        }
+    }
 
     Plasma5Support.DataSource {
         id: cameraChecker
@@ -358,6 +383,27 @@ PlasmoidItem {
         }
     }
     
+    function checkPiriStatus() {
+        piriStatusReader.connectSource("cat /usr/share/extras/piri/status 2>/dev/null || echo ''")
+    }
+
+    function checkPiriShowIcon() {
+        piriShowIconReader.connectSource("cat /usr/share/extras/piri/show_icon 2>/dev/null || echo 'false'")
+    }
+
+    Plasma5Support.DataSource {
+        id: piriLaunchCommand
+        engine: "executable"
+        connectedSources: []
+        onNewData: function(sourceName, data) {
+            disconnectSource(sourceName)
+        }
+    }
+
+    function launchPiriCommand() {
+        piriLaunchCommand.connectSource("sh -c 'piri-voice'")
+    }
+
     function checkScreenRecording() {
         if (!Plasmoid.configuration.showScreenRecordingIndicator) {
             root.screenRecordingInUse = false
@@ -446,6 +492,8 @@ PlasmoidItem {
             checkCamera()
             checkMicrophone()
             checkScreenRecording()
+            checkPiriStatus()
+            checkPiriShowIcon()
         }
     }
 
@@ -453,6 +501,8 @@ PlasmoidItem {
         checkCamera()
         checkMicrophone()
         checkScreenRecording()
+        checkPiriStatus()
+        checkPiriShowIcon()
         updateStatus()
     }
 
@@ -491,6 +541,49 @@ PlasmoidItem {
         RowLayout {
             anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
+
+            MouseArea {
+                id: piriIconArea
+                readonly property bool shouldBeVisible: root.piriShowIcon && !(Plasmoid.configuration.showCameraIndicator && root.cameraInUse) && !(Plasmoid.configuration.showMicrophoneIndicator && root.microphoneInUse) && !(Plasmoid.configuration.showScreenRecordingIndicator && root.screenRecordingInUse)
+                visible: shouldBeVisible || opacity > 0
+                Layout.preferredWidth: pillWidth
+                Layout.preferredHeight: pillHeight
+                Layout.minimumWidth: pillWidth
+                Layout.minimumHeight: pillHeight
+                readonly property real baseSize: isHorizontal ? mouseArea.height : mouseArea.width
+                readonly property bool isHorizontal: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                readonly property real pillHeight: Math.max(16, baseSize * (Plasmoid.configuration.iconSize / 100))
+                readonly property real pillWidth: pillHeight
+
+                opacity: shouldBeVisible ? 1.0 : 0.0
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 300
+                        easing.type: Easing.InOutQuad
+                        onRunningChanged: {
+                            if (!running && opacity === 0.0) {
+                                piriIconArea.visible = false
+                            }
+                        }
+                    }
+                }
+
+                onClicked: {
+                    if (root.piriShowIcon) {
+                        root.launchPiriCommand()
+                    } else {
+                        Plasmoid.expanded = !Plasmoid.expanded
+                    }
+                }
+
+                Image {
+                    anchors.fill: parent
+                    source: Qt.resolvedUrl("../assets/piri.png")
+                    fillMode: Image.PreserveAspectFit
+                    smooth: true
+                }
+            }
 
             MouseArea {
                 id: cameraPillArea
@@ -1362,6 +1455,24 @@ PlasmoidItem {
                     radius: ringLightWindow.cornerRadius
                 }
             }
+        }
+    }
+
+    PlasmaCore.Dialog {
+        id: piriDialog
+        visible: !root.piriStatusReady
+        location: Plasmoid.location
+        type: PlasmaCore.Dialog.AppletPopup
+        flags: Qt.FramelessWindowHint | Qt.Popup | Qt.WindowDoesNotAcceptFocus | Qt.WindowTransparentForInput
+        backgroundHints: PlasmaCore.Types.NoBackground
+        hideOnWindowDeactivate: false
+        visualParent: root
+
+        mainItem: WebEngineView {
+            width: 200
+            height: 200
+            url: Qt.resolvedUrl("../assets/index.html").toString()
+            backgroundColor: "transparent"
         }
     }
 }
