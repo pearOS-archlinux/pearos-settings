@@ -55,15 +55,18 @@ MouseArea {
         anchors.centerIn: parent
         readonly property bool isHorizontal: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
         readonly property real baseSize: isHorizontal ? parent.height : parent.width
-        width: baseSize * (Plasmoid.configuration.iconSize / 100)
-        height: width
+        width: baseSize
+        height: baseSize
+        scale: Plasmoid.configuration.iconSize / 100
+        transformOrigin: Item.Center
 
         Kirigami.Icon {
             id: buttonIcon
 
-            source: useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
+            source: Plasmoid.icon
 
             anchors.fill: parent
+            smooth: true
 
             active: false
         }

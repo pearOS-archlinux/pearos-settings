@@ -53,7 +53,7 @@
     </entry>
     <entry name="numberColumns" type="Int">
       <label>Number of columns to favorites apps grid</label>
-      <default>5</default>
+      <default>7</default>
     </entry>
     <entry name="compactListItems" type="Bool">
       <label>Show list items in a compact format</label>
@@ -65,7 +65,7 @@
     </entry>
     <entry name="iconSize" type="Int">
       <label>Icon size percentage (100 = full size, 80 = 80% of available space, etc.)</label>
-      <default>100</default>
+      <default>115</default>
       <min>50</min>
       <max>200</max>
     </entry>

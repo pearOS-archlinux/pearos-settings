@@ -25,6 +25,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.plasma5support as P5Support
 
 import org.kde.ksvg as KSvg
 
@@ -51,7 +52,28 @@ PlasmoidItem {
     property QtObject globalFavorites: rootModel.favoritesModel
     property QtObject systemFavorites: rootModel.systemFavoritesModel
 
-    Plasmoid.icon: Plasmoid.configuration.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
+    property string themeAwareIcon: ""
+
+    Plasmoid.icon: themeAwareIcon !== "" ? themeAwareIcon : Plasmoid.configuration.icon
+
+    P5Support.DataSource {
+        id: themeStateReader
+        engine: "executable"
+        connectedSources: []
+        onNewData: {
+            if (data["exit code"] === 0 && data["stdout"]) {
+                var state = data["stdout"].trim().toLowerCase()
+                if (state.indexOf("dark") >= 0) {
+                    kicker.themeAwareIcon = Qt.resolvedUrl("icons/appicons/launchpad_dark.png")
+                } else {
+                    kicker.themeAwareIcon = Qt.resolvedUrl("icons/appicons/launchpad_light.png")
+                }
+            }
+            disconnectSource(sourceName)
+        }
+        function exec(cmd) { connectSource(cmd) }
+    }
+
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     function action_menuedit() {
@@ -202,5 +224,14 @@ PlasmoidItem {
         rootModel.refreshed.connect(reset);
 
         dragHelper.dropped.connect(resetDragSource);
+
+        themeStateReader.exec("cat /usr/share/extras/system-settings/themeswitcher/state")
+    }
+
+    Timer {
+        interval: 30000
+        running: kicker.themeAwareIcon !== ""
+        repeat: true
+        onTriggered: themeStateReader.exec("cat /usr/share/extras/system-settings/themeswitcher/state")
     }
 }
