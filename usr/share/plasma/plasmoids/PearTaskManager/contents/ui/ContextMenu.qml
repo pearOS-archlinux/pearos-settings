@@ -495,7 +495,7 @@ PlasmaExtras.Menu {
 
         enabled: visualParent && get(atm.LauncherUrlWithoutIcon).toString() !== ""
 
-        text: i18n("&Pin to Task Manager")
+        text: i18n("&Pin to Dock")
         icon: "window-pin"
 
         function doesBelongToCurrentActivity(): bool {
@@ -511,7 +511,7 @@ PlasmaExtras.Menu {
     PlasmaExtras.MenuItem {
         id: showLauncherInActivitiesItem
 
-        text: i18n("&Pin to Task Manager")
+        text: i18n("&Pin to Dock")
         icon: "window-pin"
 
         visible: visualParent
@@ -593,7 +593,7 @@ PlasmaExtras.Menu {
                 && !launcherToggleAction.visible
                 && activityInfo.numberOfRunningActivities < 2)
 
-        text: i18n("Unpin from Task Manager")
+        text: i18n("Unpin From Dock")
         icon: "window-unpin"
 
         onClicked: {

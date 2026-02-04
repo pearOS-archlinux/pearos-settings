@@ -76,6 +76,8 @@ PlasmaCore.ToolTipArea {
     property bool delayAudioStreamIndicator: false
     property bool completed: false
     property real iconBounceOffset: -3
+    // Zoom la hover: gradient după distanță — 0: 13%, 1: 10%, 2: 5%, 3+: 0%
+    property real dockZoom: 1
     readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.interactiveMute
     readonly property bool hasAudioStream: audioStreams.length > 0
     readonly property bool playingAudio: hasAudioStream && audioStreams.some(item => !item.corked)
@@ -86,9 +88,10 @@ PlasmaCore.ToolTipArea {
         || (!!tasksRoot.groupDialog && tasksRoot.groupDialog.visualParent === task)
 
     active: !inPopup && !tasksRoot.groupDialog && task.contextMenu?.status !== PlasmaExtras.Menu.Open
-    interactive: model.IsWindow || mainItem.playerData
+    interactive: model.IsWindow || (mainItem && mainItem.playerData)
     location: Plasmoid.location
-    mainItem: !Plasmoid.configuration.showToolTips || !model.IsWindow ? pinnedAppToolTipDelegate : openWindowToolTipDelegate
+    // Același tooltip pentru toate: doar numele aplicației (ca la aplicațiile închise)
+    mainItem: tasksRoot.pinnedAppToolTipDelegate ? tasksRoot.pinnedAppToolTipDelegate.item : null
 
     onXChanged: {
         if (!completed) {
@@ -149,8 +152,24 @@ PlasmaCore.ToolTipArea {
             }
         }
     }
-    transform: Translate {
-        id: translateTransform
+    transform: [
+        Scale {
+            // Origine centru ca zoom-ul să fie vizibil indiferent de orientare
+            origin.x: task.width / 2
+            origin.y: task.height / 2
+            xScale: task.dockZoom
+            yScale: task.dockZoom
+        },
+        Translate {
+            id: translateTransform
+        }
+    ]
+
+    Behavior on dockZoom {
+        NumberAnimation {
+            duration: 320
+            easing.type: Easing.InOutCubic
+        }
     }
 
     SequentialAnimation {
@@ -241,14 +260,60 @@ PlasmaCore.ToolTipArea {
         if (containsMouse) {
             task.forceActiveFocus(Qt.MouseFocusReason);
             task.updateMainItemBindings();
+            if (!inPopup && !tasksRoot.groupDialog) {
+                tasksRoot.hoveredTaskIndex = index;
+            }
         } else {
             tasksRoot.toolTipOpenedByClick = null;
+            // Când mouse-ul iese de pe task, HoverHandler (pe TaskList) va seta cel mai apropiat task; dacă iese din dock, va seta -1
+            Qt.callLater(() => {
+                if (tasksRoot.hoveredTaskIndex === index) tasksRoot.hoveredTaskIndex = -1;
+            });
+        }
+    }
+
+    function updateDockZoom(): void {
+        if (inPopup || tasksRoot.groupDialog) {
+            dockZoom = 1;
+            return;
+        }
+        const h = tasksRoot.hoveredTaskIndex;
+        if (h < 0) {
+            dockZoom = 1;
+            return;
+        }
+        const dist = Math.abs(index - h);
+        if (dist === 0) dockZoom = 1.13;   // hover: 13%
+        else if (dist === 1) dockZoom = 1.10;  // 10%
+        else if (dist === 2) dockZoom = 1.05;  // 5%
+        else dockZoom = 1;   // 0%
+    }
+
+    // Gradient zoom: hover 13%, vecin 10%, la 2 distanță 5%, rest 0%
+    Binding on dockZoom {
+        value: {
+            if (inPopup || tasksRoot.groupDialog) return 1;
+            const h = tasksRoot.hoveredTaskIndex;
+            if (h < 0) return 1;
+            const dist = Math.abs(index - h);
+            if (dist === 0) return 1.13;
+            if (dist === 1) return 1.10;
+            if (dist === 2) return 1.05;
+            return 1;
+        }
+    }
+
+    Connections {
+        target: tasksRoot
+        function onGroupDialogChanged(): void {
+            if (tasksRoot.groupDialog) tasksRoot.hoveredTaskIndex = -1;
         }
     }
 
     onHighlightedChanged: {
-        // ensure it doesn't get stuck with a window highlighted
-        backend.cancelHighlightWindows();
+        if (typeof backend.cancelHighlightWindows === "function") {
+            backend.cancelHighlightWindows();
+        }
     }
 
     onPidChanged: updateAudioStreams({delay: false})
@@ -385,6 +450,7 @@ PlasmaCore.ToolTipArea {
 
     // Will also be called in activateTaskAtIndex(index)
     function updateMainItemBindings(): void {
+        if (!mainItem) return;
         if ((mainItem.parentTask === this && mainItem.rootIndex.row === index)
             || (tasksRoot.toolTipOpenedByClick === null && !active)
             || (tasksRoot.toolTipOpenedByClick !== null && tasksRoot.toolTipOpenedByClick !== this)) {
@@ -496,7 +562,9 @@ PlasmaCore.ToolTipArea {
                 }
             }
 
-            backend.cancelHighlightWindows();
+            if (typeof backend.cancelHighlightWindows === "function") {
+                backend.cancelHighlightWindows();
+            }
         }
     }
 

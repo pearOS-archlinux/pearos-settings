@@ -12,6 +12,8 @@ import "code/layoutmetrics.js" as LayoutMetrics
 GridLayout {
     property bool animating: false
 
+    clip: false
+
     rowSpacing: 0
     columnSpacing: 0
 

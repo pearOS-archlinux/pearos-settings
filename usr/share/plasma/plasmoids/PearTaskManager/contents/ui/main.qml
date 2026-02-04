@@ -36,8 +36,10 @@ PlasmoidItem {
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool iconsOnly: true
 
-    property Task toolTipOpenedByClick
-    property Task toolTipAreaItem
+    property Item toolTipOpenedByClick
+    property Item toolTipAreaItem
+    // Index-ul task-ului sub mouse (pentru zoom dock); -1 = niciunul
+    property int hoveredTaskIndex: -1
 
     readonly property Component contextMenuComponent: Qt.createComponent("ContextMenu.qml")
     readonly property Component pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
@@ -45,6 +47,7 @@ PlasmoidItem {
     property bool needLayoutRefresh: false
     property /*list<WId> where WId = int|string*/ var taskClosedWithMouseMiddleButton: []
     property alias taskList: taskList
+    property alias pinnedAppToolTipDelegate: pinnedAppToolTipDelegate
 
     preferredRepresentation: fullRepresentation
 
@@ -372,13 +375,17 @@ PlasmoidItem {
             }
         }
 
-        ToolTipDelegate {
+        Loader {
             id: openWindowToolTipDelegate
+            asynchronous: false
+            source: "ToolTipDelegate.qml"
             visible: false
         }
 
-        ToolTipDelegate {
+        Loader {
             id: pinnedAppToolTipDelegate
+            asynchronous: false
+            source: "ToolTipDelegate.qml"
             visible: false
         }
 
@@ -473,6 +480,33 @@ PlasmoidItem {
                 onAnimatingChanged: {
                     if (!animating) {
                         tasks.publishIconGeometries(children, tasks);
+                    }
+                }
+
+                HoverHandler {
+                    id: dockHoverHandler
+                    onPointChanged: {
+                        if (!point.active) {
+                            tasks.hoveredTaskIndex = -1;
+                            return;
+                        }
+                        let bestIndex = -1;
+                        let bestDist = Infinity;
+                        const pos = point.position;
+                        for (let i = 0; i < taskRepeater.count; i++) {
+                            const item = taskRepeater.itemAt(i);
+                            if (!item || !item.visible) continue;
+                            const center = tasks.vertical
+                                ? (item.y + item.height / 2)
+                                : (item.x + item.width / 2);
+                            const cursor = tasks.vertical ? pos.y : pos.x;
+                            const dist = Math.abs(cursor - center);
+                            if (dist < bestDist) {
+                                bestDist = dist;
+                                bestIndex = i;
+                            }
+                        }
+                        tasks.hoveredTaskIndex = bestIndex;
                     }
                 }
 

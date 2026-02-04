@@ -24,7 +24,7 @@ import org.kde.plasma.plasmoid
 Loader {
     id: toolTipDelegate
 
-    property Task parentTask
+    property Item parentTask
     property /*QModelIndex*/var rootIndex
 
     property string appName

@@ -144,7 +144,9 @@ PlasmaCore.Dialog {
 
                 onCountChanged: {
                     if (count > 0) {
-                        backend.cancelHighlightWindows()
+                        if (typeof backend.cancelHighlightWindows === "function") {
+                            backend.cancelHighlightWindows();
+                        }
                     } else {
                         groupDialog.visible = false;
                     }

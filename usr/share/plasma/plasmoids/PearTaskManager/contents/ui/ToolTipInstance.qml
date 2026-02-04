@@ -72,8 +72,8 @@ ColumnLayout {
 
     readonly property bool titleIncludesTrack: toolTipDelegate.playerData !== null && title.includes(toolTipDelegate.playerData.track)
 
-    // Lots of spacing with no thumbnails looks bad
-    spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.smallSpacing : 0
+    // Comportament identic cu aplicațiile închise (lansatoare): doar numele aplicației
+    spacing: 0
 
     // text labels + close button
     Item {
@@ -84,10 +84,9 @@ ColumnLayout {
 
         // This number controls the overall size of the window tooltips
         Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
-        Layout.minimumWidth: (toolTipDelegate.isWin && Plasmoid.configuration.showToolTips) || toolTipDelegate.isGroup ? Layout.maximumWidth : 0
+        Layout.minimumWidth: toolTipDelegate.isGroup ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-        // match margins of DefaultToolTip.qml in plasma-framework
-        Layout.margins: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit / 2
+        Layout.margins: Kirigami.Units.gridUnit / 2
 
         RowLayout {
             id: header
@@ -104,7 +103,7 @@ ColumnLayout {
                     level: 3
                     maximumLineCount: 1
                     Layout.fillWidth: true
-                    lineHeight: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 1 : appNameHeading.lineHeight
+                    lineHeight: appNameHeading.lineHeight
                     elide: Text.ElideRight
                     text: toolTipDelegate.appName
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
@@ -112,7 +111,7 @@ ColumnLayout {
                     visible: (text.length !== 0) && (root.orientation === ListView.Horizontal || root.index === 0)
                     textFormat: Text.PlainText
                 }
-                // window title
+                // window title — ascuns: afișăm doar numele aplicației
                 PlasmaComponents3.Label {
                     id: winTitle
                     maximumLineCount: 1
@@ -125,10 +124,10 @@ ColumnLayout {
                           ? "" : root.title
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                     opacity: 0.75
-                    visible: root.orientation === ListView.Horizontal || text.length !== 0
+                    visible: false  // era: root.orientation === ListView.Horizontal || text.length !== 0
                     textFormat: Text.PlainText
                 }
-                // subtext
+                // subtext — ascuns: identic cu aplicațiile închise (doar numele aplicației)
                 PlasmaComponents3.Label {
                     id: subtext
                     maximumLineCount: 2
@@ -137,15 +136,14 @@ ColumnLayout {
                     text: toolTipDelegate.isWin ? root.generateSubText() : ""
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                     opacity: 0.6
-                    visible: text.length !== 0 && text !== appNameHeading.text
+                    visible: false
                     textFormat: Text.PlainText
                 }
             }
 
             // Count badge.
-            // The badge itself is inside an item to better center the text in the bubble
             Item {
-                Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
+                Layout.alignment: !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
                 Layout.preferredHeight: closeButton.height
                 Layout.preferredWidth: closeButton.width
                 visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
@@ -157,16 +155,18 @@ ColumnLayout {
                 }
             }
 
-            // close button
+            // close button — ascuns: afișăm doar numele aplicației
             PlasmaComponents3.ToolButton {
                 id: closeButton
                 Layout.alignment: Qt.AlignTop// | Qt.AlignRight
                 Layout.rightMargin: -headerItem.Layout.margins
                 Layout.topMargin: -headerItem.Layout.margins
-                visible: toolTipDelegate.isWin
+                visible: false  // era: toolTipDelegate.isWin
                 icon.name: "window-close"
                 onClicked: {
-                    backend.cancelHighlightWindows();
+                    if (typeof backend.cancelHighlightWindows === "function") {
+                        backend.cancelHighlightWindows();
+                    }
                     tasksModel.requestClose(root.submodelIndex);
                 }
             }
@@ -206,7 +206,8 @@ ColumnLayout {
         Layout.preferredHeight: Kirigami.Units.gridUnit * 8
 
         clip: true
-        visible: Plasmoid.configuration.showToolTips && toolTipDelegate.isWin
+        // Dezactivat: nu mai afișăm preview-ul aplicației la hover, doar numele (indiferent dacă e închisă sau deschisă)
+        visible: false  // era: Plasmoid.configuration.showToolTips && toolTipDelegate.isWin
 
         readonly property /*undefined|WId where WId = int|string*/ var winId:
             toolTipDelegate.isWin ? toolTipDelegate.windows[root.index] : undefined

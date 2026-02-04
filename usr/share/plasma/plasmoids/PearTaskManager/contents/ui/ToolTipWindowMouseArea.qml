@@ -20,14 +20,19 @@ MouseArea {
     enabled: winId !== undefined
 
     onClicked: (mouse) => {
+        const cancelHighlight = () => {
+            if (typeof backend.cancelHighlightWindows === "function") {
+                backend.cancelHighlightWindows();
+            }
+        };
         switch (mouse.button) {
         case Qt.LeftButton:
             tasksModel.requestActivate(modelIndex);
             rootTask.hideImmediately();
-            backend.cancelHighlightWindows();
+            cancelHighlight();
             break;
         case Qt.MiddleButton:
-            backend.cancelHighlightWindows();
+            cancelHighlight();
             tasksModel.requestClose(modelIndex);
             break;
         case Qt.RightButton:
