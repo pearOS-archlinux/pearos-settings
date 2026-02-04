@@ -58,7 +58,7 @@ Item {
             required property var model
 
             icon: model.checked ? "checkmark-symbolic" : ""
-            checked: model.checked
+            checked: model.checked === true
             text: model.title
             enabled: model.enabled !== undefined ? model.enabled : true
             section: model.type === "title"

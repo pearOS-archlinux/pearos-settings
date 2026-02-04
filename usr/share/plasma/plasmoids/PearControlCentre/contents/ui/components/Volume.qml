@@ -31,8 +31,8 @@ Lib.Slider {
         id: paSinkModel
     }
     
-    value: Math.round(sink.volume / Vol.PulseAudio.NormalVolume * 100)
-    secondaryTitle: Math.round(sink.volume / Vol.PulseAudio.NormalVolume * 100) + "%"
+    value: sink ? Math.round(sink.volume / Vol.PulseAudio.NormalVolume * 100) : 0
+    secondaryTitle: sink ? (Math.round(sink.volume / Vol.PulseAudio.NormalVolume * 100) + "%") : "0%"
 
     showTitle: root.volume_widget_title
     thinSlider: root.volume_widget_thin
@@ -41,14 +41,14 @@ Lib.Slider {
     Binding {
         target: slider
         property: "value"
-        value: Math.round(sink.volume / Vol.PulseAudio.NormalVolume * 100)
+        value: sink ? Math.round(sink.volume / Vol.PulseAudio.NormalVolume * 100) : 0
     }
     
     // Changes icon based on the current volume percentage
-    source: Funcs.volIconName(sink.volume, sink.muted)
+    source: sink ? Funcs.volIconName(sink.volume, sink.muted) : ""
 
     onPressedChanged: {
-        if (!pressed) {
+        if (!pressed && sink) {
             // Make sure to sync the volume once the button was
             // released.
             // Otherwise it might be that the slider is at v10
@@ -59,7 +59,7 @@ Lib.Slider {
     }
     
     onMoved: {
-        sink.volume = value * Vol.PulseAudio.NormalVolume / 100
+        if (sink) sink.volume = value * Vol.PulseAudio.NormalVolume / 100
     }
     // Display view that shows audio devices list
     onClicked: {
@@ -69,6 +69,7 @@ Lib.Slider {
     
     property var oldVol: 100 * Vol.PulseAudio.NormalVolume / 100
     onActionButtonClicked: {
+        if (!sink) return
         if(value!=0){
             oldVol = sink.volume
             sink.volume=0

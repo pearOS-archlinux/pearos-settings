@@ -784,7 +784,7 @@ PlasmaCore.ToolTipArea {
 
             PropertyChanges {
                 target: frame
-                basePrefix: "focus"
+                basePrefix: "normal"
             }
         }
     ]

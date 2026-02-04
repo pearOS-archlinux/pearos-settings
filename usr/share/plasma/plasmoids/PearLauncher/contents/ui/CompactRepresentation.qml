@@ -52,7 +52,10 @@ MouseArea {
     }
 
     Item {
-        anchors.centerIn: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+       // anchors.horizontalCenterOffset: 15
+        anchors.verticalCenterOffset: -2
         readonly property bool isHorizontal: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
         readonly property real baseSize: isHorizontal ? parent.height : parent.width
         width: baseSize

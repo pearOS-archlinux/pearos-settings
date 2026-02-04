@@ -439,7 +439,10 @@ PlasmoidItem {
         onClicked: Plasmoid.activated()
 
         Item {
-            anchors.centerIn: parent
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+            //anchors.horizontalCenterOffset: 15
+            anchors.verticalCenterOffset: -2
             readonly property bool isHorizontal: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
             readonly property real baseSize: isHorizontal ? parent.height : parent.width
             width: baseSize * (Plasmoid.configuration.iconSize / 100)
@@ -448,7 +451,7 @@ PlasmoidItem {
             Kirigami.Icon {
                 source: Plasmoid.icon
                 anchors.fill: parent
-                active: mouseArea.containsMouse
+                active: false
             }
         }
 

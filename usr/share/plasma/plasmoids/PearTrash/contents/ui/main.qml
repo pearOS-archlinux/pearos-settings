@@ -186,7 +186,7 @@ PlasmoidItem {
                 top: parent.top
                 bottom: root.inPanel ? parent.bottom: text.top
             }
-            active: mouseArea.containsMouse || root.containsAcceptableDrag
+            active: root.containsAcceptableDrag
         }
 
         PlasmaExtras.ShadowedLabel {

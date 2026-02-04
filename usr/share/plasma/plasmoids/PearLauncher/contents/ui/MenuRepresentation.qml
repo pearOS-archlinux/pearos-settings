@@ -204,7 +204,9 @@ PlasmaCore.Dialog {
 				y: fs.innerPadding
 				
 				Component.onCompleted: {
-					searchBar.root = root
+					Qt.callLater(function() {
+						if (main.searchBar) main.searchBar.root = root
+					})
 				}
 			}
 		}

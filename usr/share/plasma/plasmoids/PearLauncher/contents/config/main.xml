@@ -65,7 +65,7 @@
     </entry>
     <entry name="iconSize" type="Int">
       <label>Icon size percentage (100 = full size, 80 = 80% of available space, etc.)</label>
-      <default>115</default>
+      <default>108</default>
       <min>50</min>
       <max>200</max>
     </entry>

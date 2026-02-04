@@ -89,7 +89,7 @@ PlasmoidItem {
         sortReversed: true 
         
         onCountChanged: {
-            if (root.lastFileCount === -1) { root.lastFileCount = count; return }
+            if (root.lastFileCount === -1) return  // așteptăm modelReadyTimer să seteze lastFileCount
             if (count > root.lastFileCount) flyInAnim.restart()
             root.lastFileCount = count
         }
@@ -97,11 +97,24 @@ PlasmoidItem {
 
     Timer {
         id: initTimer; interval: 300; running: true; repeat: false
-        onTriggered: dirModel.folder = root.resolvePath()
+        onTriggered: {
+            root.lastFileCount = -1
+            dirModel.folder = root.resolvePath()
+            modelReadyTimer.restart()
+        }
+    }
+    Timer {
+        id: modelReadyTimer
+        interval: 500; repeat: false
+        onTriggered: root.lastFileCount = dirModel.count
     }
     Connections {
         target: Plasmoid.configuration
-        function onFolderPathChanged() { dirModel.folder = root.resolvePath() }
+        function onFolderPathChanged() {
+            root.lastFileCount = -1
+            dirModel.folder = root.resolvePath()
+            modelReadyTimer.restart()
+        }
     }
 
     function openFileSmart(url, isDir) { 
@@ -136,7 +149,7 @@ PlasmoidItem {
         location: Plasmoid.location
         backgroundHints: PlasmaCore.Types.NoBackground
         flags: Qt.FramelessWindowHint | Qt.Popup
-        type: PlasmaCore.Dialog.Popup
+        type: (typeof PlasmaCore.Dialog !== "undefined" && PlasmaCore.Dialog.Popup !== undefined) ? PlasmaCore.Dialog.Popup : PlasmaCore.Dialog.Normal
 
         onVisibleChanged: {
             if (visible) customDialog.requestActivate()
@@ -194,29 +207,49 @@ PlasmoidItem {
 
                     ParallelAnimation {
                         id: openAnimation
-                        SequentialAnimation { PauseAnimation { duration: index * 25 }
+                        SequentialAnimation {
+                            PauseAnimation { id: openPauseAngle; duration: 0 }
                             NumberAnimation { target: delegateItem; property: "animatedAngle"; from: 0.0; to: delegateItem.targetAngle; duration: 300; easing.type: Easing.OutBack; easing.overshoot: 0.8 } }
-                        SequentialAnimation { PauseAnimation { duration: index * 25 }
+                        SequentialAnimation {
+                            PauseAnimation { id: openPauseOpacity; duration: 0 }
                             NumberAnimation { target: delegateItem; property: "opacity"; from: 0.0; to: 1.0; duration: 200; easing.type: Easing.OutQuad } }
                     }
                     ParallelAnimation {
                         id: closeAnimation
-                        property int reverseDelay: (root.cfg_maxItems - index) * 20
-                        SequentialAnimation { PauseAnimation { duration: closeAnimation.reverseDelay }
+                        SequentialAnimation {
+                            id: closeSeqAngle
+                            PauseAnimation { id: closePauseAngle; duration: 0 }
                             NumberAnimation { target: delegateItem; property: "animatedAngle"; to: 0.0; duration: 250; easing.type: Easing.InQuad } }
-                        SequentialAnimation { PauseAnimation { duration: closeAnimation.reverseDelay }
+                        SequentialAnimation {
+                            id: closeSeqOpacity
+                            PauseAnimation { id: closePauseOpacity; duration: 0 }
                             NumberAnimation { target: delegateItem; property: "opacity"; to: 0.0; duration: 200; easing.type: Easing.InQuad } }
                     }
                     Connections {
                         target: root
                         function onIsClosingChanged() {
                             if (root.isOpen) {
-                                if (root.isClosing) { openAnimation.stop(); closeAnimation.restart() } 
-                                else { closeAnimation.stop(); delegateItem.animatedAngle = 0.0; delegateItem.opacity = 0.0; openAnimation.restart() }
+                                if (root.isClosing) {
+                                    var d = Math.max(0, (root.cfg_maxItems - index) * 20)
+                                    closePauseAngle.duration = d
+                                    closePauseOpacity.duration = d
+                                    openAnimation.stop(); closeAnimation.restart()
+                                }
+                                else {
+                                    var openD = Math.max(0, index * 25)
+                                    openPauseAngle.duration = openD
+                                    openPauseOpacity.duration = openD
+                                    closeAnimation.stop(); delegateItem.animatedAngle = 0.0; delegateItem.opacity = 0.0; openAnimation.restart()
+                                }
                             }
                         }
                         function onIsOpenChanged() {
-                            if (root.isOpen && !root.isClosing) { delegateItem.animatedAngle = 0.0; delegateItem.opacity = 0.0; openAnimation.restart() }
+                            if (root.isOpen && !root.isClosing) {
+                                var openD = Math.max(0, index * 25)
+                                openPauseAngle.duration = openD
+                                openPauseOpacity.duration = openD
+                                delegateItem.animatedAngle = 0.0; delegateItem.opacity = 0.0; openAnimation.restart()
+                            }
                         }
                     }
 
@@ -305,9 +338,9 @@ PlasmoidItem {
 
                 ParallelAnimation {
                     id: moreOpenAnimation
-                    SequentialAnimation { PauseAnimation { duration: itemIndex * 25 }
+                    SequentialAnimation { PauseAnimation { duration: moreItem.itemIndex * 25 }
                         NumberAnimation { target: moreItem; property: "animatedAngle"; from: 0.0; to: moreItem.targetAngle; duration: 300; easing.type: Easing.OutBack; easing.overshoot: 0.8 } }
-                    SequentialAnimation { PauseAnimation { duration: itemIndex * 25 }
+                    SequentialAnimation { PauseAnimation { duration: moreItem.itemIndex * 25 }
                         NumberAnimation { target: moreItem; property: "opacity"; from: 0.0; to: 1.0; duration: 200; easing.type: Easing.OutQuad } }
                 }
                 ParallelAnimation {
