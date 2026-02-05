@@ -18,11 +18,23 @@ Rectangle {
 
     property int lastIndexUser: user.currentIndex
     property string lastNameUser: user.currentText
+    property string displayNameUser: ""
+    property string currentUserHomeDir: ""
     property int implicitCustomWidth: 0
     property bool firtInteraction: true
     property bool startAnimationNames: false
     TextConstants {
         id: textConstants
+    }
+
+    Component.onCompleted: {
+        try {
+            var last = userModel.lastIndex
+            displayNameUser = userModel.get(last).realName || userModel.get(last).name || ""
+            currentUserHomeDir = userModel.get(last).homeDir || ""
+        } catch (e) {
+            displayNameUser = lastNameUser
+        }
     }
 
     // hack for disable autostart QtQuick.VirtualKeyboard
@@ -303,29 +315,43 @@ Column {
 
     }
     function createModel() {
-        // Agregar todos los usuarios al modelo qmlUserModel
+        // Agregar todos los usuarios al modelo qmlUserModel (name = username, realName = full name for display)
         qmlUserModel.clear()
         for (var y = 0; y < userModel.count; y++) {
             user.currentIndex = y
+            var realName = ""
+            var homeDir = ""
+            try { realName = userModel.get(y).realName || "" } catch (e) {}
+            try { homeDir = userModel.get(y).homeDir || "" } catch (e) {}
             qmlUserModel.append({
                 name: user.currentText,
-                icon: "/var/lib/AccountsService/icons/" + user.currentText
+                realName: realName || user.currentText,
+                icon: "/var/lib/AccountsService/icons/" + user.currentText,
+                homeDir: homeDir
             });
         }
         lastIndexUser = determinateNewIndex()
         // Mover lastIndexUser al final
         var tempName = ""
+        var tempRealName = ""
         var tempIcon = ""
+        var tempHomeDir = ""
         tempName = qmlUserModel.get(lastIndexUser).name
+        tempRealName = qmlUserModel.get(lastIndexUser).realName || tempName
         tempIcon = qmlUserModel.get(lastIndexUser).icon
+        tempHomeDir = qmlUserModel.get(lastIndexUser).homeDir || ""
 
         // Eliminar el usuario en lastIndexUser
         qmlUserModel.remove(lastIndexUser)
 
         qmlUserModel.append({
             name: tempName,
-            icon: tempIcon
+            realName: tempRealName,
+            icon: tempIcon,
+            homeDir: tempHomeDir
         });
+        displayNameUser = tempRealName
+        currentUserHomeDir = tempHomeDir
     }
 
 
@@ -375,7 +401,7 @@ Column {
 
                 Text {
                     id: nameList
-                    text: model.name
+                    text: model.realName || model.name
                     color: "white"  // Asegúrate de que el texto sea visible sobre el fondo
                     font.bold: true
                     visible: !startAnimationNames
@@ -409,7 +435,9 @@ Column {
                 anchors.fill: contentFullUser
                 onClicked: {
                     console.log("pruebas", lastIndexUser)
-                    lastNameUser = nameList.text
+                    lastNameUser = model.name
+                    displayNameUser = model.realName || model.name
+                    currentUserHomeDir = model.homeDir || ""
                     lastIndexUser = determinateNewIndex()
                     listuser.visible = !listuser.visible
                     ava.visible = !ava.visible
@@ -512,8 +540,15 @@ Column {
                         }
                         source: "/var/lib/AccountsService/icons/" + lastNameUser
                         onStatusChanged: {
-                            if (status == Image.Error)
-                                return source = "images/.face.icon"
+                            if (status !== Image.Error) return
+                            if (source.indexOf("AccountsService") !== -1) {
+                                if (currentUserHomeDir)
+                                    source = currentUserHomeDir + "/.face.icon"
+                                else
+                                    source = "images/.face.icon"
+                            } else if (source.indexOf("images") === -1) {
+                                source = "images/.face.icon"
+                            }
                         }
                          MouseArea {
                            anchors.fill: ava
@@ -544,13 +579,13 @@ Column {
 
                 Text {
                     id: usernametext
-                    text: lastNameUser
+                    text: displayNameUser || lastNameUser
                     anchors.top: parent.top
                     anchors.topMargin: listuser.visible ? listuser.height + 20 : sizeAvatar + 20
                     anchors.horizontalCenter: parent.horizontalCenter
                     font.pixelSize: 20
                     font.family: fontbold.name
-                    font.capitalization: Font.Capitalize
+                    font.capitalization: Font.MixedCase
                     font.weight: Font.DemiBold
                     visible: listuser.visible ? false : true
                     color: "white"
@@ -661,7 +696,7 @@ Column {
                 }
                 Label {
                 id: greetingLabel
-                text: "Enter Password"
+                text: "Touch ID or Enter Password"
                 color: "#fff"
                 style: Text.Normal
                 visible: listuser.visible ? false : true
