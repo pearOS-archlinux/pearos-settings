@@ -35,6 +35,9 @@ Rectangle {
         } catch (e) {
             displayNameUser = lastNameUser
         }
+        sectionLogin.createModel()
+        if (listuser.visible)
+            baseOfUserDialog.forceActiveFocus()
     }
 
     // hack for disable autostart QtQuick.VirtualKeyboard
@@ -61,10 +64,9 @@ Rectangle {
     }
     Connections {
         target: sddm
-        onLoginSucceeded: {
-
+        function onLoginSucceeded() {
         }
-        onLoginFailed: {
+        function onLoginFailed() {
             password.placeholderText = textConstants.loginFailed
             password.placeholderTextColor = "white"
             password.text = ""
@@ -78,11 +80,11 @@ Rectangle {
         anchors.fill: parent
         fillMode: Image.PreserveAspectCrop
         visible: true
-        Binding on source {
-            when: config.background !== undefined
-            value: config.background
+        source: "file:///usr/share/extras/background.jpg"
+        onStatusChanged: {
+            if (status === Image.Error && source === "file:///usr/share/extras/background.jpg")
+                source = "file:///usr/share/extras/background.png"
         }
-
     }
 
     Row {
@@ -201,7 +203,7 @@ Row {
                         highlighted: session.highlightedIndex === index
                         hoverEnabled: session.hoverEnabled
                         onClicked: {
-                            ava.source = "/var/lib/AccountsService/icons/" + user.currentText
+                            ava.source = "file:///usr/share/extras/.face.icon"
                             session.currentIndex = index
                             slistview.currentIndex = index
                             session.popup.close()
@@ -223,7 +225,7 @@ Row {
                     }
                     popup: Popup {
                         width: parent.width
-                        height: parent.height * menuitems.count
+                        height: parent.height * (session.model ? session.model.count : 1)
                         implicitHeight: slistview.contentHeight
                         margins: 0
                         contentItem: ListView {
@@ -299,13 +301,15 @@ Row {
 
 Rectangle {
     id: baseOfUserDialog
-    width: listuser.visible ? listuser.width > password.width ? listuser.width + (listuser.spacing*userModel.count) : password.width : password.width
-    height: listuser.visible ? listuser.height + password.height + greetingLabel.height + password.height + password.anchors.bottomMargin + 10 : sizeAvatar + password.height + greetingLabel.height + password.height + password.anchors.bottomMargin +10
+    property real contentAreaHeight: Math.max(listuser.height, sizeAvatar*.9 + 15 + 32)
+    width: Math.max(listuser.width, 150)
+    height: contentAreaHeight + 15 + 32 + 15 + greetingLabel.height
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.bottom: parent.bottom
     anchors.bottomMargin: 40
     color: "transparent"
-Column {
+    focus: true
+Item {
     id: sectionLogin
     height: parent.height
     width: parent.width
@@ -326,7 +330,7 @@ Column {
             qmlUserModel.append({
                 name: user.currentText,
                 realName: realName || user.currentText,
-                icon: "/var/lib/AccountsService/icons/" + user.currentText,
+                icon: "file:///usr/share/extras/.face.icon",
                 homeDir: homeDir
             });
         }
@@ -359,25 +363,21 @@ Column {
     ListView {
         id: listuser
         width: implicitCustomWidth + sizeAvatar*.9
-        height: ((sizeAvatar*.9) + 10)*userModel.count
+        height: ((sizeAvatar*.9) + 37)*userModel.count
         model: qmlUserModel
-        anchors.left: parent.left
-        anchors.leftMargin: ((parent.width/2) - (sizeAvatar*.9)/2)+5
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: usernametext.top
-        anchors.bottomMargin: -10
-        visible: false
+        anchors.top: parent.top
+        visible: true
         currentIndex: userModel.lastIndex
 
         delegate: Item {
-            height: sizeAvatar*.9
-            width: nameList.implicitWidth + height + contentFullUser.spacing
-            Row {
+            height: sizeAvatar*.9 + 37
+            width: listuser.width
+            Column {
                 id: contentFullUser
-                height: parent.height - 10
-                width: parent.width + spacing
-                spacing: 10
+                spacing: 15
                 anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
                 Rectangle {
                     id: maskByList
                     width: sizeAvatar*.9
@@ -389,24 +389,22 @@ Column {
                 Image {
                     id: avaList
                     source: model.icon
-                    height: parent.height
-                    width: height
+                    height: sizeAvatar*.9
+                    width: sizeAvatar*.9
                     fillMode: Image.PreserveAspectFit
                     layer.enabled: true
                     layer.effect: OpacityMask {
                         maskSource: maskByList
                     }
-
                 }
-
                 Text {
                     id: nameList
                     text: model.realName || model.name
-                    color: "white"  // Asegúrate de que el texto sea visible sobre el fondo
+                    color: "white"
                     font.bold: true
                     visible: !startAnimationNames
                     font.pixelSize: 14
-                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
             Rectangle {
@@ -434,26 +432,17 @@ Column {
             MouseArea {
                 anchors.fill: contentFullUser
                 onClicked: {
-                    console.log("pruebas", lastIndexUser)
                     lastNameUser = model.name
                     displayNameUser = model.realName || model.name
                     currentUserHomeDir = model.homeDir || ""
                     lastIndexUser = determinateNewIndex()
-                    listuser.visible = !listuser.visible
-                    ava.visible = !ava.visible
+                    listuser.visible = false
                 }
             }
             Component.onCompleted: {
                 implicitCustomWidth = nameList.implicitWidth > implicitCustomWidth ? nameList.implicitWidth : implicitCustomWidth
             }
         }
-        Behavior on opacity {  // Comportamiento animado para la opacidad
-            NumberAnimation {
-                duration: 300
-                easing.type: Easing.InOutQuad
-            }
-        }
-
         states: [
             State {
                 name: "visible"
@@ -473,91 +462,50 @@ Column {
             }
         ]
 
-        transitions: [
-            Transition {
-                from: "hidden"
-                to: "visible"
-                NumberAnimation {
-                    target: listuser
-                    property: "y"
-                    duration: 300
-                    easing.type: Easing.OutBounce
-                    from: listuser.y + 20
-                    to: listuser.y
-                }
-            },
-            Transition {
-                from: "visible"
-                to: "hidden"
-                NumberAnimation {
-                    target: listuser
-                    property: "y"
-                    duration: 300
-                    easing.type: Easing.InQuad
-                    from: listuser.y
-                    to: listuser.y + 20
-                }
-            }
-        ]
+        transitions: []
 
 
     }
 
-
+    Text {
+        id: touchIdHint
+        text: textConstants.touchIdOrPassword
+        visible: listuser.visible
+        anchors.top: parent.top
+        anchors.topMargin: sizeAvatar*.9 + 15 + 32 + 15
+        anchors.horizontalCenter: parent.horizontalCenter
+        color: "white"
+        font.pointSize: 8
+    }
 
                         Rectangle {
                             id: mask
-                            width: sizeAvatar
-                            height: sizeAvatar
-                            radius: sizeAvatar/2
+                            width: sizeAvatar*.9
+                            height: sizeAvatar*.9
+                            radius: (sizeAvatar*.9)/2
                             visible: false
+                            anchors.top: parent.top
                         }
 
-                        DropShadow {
-                            anchors.fill: ava
-                            width: mask.width - 4
-                            height: mask.height - 4
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            horizontalOffset: 0
-                            verticalOffset: 0
-                            radius: 15.0
-                            samples: 15
-                            color: "#50000000"
-                            source: mask
-                            visible: listuser.visible ? false : true
-                        }
                     Image {
                         id: ava
-                        width: sizeAvatar
-                        height: sizeAvatar
-                        visible: true
+                        width: sizeAvatar*.9
+                        height: sizeAvatar*.9
+                        visible: !listuser.visible
                         fillMode: Image.PreserveAspectCrop
+                        anchors.top: parent.top
                         anchors.horizontalCenter: parent.horizontalCenter
 
                         layer.enabled: true
                         layer.effect: OpacityMask {
                             maskSource: mask
                         }
-                        source: "/var/lib/AccountsService/icons/" + lastNameUser
-                        onStatusChanged: {
-                            if (status !== Image.Error) return
-                            if (source.indexOf("AccountsService") !== -1) {
-                                if (currentUserHomeDir)
-                                    source = currentUserHomeDir + "/.face.icon"
-                                else
-                                    source = "images/.face.icon"
-                            } else if (source.indexOf("images") === -1) {
-                                source = "images/.face.icon"
-                            }
-                        }
+                        source: "file:///usr/share/extras/.face.icon"
                          MouseArea {
                            anchors.fill: ava
                            onClicked: {
-                              //lastIndexUser = firtInteraction ? user.currentIndex : lastIndexUser
                               sectionLogin.createModel()
                               listuser.visible = true
-                              ava.visible = false
-                              //lastIndexUser = false
                            }
                        }
 
@@ -581,13 +529,13 @@ Column {
                     id: usernametext
                     text: displayNameUser || lastNameUser
                     anchors.top: parent.top
-                    anchors.topMargin: listuser.visible ? listuser.height + 20 : sizeAvatar + 20
+                    anchors.topMargin: listuser.visible ? listuser.height + 6 : sizeAvatar*.9 + 6
                     anchors.horizontalCenter: parent.horizontalCenter
-                    font.pixelSize: 20
+                    font.pixelSize: 14
                     font.family: fontbold.name
                     font.capitalization: Font.MixedCase
-                    font.weight: Font.DemiBold
-                    visible: listuser.visible ? false : true
+                    font.bold: true
+                    visible: false
                     color: "white"
                     layer.enabled: true
                        layer.effect: DropShadow {
@@ -610,17 +558,18 @@ Column {
 
                     property var vtext: TextInput.Password
 
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: greetingLabel.height*2
+                    anchors.top: parent.top
+                    anchors.topMargin: sizeAvatar*.9 + 15
+                    anchors.horizontalCenter: parent.horizontalCenter
                     height: 32
-                    width: 250
+                    width: 150
                     color: "#fff"
                     placeholderTextColor: "#66FFFFFF"
                     echoMode: TextInput.Password
                     focus: true
                     font.weight: Font.DemiBold
-                    placeholderText: textConstants.password
-                    horizontalAlignment: TextInput.AlignHCenter
+                    placeholderText: textConstants.enterPassword
+                    horizontalAlignment: TextInput.AlignLeft
                     verticalAlignment: TextInput.AlignVCenter
                     // leftPadding: (width - demo.implicitWidth)/2
                     visible: listuser.visible ? false : true
@@ -694,24 +643,30 @@ Column {
                         ]
                     }
                 }
-                Label {
+                Text {
                 id: greetingLabel
-                text: "Touch ID or Enter Password"
+                text: textConstants.touchIdOrPassword
                 color: "#fff"
-                style: Text.Normal
-                visible: listuser.visible ? false : true
-
-                styleColor: "transparent"
-                font.pointSize:8
+                visible: !listuser.visible
+                font.pointSize: 8
+                anchors.top: parent.top
+                anchors.topMargin: sizeAvatar*.9 + 15 + 32 + 15
                 anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.bottom
-                font.bold: true
             }
 }
 
 
 
-                Keys.onPressed: {
+                Keys.onPressed: function(event) {
+                    if (listuser.visible) {
+                        listuser.visible = false
+                        password.forceActiveFocus()
+                        if (event.text) {
+                            password.insert(password.cursorPosition, event.text)
+                        }
+                        event.accepted = true
+                        return
+                    }
                     if (event.key === Qt.Key_Return
                             || event.key === Qt.Key_Enter) {
                         sddm.login(user.currentText, password.text,

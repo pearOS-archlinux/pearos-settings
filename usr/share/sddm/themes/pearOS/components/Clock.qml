@@ -32,7 +32,7 @@ ColumnLayout {
     }
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     Label {
-        text: Qt.formatDateTime(new Date(), "dddd, MMMM d")
+        text: Qt.formatDateTime(new Date(), "ddd MMM d")
         color: "white"
         opacity: 0.5
         style: softwareRendering ? Text.Outline : Text.Normal
