@@ -52,27 +52,28 @@ PlasmoidItem {
     property QtObject globalFavorites: rootModel.favoritesModel
     property QtObject systemFavorites: rootModel.systemFavoritesModel
 
-    property string themeAwareIcon: ""
+    // property string themeAwareIcon: ""
 
-    Plasmoid.icon: themeAwareIcon !== "" ? themeAwareIcon : Plasmoid.configuration.icon
+    // Plasmoid.icon: themeAwareIcon !== "" ? themeAwareIcon : Plasmoid.configuration.icon
+    Plasmoid.icon: Qt.resolvedUrl("icons/appicons/launchpad_light.png")
 
-    P5Support.DataSource {
-        id: themeStateReader
-        engine: "executable"
-        connectedSources: []
-        onNewData: {
-            if (data["exit code"] === 0 && data["stdout"]) {
-                var state = data["stdout"].trim().toLowerCase()
-                if (state.indexOf("dark") >= 0) {
-                    kicker.themeAwareIcon = Qt.resolvedUrl("icons/appicons/launchpad_dark.png")
-                } else {
-                    kicker.themeAwareIcon = Qt.resolvedUrl("icons/appicons/launchpad_light.png")
-                }
-            }
-            disconnectSource(sourceName)
-        }
-        function exec(cmd) { connectSource(cmd) }
-    }
+    // P5Support.DataSource {
+    //     id: themeStateReader
+    //     engine: "executable"
+    //     connectedSources: []
+    //     onNewData: {
+    //         if (data["exit code"] === 0 && data["stdout"]) {
+    //             var state = data["stdout"].trim().toLowerCase()
+    //             if (state.indexOf("dark") >= 0) {
+    //                 kicker.themeAwareIcon = Qt.resolvedUrl("icons/appicons/launchpad_dark.png")
+    //             } else {
+    //                 kicker.themeAwareIcon = Qt.resolvedUrl("icons/appicons/launchpad_light.png")
+    //             }
+    //         }
+    //         disconnectSource(sourceName)
+    //     }
+    //     function exec(cmd) { connectSource(cmd) }
+    // }
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
@@ -225,13 +226,13 @@ PlasmoidItem {
 
         dragHelper.dropped.connect(resetDragSource);
 
-        themeStateReader.exec("cat /usr/share/extras/system-settings/themeswitcher/state")
+        // themeStateReader.exec("cat /usr/share/extras/system-settings/themeswitcher/state")
     }
 
-    Timer {
-        interval: 30000
-        running: kicker.themeAwareIcon !== ""
-        repeat: true
-        onTriggered: themeStateReader.exec("cat /usr/share/extras/system-settings/themeswitcher/state")
-    }
+    // Timer {
+    //     interval: 30000
+    //     running: kicker.themeAwareIcon !== ""
+    //     repeat: true
+    //     onTriggered: themeStateReader.exec("cat /usr/share/extras/system-settings/themeswitcher/state")
+    // }
 }
