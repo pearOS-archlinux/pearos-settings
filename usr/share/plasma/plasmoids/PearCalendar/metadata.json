@@ -1,0 +1,25 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "",
+        "Name": "vps"
+      },
+      {
+        "Email": "alex@pear-software.com",
+        "Name": "Alexandru Balan"
+      }
+    ],
+    "Category": "Date and Time",
+    "Description": "Simple mini calendar widget showing the current month and year.",
+    "EnabledByDefault": true,
+    "Icon": "/icon.png",
+    "Id": "PearCalendar",
+    "License": "GPL-2.0+",
+    "Name": "Calendar Widget",
+    "Version": "26.3",
+    "Website": ""
+  },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

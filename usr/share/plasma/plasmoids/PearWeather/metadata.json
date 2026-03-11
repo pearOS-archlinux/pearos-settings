@@ -1,0 +1,43 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPlugin": {
+        "Id": "PearWeather",
+        "Name": "PearWeather",
+        "Version": "26.3",
+        "Category": "Utilities",
+        "Description": "Modern weather widget with Google Weather icons, daily/hourly forecasts, and auto-refresh",
+        "Icon": "weather",
+        "License": "GPL-3.0",
+        "Website": "https://pearos.xyz",
+        "Authors": [
+            {
+                "Name": "MCC45TR",
+                "Email": "mcc45tr@gmail.com"
+            },
+            {
+                "Name": "Alexandru Balan",
+                "Email": "alex@pear-software.com"
+            }
+        ]
+    },
+    "X-Plasma-ConfigModel": [
+        {
+            "Key": "General",
+            "Name": "General",
+            "Source": "ui/config/ConfigGeneral.qml"
+        },
+        {
+            "Key": "Appearance",
+            "Name": "Appearance",
+            "Source": "ui/config/ConfigAppearance.qml"
+        },
+        {
+            "Key": "Notifications",
+            "Name": "Notifications",
+            "Source": "ui/config/ConfigNotifications.qml"
+        }
+    ]
+}
