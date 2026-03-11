@@ -9,8 +9,8 @@ RightButton;NoModifier=org.kde.contextmenu
 FillMode=2
 
 [Containments][121]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
+ItemGeometries-1920x1080=Applet-139:0,0,224,224,0;Applet-140:224,0,224,224,0;
+ItemGeometriesHorizontal=Applet-139:0,0,224,224,0;Applet-140:224,0,224,224,0;
 activityId=2c65b32b-3d09-4541-89aa-02943239faba
 formfactor=0
 immutability=1
@@ -18,6 +18,23 @@ lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][121][Applets][139]
+immutability=1
+plugin=PearCalendar
+
+[Containments][121][Applets][140]
+immutability=1
+plugin=PearWeather
+
+[Containments][121][Applets][140][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][121][Applets][140][Configuration][General]
+forecastDays=10
+iconPack=system
+updateInterval=15
 
 [Containments][121][ConfigDialog]
 DialogHeight=540
@@ -193,7 +210,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][27][Applets][92][Configuration][General]
-launchers=preferred://filemanager,preferred://browser,applications:pearos-systemsettings.desktop,applications:org.kde.kcalc.desktop,applications:org.kde.gwenview.desktop,applications:org.kde.elisa.desktop,applications:org.kde.kate.desktop
+launchers=preferred://filemanager,preferred://browser,applications:org.kde.kmail2.desktop,applications:org.gnome.Maps.desktop,applications:org.kde.gwenview.desktop,applications:pearos-calendar.desktop,applications:pearos-contacts.desktop,applications:pearos-todo.desktop,applications:pearos-notes.desktop,applications:org.kde.elisa.desktop,applications:pearos-appstore.desktop,applications:org.kde.kdeconnect.app.desktop,applications:pearos-systemsettings.desktop
 
 [Containments][27][Applets][93]
 immutability=1
@@ -673,10 +690,10 @@ DialogWidth=720
 PreloadWeight=100
 
 [Containments][3][Applets][8][General]
-extraItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.weather
+extraItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.weather,org.kde.kdeconnect
 hiddenItems=Albert,org.kde.plasma.volume,org.kde.plasma.clipboard
 iconSpacing=6
-knownItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.vault,org.kde.plasma.weather
+knownItems=org.kde.plasma.notifications,org.kde.plasma.manage-inputmethod,org.kde.plasma.clipboard,org.kde.plasma.networkmanagement,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.cameraindicator,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.vault,org.kde.plasma.weather,org.kde.kdeconnect
 scaleIconsToFit=true
 
 [Containments][3][Applets][82]
@@ -709,4 +726,4 @@ useCustomButtonImage=true
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/org.kde.plasma.appmenu,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/homeee,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/mac-cursors-main,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/install_steps.zip,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/original_code,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/newsettings,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/Settings.app,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/a,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/plasma6-pearos,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma-org.kde.plasma.desktop-appletsrc,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/pearos-settings,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/home.tar.xz,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/package-repository,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.desktopcontainment,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pkgbuilds,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/main.qml.backup_1764482849,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/filesystem,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/git.key,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/iso,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-private-key.asc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/extrass,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/plasma6pearos_install.log,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/TahoeLauncher,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/New Folder,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/sddm.conf,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/ref.sh,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/pearos-refind-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-boot-sound,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/PearFolderArc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps-bundle,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/test,0,3173ac60-468b-43ae-9ce9-60542f97cd90
+screenMapping=desktop:/install_steps.zip,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/original_code,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/system_install.desktop,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/PearFolderArc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/Settings.app,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/main.qml.backup_1764482849,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-boot-sound,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/mac-cursors-main,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/a,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/package-repository,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/filesystem,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/git.key,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearOS-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/Home.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/pkgbuilds,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma6pearos_install.log,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/new26,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/extrass,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/iso,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/home.tar.xz,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-settings,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/homeee,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.plasma.appmenu,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/ref.sh,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/trash.desktop,0,d1ae18cf-e9b7-40f7-8cce-2525a8bb09df,desktop:/system_install.desktop,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/newsettings,0,2c65b32b-3d09-4541-89aa-02943239faba,desktop:/pearOS-private-key.asc,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/New Folder,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/org.kde.desktopcontainment,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma6-pearos,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/sddm.conf,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/test,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/plasma-org.kde.plasma.desktop-appletsrc,0,9523a99b-c5cf-47c8-9b19-f504b9adb295,desktop:/TahoeLauncher,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-apps-bundle,0,3173ac60-468b-43ae-9ce9-60542f97cd90,desktop:/pearos-refind-installer,0,3173ac60-468b-43ae-9ce9-60542f97cd90
