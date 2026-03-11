@@ -1,0 +1,28 @@
+{
+    "KPlugin": {
+        "Name": "Temporary Virtual Desktops With Delay",
+        "Description": "Automatically adds and removes virtual desktops, now with delay",
+        "Icon": "preferences-desktop-virtual",
+
+        "Authors": [
+            {
+                "Name": "Berlioz-Ubiquitus"
+            },
+            {
+                "Name": "wsdfhjxc"
+            },
+            {
+                "Name": "tortoise501"
+            }
+        ],
+        "Id": "temporary-virtual-desktops-with-delay",
+        "Version": "0.1.0",
+        "License": "GPLv3",
+        "EnabledByDefault": false
+    },
+    "X-Plasma-API": "javascript",
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}
+
