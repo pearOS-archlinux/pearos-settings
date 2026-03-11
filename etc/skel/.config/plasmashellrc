@@ -20,11 +20,12 @@ thickness=27
 
 [PlasmaViews][Panel 27]
 floating=1
+floatingApplets=1
 panelLengthMode=1
-panelVisibility=2
+panelVisibility=0
 
 [PlasmaViews][Panel 27][Defaults]
-thickness=64
+thickness=70
 
 [PlasmaViews][Panel 28]
 floating=1
