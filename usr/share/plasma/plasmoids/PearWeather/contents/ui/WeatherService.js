@@ -331,8 +331,8 @@ function fetchWeatherInternal(config, callback) {
 function fetchWeather(config, callback) {
     var now = Date.now()
 
-    var forceRefresh = false
-    if (cache.current && cache.current.location && cache.current.location.indexOf(",") !== -1) {
+    var forceRefresh = !!config.forceRefresh
+    if (!forceRefresh && cache.current && cache.current.location && cache.current.location.indexOf(",") !== -1) {
         forceRefresh = true
     }
 

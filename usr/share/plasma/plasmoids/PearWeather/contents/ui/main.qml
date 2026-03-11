@@ -12,8 +12,8 @@ PlasmoidItem {
 
     Layout.preferredWidth: 400
     Layout.preferredHeight: 200
-    Layout.minimumWidth: 200
-    Layout.minimumHeight: 200
+    Layout.minimumWidth: 0
+    Layout.minimumHeight: 0
 
     readonly property string apiKey: Plasmoid.configuration.apiKey || ""
     readonly property string apiKey2: Plasmoid.configuration.apiKey2 || ""
@@ -110,7 +110,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18n("Refresh")
             icon.name: "view-refresh"
-            onTriggered: root.fetchWeatherData()
+            onTriggered: root.fetchWeatherData(true)
         },
         PlasmaCore.Action {
             text: root.forecastMode ? i18n("Daily Forecast") : i18n("Hourly Forecast")
@@ -130,6 +130,12 @@ PlasmoidItem {
                 fetchWeatherData()
                 lastFetchMinute = min
             }
+        }
+    }
+
+    onUnitsChanged: {
+        if (currentWeather && !isLoading) {
+            fetchWeatherData(true)
         }
     }
 
@@ -170,7 +176,7 @@ PlasmoidItem {
         }
     }
 
-    function fetchWeatherData() {
+    function fetchWeatherData(forceRefresh) {
         isLoading = true
         WeatherService.fetchWeather({
             apiKey: apiKey,
@@ -179,7 +185,8 @@ PlasmoidItem {
             units: units,
             provider: weatherProvider,
             autoDetect: locationMode === "auto",
-            forecastDays: forecastDays
+            forecastDays: forecastDays,
+            forceRefresh: !!forceRefresh
         }, function(result) {
             isLoading = false
             if (result.success) {
