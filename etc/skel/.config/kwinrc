@@ -1,6 +1,8 @@
 [Desktops]
 Id_1=f5e21766-0c6f-4ce3-9dab-8707b079e367
-Number=1
+Id_2=16fca0f1-44b2-44f6-bb6f-2eb60939737f
+Id_3=9307afee-0897-46a0-b7f0-0a33ac47f81d
+Number=3
 Rows=1
 
 [Effect-blur]
@@ -96,6 +98,9 @@ padding=4
 [Tiling][13ad835f-efbe-45ee-83f9-61b89a63edf5][e5ea93b9-a015-40e9-8d9b-9349585d1a82]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][16fca0f1-44b2-44f6-bb6f-2eb60939737f][38a34455-0a51-446f-8a9b-1040a1bd97a0]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][1e0da598-f00a-4da5-8d70-b4bc0115be24][cb995a0f-9c7a-4f35-a2b8-440453c8a29a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -126,6 +131,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][8c68844c-c191-42d8-913a-691bb69425b3][e5ea93b9-a015-40e9-8d9b-9349585d1a82]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][9307afee-0897-46a0-b7f0-0a33ac47f81d][38a34455-0a51-446f-8a9b-1040a1bd97a0]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][9350f969-92d0-5658-bb27-639b07d90acc]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -139,6 +147,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d359a34b-fcc4-4044-9024-ab45ca9913a5][e4260ac8-2d87-4da4-af70-f072b618efca]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][f5e21766-0c6f-4ce3-9dab-8707b079e367][38a34455-0a51-446f-8a9b-1040a1bd97a0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][f5e21766-0c6f-4ce3-9dab-8707b079e367][cb995a0f-9c7a-4f35-a2b8-440453c8a29a]
@@ -165,5 +176,5 @@ ButtonsOnLeft=XIA
 ButtonsOnRight=
 Library=org.kde.kwin.aurorae
 Theme=__aurorae__svg__pearOS-dark
-library=org.kde.kwin.aurorae
-theme=__aurorae__svg__pearOS-dark
+library=breezeenhanced
+theme=pearOS

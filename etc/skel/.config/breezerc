@@ -1,0 +1,17 @@
+[Windeco]
+AnimationsEnabled=false
+CloseButtonMinimizes=true
+DrawBackgroundGradient=false
+TitleBarFont=Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[Windeco Exception 0]
+BorderSize=0
+Enabled=true
+ExceptionPattern=pearos-notch
+ExceptionType=0
+FlatTitleBar=false
+HideTitleBar=false
+IsDialog=false
+Mask=16
+OpacityOverride=-1
+OpaqueTitleBar=false
