@@ -29,11 +29,9 @@ PageTemplate {
         sourceModel: BluezQt.DevicesModel { }
     }
 
-    PlasmaBt.DevicesProxyModel {
-        id: devicesModel
-     //   hideBlockedDevices: true
-        sourceModel: PlasmaBt.SharedDevicesStateProxyModel
-    }
+    // SharedDevicesStateProxyModel is already a proxy model; wrapping it again
+    // as sourceModel for another DevicesProxyModel can create a binding loop.
+    readonly property var devicesModel: PlasmaBt.SharedDevicesStateProxyModel
 
     function setBluetoothEnabled(enable: bool): void {
         BluezQt.Manager.bluetoothBlocked = !enable;

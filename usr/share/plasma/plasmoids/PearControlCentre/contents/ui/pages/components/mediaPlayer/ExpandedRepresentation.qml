@@ -395,7 +395,11 @@ PlasmaExtras.Representation {
 
                 // KeyNavigation.backtab: playerSelector.currentItem
                 KeyNavigation.up: KeyNavigation.backtab
-                KeyNavigation.down: playPauseButton.enabled ? playPauseButton : (playPauseButton.KeyNavigation.left.enabled ? playPauseButton.KeyNavigation.left : playPauseButton.KeyNavigation.right)
+                KeyNavigation.down: (playPauseButton && playPauseButton.enabled)
+                    ? playPauseButton
+                    : ((playPauseButton && playPauseButton.KeyNavigation.left && playPauseButton.KeyNavigation.left.enabled)
+                        ? playPauseButton.KeyNavigation.left
+                        : playPauseButton.KeyNavigation.right)
                 Keys.onLeftPressed: {
                     seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
                     seekSlider.moved();
@@ -526,7 +530,7 @@ PlasmaExtras.Representation {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: i18nc("@action:button", "Shuffle")
 
-                KeyNavigation.right: previousButton.enabled ? previousButton : previousButton.KeyNavigation.right
+                KeyNavigation.right: (previousButton && previousButton.enabled) ? previousButton : previousButton.KeyNavigation.right
                 KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                 onClicked: {
@@ -552,7 +556,7 @@ PlasmaExtras.Representation {
                 text: i18nc("Play previous track", "Previous Track")
 
                 KeyNavigation.left: shuffleButton
-                KeyNavigation.right: playPauseButton.enabled ? playPauseButton : playPauseButton.KeyNavigation.right
+                KeyNavigation.right: (playPauseButton && playPauseButton.enabled) ? playPauseButton : playPauseButton.KeyNavigation.right
                 KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                 onClicked: {
@@ -574,8 +578,8 @@ PlasmaExtras.Representation {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: mediaPlayerPage.isPlaying ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play")
 
-                KeyNavigation.left: previousButton.enabled ? previousButton : previousButton.KeyNavigation.left
-                KeyNavigation.right: nextButton.enabled ? nextButton : nextButton.KeyNavigation.right
+                KeyNavigation.left: (previousButton && previousButton.enabled) ? previousButton : previousButton.KeyNavigation.left
+                KeyNavigation.right: (nextButton && nextButton.enabled) ? nextButton : nextButton.KeyNavigation.right
                 KeyNavigation.up: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.up
 
                 onClicked: mediaPlayerPage.togglePlaying()
@@ -593,7 +597,7 @@ PlasmaExtras.Representation {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: i18nc("Play next track", "Next Track")
 
-                KeyNavigation.left: playPauseButton.enabled ? playPauseButton : playPauseButton.KeyNavigation.left
+                KeyNavigation.left: (playPauseButton && playPauseButton.enabled) ? playPauseButton : playPauseButton.KeyNavigation.left
                 KeyNavigation.right: repeatButton
                 KeyNavigation.up: playPauseButton.KeyNavigation.up
 
@@ -618,7 +622,7 @@ PlasmaExtras.Representation {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: mediaPlayerPage.loopStatus === Mpris.LoopStatus.Track ? i18n("Repeat Track") : i18n("Repeat")
 
-                KeyNavigation.left: nextButton.enabled ? nextButton : nextButton.KeyNavigation.left
+                KeyNavigation.left: (nextButton && nextButton.enabled) ? nextButton : nextButton.KeyNavigation.left
                 KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                 onClicked: {
