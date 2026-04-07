@@ -202,10 +202,7 @@ PlasmoidItem {
 
             MouseArea {
                 anchors.fill: parent
-                acceptedButtons: Qt.LeftButton
-                onClicked: {
-                    Qt.openUrlExternally("pear-calendar")
-                }
+                acceptedButtons: Qt.NoButton
                 propagateComposedEvents: true
             }
 
