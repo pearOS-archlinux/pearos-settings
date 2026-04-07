@@ -76,6 +76,7 @@ AbstractButton {
         textFormat: Text.StyledText
         verticalAlignment: Text.AlignVCenter
         elide: Text.ElideRight
-        color: controlRoot.menuState === MenuDelegate.State.Rest ? Kirigami.Theme.textColor : Kirigami.Theme.highlightedTextColor
+        // Keep panel global-menu text readable on pearOS light topbar.
+        color: controlRoot.menuState === MenuDelegate.State.Rest ? "#ffffff" : Kirigami.Theme.highlightedTextColor
     }
 }
