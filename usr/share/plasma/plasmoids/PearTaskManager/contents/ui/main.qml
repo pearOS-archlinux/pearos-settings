@@ -17,7 +17,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.workspace.trianglemousefilter
 
 import org.kde.taskmanager as TaskManager
-import org.kde.plasma.private.taskmanager as TaskManagerApplet
+import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
 import org.kde.plasma.workspace.dbus as DBus
 
 import "code/layoutmetrics.js" as LayoutMetrics
