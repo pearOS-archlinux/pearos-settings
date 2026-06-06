@@ -9,7 +9,6 @@ import org.kde.taskmanager       as TaskManager
 import org.kde.kirigami          as Kirigami
 import org.kde.activities        as Activities
 import "../tools/Tools.js"       as Tools
-import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 PlasmoidItem {
