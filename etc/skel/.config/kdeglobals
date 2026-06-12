@@ -158,6 +158,10 @@ LastUsedCustomAccentColor=61,174,233
 XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
+font=MuternVF Text Regular,11,-1,5,50,0,0,0,0,0
+fixed=MuternVF Text Regular,10,-1,5,50,0,0,0,0,0
+menuFont=MuternVF Text Regular,11,-1,5,50,0,0,0,0,0
+toolBarFont=MuternVF Text Regular,11,-1,5,50,0,0,0,0,0
 
 [Icons]
 Theme=pearOS
@@ -202,6 +206,7 @@ activeForeground=252,252,252
 inactiveBackground=66,66,66
 inactiveBlend=85,85,85
 inactiveForeground=170,170,170
+activeFont=MuternVF Text Regular,11,-1,5,50,0,0,0,0,0
 
 [Wallpaper]
 Image=pearOS
