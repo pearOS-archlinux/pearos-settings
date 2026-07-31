@@ -98,7 +98,7 @@ DialogWidth=810
 
 [Containments][141][Applets][142][Configuration][General]
 iconSize=52
-launchers=applications:seafari.desktop,applications:org.kde.kmail2.desktop,applications:org.gnome.Maps.desktop,applications:org.kde.gwenview.desktop,applications:pearos-calendar.desktop,applications:pearos-contacts.desktop,applications:pearos-todo.desktop,applications:pearos-notes.desktop,applications:org.kde.elisa.desktop,applications:pearos-appstore.desktop,applications:org.kde.kdeconnect.app.desktop,applications:pearos-systemsettings.desktop,applications:calculator.desktop
+launchers=preferred://browser,applications:org.kde.kmail2.desktop,applications:org.gnome.Maps.desktop,applications:org.kde.gwenview.desktop,applications:pearos-calendar.desktop,applications:pearos-contacts.desktop,applications:pearos-todo.desktop,applications:pearos-notes.desktop,applications:org.kde.elisa.desktop,applications:pearos-appstore.desktop,applications:org.kde.kdeconnect.app.desktop,applications:pearos-systemsettings.desktop,applications:calculator.desktop
 skinBlur=true
 
 [Containments][141][Applets][142][Shortcuts]
